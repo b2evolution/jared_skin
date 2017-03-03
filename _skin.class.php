@@ -150,7 +150,7 @@ class jared_Skin extends Skin
 					'front_bg_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
-						'initialize_with' => 'shared/global/sunset/sunset.jpg',
+						'initialize_with' => 'shared/global/monument-valley/monuments.jpg',
 						'thumbnail_size' => 'fit-320x320'
 					),
 					'front_bg_color' => array(
@@ -244,6 +244,7 @@ class jared_Skin extends Skin
 					'secondary_1_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
+						'defaultvalue' => NULL,
 						'initialize_with' => 'shared/global/sunset/sunset.jpg',
 						'thumbnail_size' => 'fit-320x320'
 					),
@@ -289,7 +290,7 @@ class jared_Skin extends Skin
 					'secondary_2_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
-						'initialize_with' => 'shared/global/sunset/sunset.jpg',
+						'initialize_with' => 'shared/global/monument-valley/monument-valley-road.jpg',
 						'thumbnail_size' => 'fit-320x320'
 					),
 					'secondary_2_bg_color' => array(
@@ -334,6 +335,7 @@ class jared_Skin extends Skin
 					'secondary_3_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
+						'defaultvalue' => NULL,
 						'initialize_with' => 'shared/global/sunset/sunset.jpg',
 						'thumbnail_size' => 'fit-320x320'
 					),
@@ -379,7 +381,7 @@ class jared_Skin extends Skin
 					'secondary_4_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
-						'initialize_with' => 'shared/global/sunset/sunset.jpg',
+						'initialize_with' => 'shared/global/monument-valley/bus-stop-ahead.jpg',
 						'thumbnail_size' => 'fit-320x320'
 					),
 					'secondary_4_bg_color' => array(
