@@ -40,11 +40,8 @@
 }
 
 // Footer
-body.pictured .secondary_area footer {
-	color: #666;
-	a {
-		color: #666;
-	}
+body.pictured .footer_wrapper {
+	font-size: 18px;
 }
 
 // Body content
@@ -620,10 +617,20 @@ html, body {
     height:50%;
 }
 
+.evo_container__front_page_primary,
 .evo_container__front_page_secondary {
 	padding: 80px 0;
-	.evo_widget h2 {
-		border: none;
-		font-size: 38px;
+	.evo_widget {
+		h2 {
+			border: none;
+			margin-top: 0;
+			padding: 0 0 17px;
+			font-size: 38px;
+		}
+		p, ul, > div, & {
+			margin-bottom: 0;
+			padding: 0 0 18px;
+			font-size: 18px;
+		}
 	}
 }

@@ -520,18 +520,25 @@ body {
 .not-fullscreen {
   height: 50%;
 }
+.evo_container__front_page_primary,
 .evo_container__front_page_secondary {
   padding: 80px 0;
 }
+.evo_container__front_page_primary .evo_widget h2,
 .evo_container__front_page_secondary .evo_widget h2 {
   border: none;
   margin-top: 0;
   padding: 0 0 17px;
   font-size: 38px;
 }
+.evo_container__front_page_primary .evo_widget p,
 .evo_container__front_page_secondary .evo_widget p,
+.evo_container__front_page_primary .evo_widget ul,
 .evo_container__front_page_secondary .evo_widget ul,
-.evo_container__front_page_secondary .evo_widget > div {
+.evo_container__front_page_primary .evo_widget > div,
+.evo_container__front_page_secondary .evo_widget > div,
+.evo_container__front_page_primary .evo_widget,
+.evo_container__front_page_secondary .evo_widget {
   margin-bottom: 0;
   padding: 0 0 18px;
   font-size: 18px;
