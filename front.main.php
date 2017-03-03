@@ -321,7 +321,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 			</div>
 		</div>
 
-		<footer class="col-md-12 footer_wrapper">
+		<footer class="col-md-12 footer_wrapper center">
 
 			<div class="evo_container evo_container__footer">
 			<?php
