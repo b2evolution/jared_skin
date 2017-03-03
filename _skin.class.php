@@ -159,7 +159,6 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
-					
 					// 'front_width' => array(
 						// 'label' => T_('Width'),
 						// 'note' => T_('Adjust width of the Main Area container.'),
@@ -225,6 +224,17 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#CCCCCC',
 						'type' => 'color',
 					),
+					'section_1_text_align' => array(
+						'label'    => T_('Align text'),
+						'note'     => '',
+						'type'     => 'radio',
+						'options'  => array(
+							array( 'section_1_left', T_('Left') ),
+							array( 'section_1_center', T_('Center') ),
+							array( 'section_1_right', T_('Right') ),
+						),
+						'defaultvalue' => 'section_1_center',
+					),
 				'1_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -271,6 +281,17 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#318780',
 						'type' => 'color',
 					),
+					'section_2_text_align' => array(
+						'label'    => T_('Align text'),
+						'note'     => '',
+						'type'     => 'radio',
+						'options'  => array(
+							array( 'section_2_left', T_('Left') ),
+							array( 'section_2_center', T_('Center') ),
+							array( 'section_2_right', T_('Right') ),
+						),
+						'defaultvalue' => 'section_2_center',
+					),
 				'secondary_1_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -315,6 +336,17 @@ class jared_Skin extends Skin
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#318780',
 						'type' => 'color',
+					),
+					'section_3_text_align' => array(
+						'label'    => T_('Align text'),
+						'note'     => '',
+						'type'     => 'radio',
+						'options'  => array(
+							array( 'section_3_left', T_('Left') ),
+							array( 'section_3_center', T_('Center') ),
+							array( 'section_3_right', T_('Right') ),
+						),
+						'defaultvalue' => 'section_3_center',
 					),
 				'secondary_2_end' => array(
 					'layout' => 'end_fieldset',
@@ -362,6 +394,17 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#318780',
 						'type' => 'color',
 					),
+					'section_4_text_align' => array(
+						'label'    => T_('Align text'),
+						'note'     => '',
+						'type'     => 'radio',
+						'options'  => array(
+							array( 'section_4_left', T_('Left') ),
+							array( 'section_4_center', T_('Center') ),
+							array( 'section_4_right', T_('Right') ),
+						),
+						'defaultvalue' => 'section_4_center',
+					),
 				'secondary_3_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -406,6 +449,17 @@ class jared_Skin extends Skin
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#318780',
 						'type' => 'color',
+					),
+					'section_5_text_align' => array(
+						'label'    => T_('Align text'),
+						'note'     => '',
+						'type'     => 'radio',
+						'options'  => array(
+							array( 'section_5_left', T_('Left') ),
+							array( 'section_5_center', T_('Center') ),
+							array( 'section_5_right', T_('Right') ),
+						),
+						'defaultvalue' => 'section_5_center',
 					),
 				'secondary_4_end' => array(
 					'layout' => 'end_fieldset',
@@ -477,6 +531,17 @@ class jared_Skin extends Skin
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
+					),
+					'footer_text_align' => array(
+						'label'    => T_('Align text'),
+						'note'     => '',
+						'type'     => 'radio',
+						'options'  => array(
+							array( 'footer_left', T_('Left') ),
+							array( 'footer_center', T_('Center') ),
+							array( 'footer_right', T_('Right') ),
+						),
+						'defaultvalue' => 'footer_center',
 					),
 				'footer_end' => array(
 					'layout' => 'end_fieldset',
@@ -702,7 +767,14 @@ class jared_Skin extends Skin
 				$custom_css .= 'body.pictured .front_main_content .ufld_icon_links a:hover:not([class*="ufld__hovertextcolor"]) { color: '.$link_color." }\n";
 				$custom_css .= 'body.pictured .front_main_content .ufld_icon_links a:hover:not([class*="ufld__hoverbgcolor"]) { background-color: '.$icon_color." }\n";
 			}
-
+			if( $this->get_setting( 'section_1_text_align' ) == 'section_1_center' )
+			{
+				$custom_css .= ".evo_container__front_page_primary { text-align: center }\n";
+			}
+			if( $this->get_setting( 'section_1_text_align' ) == 'section_1_right' )
+			{
+				$custom_css .= ".evo_container__front_page_primary { text-align: right }\n";
+			}
 			// if( $width = $this->get_setting( 'front_width' ) )
 			// { // Custom width for front main area:
 				// $custom_css .= 'div.front_main_area { width: '.$width." }\n";
@@ -758,6 +830,14 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_1_link_h_color' );
 				$custom_css .= '.evo_container__front_page_secondary__one a:hover { color: '.$color." }\n";
 			}
+			if( $this->get_setting( 'section_2_text_align' ) == 'section_2_center' )
+			{
+				$custom_css .= ".evo_container__front_page_secondary__one { text-align: center }\n";
+			}
+			if( $this->get_setting( 'section_2_text_align' ) == 'section_2_right' )
+			{
+				$custom_css .= ".evo_container__front_page_secondary__one { text-align: right }\n";
+			}
 
 			// Secondary Area 2 Customization Options
 			if( $this->get_setting( 'secondary_2_image_file_ID' ) )
@@ -791,6 +871,14 @@ class jared_Skin extends Skin
 			{
 				$color = $this->get_setting( 'secondary_2_link_h_color' );
 				$custom_css .= '.evo_container__front_page_secondary__two a:hover { color: '.$color." }\n";
+			}
+			if( $this->get_setting( 'section_3_text_align' ) == 'section_3_center' )
+			{
+				$custom_css .= ".evo_container__front_page_secondary__two { text-align: center }\n";
+			}
+			if( $this->get_setting( 'section_3_text_align' ) == 'section_3_right' )
+			{
+				$custom_css .= ".evo_container__front_page_secondary__two { text-align: right }\n";
 			}
 			
 			// Secondary Area 3 Customization Options
@@ -826,6 +914,14 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_3_link_h_color' );
 				$custom_css .= '.evo_container__front_page_secondary__three a:hover { color: '.$color." }\n";
 			}
+			if( $this->get_setting( 'section_4_text_align' ) == 'section_4_center' )
+			{
+				$custom_css .= ".evo_container__front_page_secondary__three { text-align: center }\n";
+			}
+			if( $this->get_setting( 'section_4_text_align' ) == 'section_4_right' )
+			{
+				$custom_css .= ".evo_container__front_page_secondary__three { text-align: right }\n";
+			}
 			
 			// Secondary Area 4 Customization Options
 			if( $this->get_setting( 'secondary_4_image_file_ID' ) )
@@ -860,6 +956,14 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_4_link_h_color' );
 				$custom_css .= '.evo_container__front_page_secondary__four a:hover { color: '.$color." }\n";
 			}
+			if( $this->get_setting( 'section_5_text_align' ) == 'section_5_center' )
+			{
+				$custom_css .= ".evo_container__front_page_secondary__four { text-align: center }\n";
+			}
+			if( $this->get_setting( 'section_5_text_align' ) == 'section_5_right' )
+			{
+				$custom_css .= ".evo_container__front_page_secondary__four { text-align: right }\n";
+			}
 		}
 
 
@@ -892,6 +996,14 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'footer_link_h_color' ) )
 		{	// Custom link color on background image:
 			$custom_css .= '.footer_wrapper a:hover { color: '.$color." }\n";
+		}
+		if( $this->get_setting( 'footer_text_align' ) == 'footer_center' )
+		{
+			$custom_css .= ".footer_wrapper { text-align: center }\n";
+		}
+		if( $this->get_setting( 'footer_text_align' ) == 'footer_right' )
+		{
+			$custom_css .= ".footer_wrapper { text-align: right }\n";
 		}
 
 		if( ! empty( $custom_css ) )

@@ -552,6 +552,10 @@ body {
   padding: 0 0 18px;
   font-size: 18px;
 }
+.evo_container__front_page_primary .evo_widget ul,
+.evo_container__front_page_secondary .evo_widget ul {
+  display: inline-block;
+}
 div.widget_core_coll_featured_posts.evo_withexcerpt ul li div.item_title,
 div.widget_core_coll_featured_posts.evo_withteaser ul li div.item_title,
 div.widget_core_coll_item_list.evo_withexcerpt ul li div.item_title,
