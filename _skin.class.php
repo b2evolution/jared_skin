@@ -149,7 +149,6 @@ class jared_Skin extends Skin
 				),
 					'front_bg_image_file_ID' => array(
 						'label' => T_('Background image'),
-						'defaultvalue' => NULL,
 						'type' => 'fileselect',
 						'initialize_with' => 'shared/global/sunset/sunset.jpg',
 						'thumbnail_size' => 'fit-320x320'
@@ -244,7 +243,6 @@ class jared_Skin extends Skin
 				),
 					'secondary_1_image_file_ID' => array(
 						'label' => T_('Background image'),
-						'defaultvalue' => NULL,
 						'type' => 'fileselect',
 						'initialize_with' => 'shared/global/sunset/sunset.jpg',
 						'thumbnail_size' => 'fit-320x320'
@@ -290,7 +288,6 @@ class jared_Skin extends Skin
 				),
 					'secondary_2_image_file_ID' => array(
 						'label' => T_('Background image'),
-						'defaultvalue' => NULL,
 						'type' => 'fileselect',
 						'initialize_with' => 'shared/global/sunset/sunset.jpg',
 						'thumbnail_size' => 'fit-320x320'
@@ -336,7 +333,6 @@ class jared_Skin extends Skin
 				),
 					'secondary_3_image_file_ID' => array(
 						'label' => T_('Background image'),
-						'defaultvalue' => NULL,
 						'type' => 'fileselect',
 						'initialize_with' => 'shared/global/sunset/sunset.jpg',
 						'thumbnail_size' => 'fit-320x320'
@@ -382,7 +378,6 @@ class jared_Skin extends Skin
 				),
 					'secondary_4_image_file_ID' => array(
 						'label' => T_('Background image'),
-						'defaultvalue' => NULL,
 						'type' => 'fileselect',
 						'initialize_with' => 'shared/global/sunset/sunset.jpg',
 						'thumbnail_size' => 'fit-320x320'
