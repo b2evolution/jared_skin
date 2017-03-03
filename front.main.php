@@ -258,7 +258,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
-				skin_container( NT_('Front Page Secondary Area 1'), array(
+				skin_container( NT_('Front Page Secondary Area'), array(
 						// The following params will be used as defaults for widgets included in this container:
 						'block_start'       => '<div class="widget $wi_class$">',
 						'block_end'         => '</div>',
@@ -275,7 +275,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
-				skin_container( NT_('Front Page Secondary Area 2'), array(
+				skin_container( NT_('Front Page Area 3'), array(
 						// The following params will be used as defaults for widgets included in this container:
 						'block_start'       => '<div class="widget $wi_class$">',
 						'block_end'         => '</div>',
@@ -292,7 +292,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
-				skin_container( NT_('Front Page Secondary Area 3'), array(
+				skin_container( NT_('Front Page Area 4'), array(
 						// The following params will be used as defaults for widgets included in this container:
 						'block_start'       => '<div class="widget $wi_class$">',
 						'block_end'         => '</div>',
@@ -309,7 +309,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
-				skin_container( NT_('Front Page Secondary Area 4'), array(
+				skin_container( NT_('Front Page Area 5'), array(
 						// The following params will be used as defaults for widgets included in this container:
 						'block_start'       => '<div class="widget $wi_class$">',
 						'block_end'         => '</div>',
