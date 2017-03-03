@@ -75,11 +75,11 @@ class jared_Skin extends Skin
 	{
 		$supported_kinds = array(
 				'main' => 'yes',
-				'std' => 'no',		// Blog
+				'std' => 'yes',		// Blog
 				'photo' => 'no',
 				'forum' => 'no',
 				'manual' => 'no',
-				'group' => 'maybe',  // Tracker
+				'group' => 'no',  // Tracker
 				// Any kind that is not listed should be considered as "maybe" supported
 			);
 
