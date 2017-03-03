@@ -29,7 +29,7 @@ skin_include( '_html_header.inc.php', array(
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
-siteskin_include( '_site_body_header.inc.php' );
+skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
 // Display a picture from skin setting as background image
@@ -232,7 +232,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
     </div>
 </div>
 <div class="fullscreen background parallax" style="background-image:url(http://localhost/b2evolution/media/blogs/home/z2qpo2p485.jpg?mtime=1488368559);height: 300px;" data-img-width="3872" data-img-height="2592" data-diff="100">
-    <div class="content-a">
+    <div class="content-wrapper">
         <div class="content-b">
             Centered content3
         </div>

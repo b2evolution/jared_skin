@@ -452,6 +452,18 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
 					),
+					'footer_link_color' => array(
+						'label' => T_('Content color'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'footer_link_h_color' => array(
+						'label' => T_('Content color'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
 				'footer_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -842,6 +854,14 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'footer_content_color' ) )
 		{	// Custom link color on background image:
 			$custom_css .= '.footer_wrapper { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'footer_link_color' ) )
+		{	// Custom link color on background image:
+			$custom_css .= '.footer_wrapper a { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'footer_link_h_color' ) )
+		{	// Custom link color on background image:
+			$custom_css .= '.footer_wrapper a:hover { color: '.$color." }\n";
 		}
 
 		if( ! empty( $custom_css ) )

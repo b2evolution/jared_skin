@@ -33,11 +33,8 @@
 .secondary_area p {
   margin-top: 10px;
 }
-body.pictured .secondary_area footer {
-  color: #666;
-}
-body.pictured .secondary_area footer a {
-  color: #666;
+body.pictured .footer_wrapper {
+  font-size: 18px;
 }
 html {
   height: 100%;
@@ -528,5 +525,14 @@ body {
 }
 .evo_container__front_page_secondary .evo_widget h2 {
   border: none;
+  margin-top: 0;
+  padding: 0 0 17px;
   font-size: 38px;
+}
+.evo_container__front_page_secondary .evo_widget p,
+.evo_container__front_page_secondary .evo_widget ul,
+.evo_container__front_page_secondary .evo_widget > div {
+  margin-bottom: 0;
+  padding: 0 0 18px;
+  font-size: 18px;
 }
