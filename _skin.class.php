@@ -255,10 +255,16 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
+					'secondary_1_title_color' => array(
+						'label' => T_('Title color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#222222',
+						'type' => 'color',
+					),
 					'secondary_1_color' => array(
 						'label' => T_('Content color'),
 						'note' => T_('Click to select a color'),
-						'defaultvalue' => '#222222',
+						'defaultvalue' => '#adadad',
 						'type' => 'color',
 					),
 					'secondary_1_link_color' => array(
@@ -295,10 +301,16 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
+					'secondary_2_title_color' => array(
+						'label' => T_('Title color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#222222',
+						'type' => 'color',
+					),
 					'secondary_2_color' => array(
 						'label' => T_('Content color'),
 						'note' => T_('Click to select a color'),
-						'defaultvalue' => '#222222',
+						'defaultvalue' => '#adadad',
 						'type' => 'color',
 					),
 					'secondary_2_link_color' => array(
@@ -335,10 +347,16 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
+					'secondary_3_title_color' => array(
+						'label' => T_('Title color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#222222',
+						'type' => 'color',
+					),
 					'secondary_3_color' => array(
 						'label' => T_('Content color'),
 						'note' => T_('Click to select a color'),
-						'defaultvalue' => '#222222',
+						'defaultvalue' => '#adadad',
 						'type' => 'color',
 					),
 					'secondary_3_link_color' => array(
@@ -375,10 +393,16 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
+					'secondary_4_title_color' => array(
+						'label' => T_('Title color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#222222',
+						'type' => 'color',
+					),
 					'secondary_4_color' => array(
 						'label' => T_('Content color'),
 						'note' => T_('Click to select a color'),
-						'defaultvalue' => '#222222',
+						'defaultvalue' => '#adadad',
 						'type' => 'color',
 					),
 					'secondary_4_link_color' => array(
@@ -725,6 +749,10 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_1_bg_color' );
 				$custom_css .= '.evo_container__front_page_secondary__one { background: '.$color." }\n";
 			}
+			if( $color = $this->get_setting( 'secondary_1_title_color' ) )
+			{
+				$custom_css .= '.evo_container__front_page_secondary__one h2.page-header { color: '.$color." }\n";
+			}
 			if( $this->get_setting( 'secondary_1_color' ) )
 			{
 				$color = $this->get_setting( 'secondary_1_color' );
@@ -754,6 +782,10 @@ class jared_Skin extends Skin
 			{
 				$color = $this->get_setting( 'secondary_2_bg_color' );
 				$custom_css .= '.evo_container__front_page_secondary__two { background: '.$color." }\n";
+			}
+			if( $color = $this->get_setting( 'secondary_2_title_color' ) )
+			{
+				$custom_css .= '.evo_container__front_page_secondary__two h2.page-header { color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'secondary_2_color' ) )
 			{
@@ -785,6 +817,10 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_3_bg_color' );
 				$custom_css .= '.evo_container__front_page_secondary__three { background: '.$color." }\n";
 			}
+			if( $color = $this->get_setting( 'secondary_3_title_color' ) )
+			{
+				$custom_css .= '.evo_container__front_page_secondary__three h2.page-header { color: '.$color." }\n";
+			}
 			if( $this->get_setting( 'secondary_3_color' ) )
 			{
 				$color = $this->get_setting( 'secondary_3_color' );
@@ -814,6 +850,10 @@ class jared_Skin extends Skin
 			{
 				$color = $this->get_setting( 'secondary_4_bg_color' );
 				$custom_css .= '.evo_container__front_page_secondary__four { background: '.$color." }\n";
+			}
+			if( $color = $this->get_setting( 'secondary_4_title_color' ) )
+			{
+				$custom_css .= '.evo_container__front_page_secondary__four h2.page-header { color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'secondary_4_color' ) )
 			{
