@@ -159,14 +159,7 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
-				'1_end' => array(
-					'layout' => 'end_fieldset',
-				),				
-				
-				'2_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('Front Page Main Area Settings')
-				),
+					
 					// 'front_width' => array(
 						// 'label' => T_('Width'),
 						// 'note' => T_('Adjust width of the Main Area container.'),
@@ -232,7 +225,7 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#CCCCCC',
 						'type' => 'color',
 					),
-				'2_end' => array(
+				'1_end' => array(
 					'layout' => 'end_fieldset',
 				),
 
