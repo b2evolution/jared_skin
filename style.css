@@ -53,6 +53,23 @@ body {
 #skin_wrapper h1 {
   font-family: 'Montserrat', sans-serif;
 }
+.navbar.main-header-navigation {
+  position: absolute;
+  width: 100%;
+  border-radius: 0;
+  border: 0;
+  margin: 0;
+  z-index: 999;
+}
+.navbar.main-header-navigation .navbar-brand {
+  padding: 0;
+}
+.navbar.main-header-navigation .collapse {
+  padding: 0;
+}
+.navbar.main-header-navigation .collapse .nav {
+  margin: 0;
+}
 div.front_main_area {
   max-width: 100%;
   padding: 0;
@@ -505,4 +522,11 @@ body {
 }
 .not-fullscreen {
   height: 50%;
+}
+.evo_container__front_page_secondary {
+  padding: 80px 0;
+}
+.evo_container__front_page_secondary .evo_widget h2 {
+  border: none;
+  font-size: 38px;
 }

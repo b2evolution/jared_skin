@@ -260,7 +260,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 				// Display container and contents:
 				skin_container( NT_('Front Page Secondary Area'), array(
 						// The following params will be used as defaults for widgets included in this container:
-						'block_start'       => '<div class="widget $wi_class$">',
+						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
@@ -277,7 +277,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 				// Display container and contents:
 				skin_container( NT_('Front Page Area 3'), array(
 						// The following params will be used as defaults for widgets included in this container:
-						'block_start'       => '<div class="widget $wi_class$">',
+						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
@@ -294,7 +294,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 				// Display container and contents:
 				skin_container( NT_('Front Page Area 4'), array(
 						// The following params will be used as defaults for widgets included in this container:
-						'block_start'       => '<div class="widget $wi_class$">',
+						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
@@ -311,7 +311,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 				// Display container and contents:
 				skin_container( NT_('Front Page Area 5'), array(
 						// The following params will be used as defaults for widgets included in this container:
-						'block_start'       => '<div class="widget $wi_class$">',
+						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
@@ -321,7 +321,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 			</div>
 		</div>
 
-		<footer class="col-md-12">
+		<footer class="col-md-12 footer_wrapper">
 
 			<div class="evo_container evo_container__footer">
 			<?php

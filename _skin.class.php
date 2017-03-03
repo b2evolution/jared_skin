@@ -122,6 +122,26 @@ class jared_Skin extends Skin
 				'section_layout_end' => array(
 					'layout' => 'end_fieldset',
 				),
+				
+				'navigation_section_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Navigation Settings')
+				),
+					'nav_bg_transparent' => array(
+						'label' => T_('Transparent background'),
+						'note' => T_('Check this to enable transparent background until navigation breaks into hamburger layout.'),
+						'defaultvalue' => 1,
+						'type' => 'checkbox',
+					),
+					'nav_bg_color' => array(
+						'label' => T_('Background color'),
+						'note' => T_('This color will be used if Background image is not set or does not exist.'),
+						'defaultvalue' => '#333333',
+						'type' => 'color',
+					),
+				'navigation_section_end' => array(
+					'layout' => 'end_fieldset',
+				),
 
 				'1_start' => array(
 					'layout' => 'begin_fieldset',
@@ -140,6 +160,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+				'1_end' => array(
+					'layout' => 'end_fieldset',
+				),				
+				
+				'2_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Front Page Main Area Settings')
+				),
 					// 'front_width' => array(
 						// 'label' => T_('Width'),
 						// 'note' => T_('Adjust width of the Main Area container.'),
@@ -205,7 +233,7 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#CCCCCC',
 						'type' => 'color',
 					),
-				'1_end' => array(
+				'2_end' => array(
 					'layout' => 'end_fieldset',
 				),
 
@@ -230,7 +258,19 @@ class jared_Skin extends Skin
 					'secondary_1_color' => array(
 						'label' => T_('Content color'),
 						'note' => T_('Click to select a color'),
-						'defaultvalue' => '#333333',
+						'defaultvalue' => '#222222',
+						'type' => 'color',
+					),
+					'secondary_1_link_color' => array(
+						'label' => T_('Links color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'secondary_1_link_h_color' => array(
+						'label' => T_('Links hover color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
 						'type' => 'color',
 					),
 				'secondary_1_end' => array(
@@ -258,7 +298,19 @@ class jared_Skin extends Skin
 					'secondary_2_color' => array(
 						'label' => T_('Content color'),
 						'note' => T_('Click to select a color'),
-						'defaultvalue' => '#333333',
+						'defaultvalue' => '#222222',
+						'type' => 'color',
+					),
+					'secondary_2_link_color' => array(
+						'label' => T_('Links color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'secondary_2_link_h_color' => array(
+						'label' => T_('Links hover color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
 						'type' => 'color',
 					),
 				'secondary_2_end' => array(
@@ -286,7 +338,19 @@ class jared_Skin extends Skin
 					'secondary_3_color' => array(
 						'label' => T_('Content color'),
 						'note' => T_('Click to select a color'),
-						'defaultvalue' => '#333333',
+						'defaultvalue' => '#222222',
+						'type' => 'color',
+					),
+					'secondary_3_link_color' => array(
+						'label' => T_('Links color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'secondary_3_link_h_color' => array(
+						'label' => T_('Links hover color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
 						'type' => 'color',
 					),
 				'secondary_3_end' => array(
@@ -314,7 +378,19 @@ class jared_Skin extends Skin
 					'secondary_4_color' => array(
 						'label' => T_('Content color'),
 						'note' => T_('Click to select a color'),
-						'defaultvalue' => '#333333',
+						'defaultvalue' => '#222222',
+						'type' => 'color',
+					),
+					'secondary_4_link_color' => array(
+						'label' => T_('Links color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'secondary_4_link_h_color' => array(
+						'label' => T_('Links hover color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
 						'type' => 'color',
 					),
 				'secondary_4_end' => array(
@@ -323,7 +399,7 @@ class jared_Skin extends Skin
 				
 				'3_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Front Page Secondary Area Settings -- ?????')
+					'label'  => T_('Front Page Secondary Area Settings')
 				),
 					'secondary_text_color' => array(
 						'label' => T_('Text color'),
@@ -359,6 +435,27 @@ class jared_Skin extends Skin
 				'4_end' => array(
 					'layout' => 'end_fieldset',
 				),
+				
+				'footer_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Footer Settings')
+				),
+					'footer_bg_color' => array(
+						'label' => T_('Background color'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#222222',
+						'type' => 'color',
+					),
+					'footer_content_color' => array(
+						'label' => T_('Content color'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+				'footer_end' => array(
+					'layout' => 'end_fieldset',
+				),
+				
 				'section_colorbox_start' => array(
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Colorbox Image Zoom')
@@ -548,6 +645,16 @@ class jared_Skin extends Skin
 				// $custom_css .= '.front_main_content { background-color: rgba('.implode( ',', array_map( 'hexdec', $color ) ).','.$color_transparency.')'." }\n";
 			// }
 
+			// Navbar color customization
+			if( $color = $this->get_setting( 'nav_bg_color' ) )
+			{
+				$custom_css .= '.navbar { background-color: ' . $color . " }\n";
+			}
+			if( $this->get_setting( 'nav_bg_transparent' ) )
+			{
+				$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
+			}
+
 			if( $color = $this->get_setting( 'front_text_color' ) )
 			{ // Custom text color:
 				$custom_css .= 'body.pictured .front_main_content, body.pictured .front_main_content h1 small, .evo_container__header, .evo_container__page_top { color: '.$color." }\n";
@@ -611,6 +718,16 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_1_color' );
 				$custom_css .= '.evo_container__front_page_secondary__one { color: '.$color." }\n";
 			}
+			if( $this->get_setting( 'secondary_1_link_color' ) )
+			{
+				$color = $this->get_setting( 'secondary_1_link_color' );
+				$custom_css .= '.evo_container__front_page_secondary__one a { color: '.$color." }\n";
+			}
+			if( $this->get_setting( 'secondary_1_link_h_color' ) )
+			{
+				$color = $this->get_setting( 'secondary_1_link_h_color' );
+				$custom_css .= '.evo_container__front_page_secondary__one a:hover { color: '.$color." }\n";
+			}
 
 			// Secondary Area 2 Customization Options
 			if( $this->get_setting( 'secondary_2_image_file_ID' ) )
@@ -630,6 +747,16 @@ class jared_Skin extends Skin
 			{
 				$color = $this->get_setting( 'secondary_2_color' );
 				$custom_css .= '.evo_container__front_page_secondary__two { color: '.$color." }\n";
+			}
+			if( $this->get_setting( 'secondary_2_link_color' ) )
+			{
+				$color = $this->get_setting( 'secondary_2_link_color' );
+				$custom_css .= '.evo_container__front_page_secondary__two a { color: '.$color." }\n";
+			}
+			if( $this->get_setting( 'secondary_2_link_h_color' ) )
+			{
+				$color = $this->get_setting( 'secondary_2_link_h_color' );
+				$custom_css .= '.evo_container__front_page_secondary__two a:hover { color: '.$color." }\n";
 			}
 			
 			// Secondary Area 3 Customization Options
@@ -651,6 +778,16 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_3_color' );
 				$custom_css .= '.evo_container__front_page_secondary__three { color: '.$color." }\n";
 			}
+			if( $this->get_setting( 'secondary_3_link_color' ) )
+			{
+				$color = $this->get_setting( 'secondary_3_link_color' );
+				$custom_css .= '.evo_container__front_page_secondary__three a { color: '.$color." }\n";
+			}
+			if( $this->get_setting( 'secondary_3_link_h_color' ) )
+			{
+				$color = $this->get_setting( 'secondary_3_link_h_color' );
+				$custom_css .= '.evo_container__front_page_secondary__three a:hover { color: '.$color." }\n";
+			}
 			
 			// Secondary Area 4 Customization Options
 			if( $this->get_setting( 'secondary_4_image_file_ID' ) )
@@ -671,6 +808,16 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_4_color' );
 				$custom_css .= '.evo_container__front_page_secondary__four { color: '.$color." }\n";
 			}
+			if( $this->get_setting( 'secondary_4_link_color' ) )
+			{
+				$color = $this->get_setting( 'secondary_4_link_color' );
+				$custom_css .= '.evo_container__front_page_secondary__four a { color: '.$color." }\n";
+			}
+			if( $this->get_setting( 'secondary_4_link_h_color' ) )
+			{
+				$color = $this->get_setting( 'secondary_4_link_h_color' );
+				$custom_css .= '.evo_container__front_page_secondary__four a:hover { color: '.$color." }\n";
+			}
 		}
 
 
@@ -685,6 +832,16 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'bgimg_hover_link_color' ) )
 		{	// Custom link hover color on background image:
 			$custom_css .= '.evo_hasbgimg a:hover { color: '.$color." }\n";
+		}
+		
+		// Footer Customization options
+		if( $color = $this->get_setting( 'footer_bg_color' ) )
+		{	// Custom text color on background image:
+			$custom_css .= '.footer_wrapper { background-color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'footer_content_color' ) )
+		{	// Custom link color on background image:
+			$custom_css .= '.footer_wrapper { color: '.$color." }\n";
 		}
 
 		if( ! empty( $custom_css ) )
