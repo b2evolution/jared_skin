@@ -125,7 +125,7 @@ class jared_Skin extends Skin
 
 				'1_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Image section')
+					'label'  => T_('Section 1 - Front Page Main Area')
 				),
 					'front_bg_image_file_ID' => array(
 						'label' => T_('Background image'),
@@ -140,14 +140,6 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
-				'1_end' => array(
-					'layout' => 'end_fieldset',
-				),				
-				
-				'2_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('Front Page Main Area Settings')
-				),
 					// 'front_width' => array(
 						// 'label' => T_('Width'),
 						// 'note' => T_('Adjust width of the Main Area container.'),
@@ -213,14 +205,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#CCCCCC',
 						'type' => 'color',
 					),
-				'2_end' => array(
+				'1_end' => array(
 					'layout' => 'end_fieldset',
 				),
 
 				// Secondary Area 1 Customization Options
 				'secondary_1_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Front Page Secondary Area One')
+					'label'  => T_('Section 2 - Front Page Secondary Area')
 				),
 					'secondary_1_image_file_ID' => array(
 						'label' => T_('Background image'),
@@ -248,7 +240,7 @@ class jared_Skin extends Skin
 				// Secondary Area 2 Customization Options
 				'secondary_2_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Front Page Secondary Area Two')
+					'label'  => T_('Section 3 - Front Page Area 3')
 				),
 					'secondary_2_image_file_ID' => array(
 						'label' => T_('Background image'),
@@ -276,7 +268,7 @@ class jared_Skin extends Skin
 				// Secondary Area 3 Customization Options
 				'secondary_3_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Front Page Secondary Area Three')
+					'label'  => T_('Section 4 - Front Page Area 4')
 				),
 					'secondary_3_image_file_ID' => array(
 						'label' => T_('Background image'),
@@ -304,7 +296,7 @@ class jared_Skin extends Skin
 				// Secondary Area 4 Customization Options
 				'secondary_4_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Front Page Secondary Area Four')
+					'label'  => T_('Section 5 - Front Page Area 5')
 				),
 					'secondary_4_image_file_ID' => array(
 						'label' => T_('Background image'),
@@ -331,7 +323,7 @@ class jared_Skin extends Skin
 				
 				'3_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Front Page Secondary Area Settings')
+					'label'  => T_('Front Page Secondary Area Settings -- ?????')
 				),
 					'secondary_text_color' => array(
 						'label' => T_('Text color'),
