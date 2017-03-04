@@ -139,6 +139,12 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'nav_links_color' => array(
+						'label' => T_('Links color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 				'navigation_section_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -832,6 +838,10 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'nav_bg_color' ) )
 			{
 				$custom_css .= '.navbar { background-color: ' . $color . " }\n";
+			}
+			if( $color = $this->get_setting( 'nav_links_color' ) )
+			{
+				$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
 			}
 			if( $this->get_setting( 'nav_bg_transparent' ) )
 			{
