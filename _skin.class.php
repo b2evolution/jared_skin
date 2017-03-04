@@ -145,13 +145,19 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
+					'nav_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 				'navigation_section_end' => array(
 					'layout' => 'end_fieldset',
 				),
 				
 				'pageTop_section_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Navigation Settings')
+					'label'  => T_('Page Top Settings')
 				),
 					'pageTop_button_bg_color' => array(
 						'label' => T_('Button background color'),
@@ -185,41 +191,6 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
-					// 'front_width' => array(
-						// 'label' => T_('Width'),
-						// 'note' => T_('Adjust width of the Main Area container.'),
-						// 'size' => '7',
-						// 'defaultvalue' => '450px',
-					// ),
-					// 'front_position' => array(
-						// 'label' => T_('Position'),
-						// 'note' => T_('Select the position of Main Area container.'),
-						// 'defaultvalue' => 'left',
-						// 'options' => array(
-								// 'left'   => T_('Left'),
-								// 'middle' => T_('Middle'),
-								// 'right'  => T_('Right'),
-							// ),
-						// 'type' => 'select',
-					// ),
-					// 'front_bg_cont_color' => array(
-						// 'label' => T_('Background color'),
-						// 'note' => T_('Click to select a color.'),
-						// 'defaultvalue' => '#000000',
-						// 'type' => 'color',
-					// ),
-					// 'front_bg_opacity' => array(
-						// 'label' => T_('Background opacity'),
-						// 'note' => '%. ' . T_('Adjust the background transparency level.'),
-						// 'size' => '7',
-						// 'maxlength' => '3',
-						// 'defaultvalue' => '10',
-						// 'type' => 'integer',
-						// 'valid_range' => array(
-							// 'min' => 0, // from 0%
-							// 'max' => 100, // to 100%
-						// ),
-					// ),
 					'pict_title_color' => array(
 						'label' => T_('Title color'),
 						'note' => T_('Click to select a color.'),
@@ -551,45 +522,6 @@ class jared_Skin extends Skin
 					'layout' => 'end_fieldset',
 				),
 				
-				'3_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('Front Page Secondary Area Settings')
-				),
-					'secondary_text_color' => array(
-						'label' => T_('Text color'),
-						'note' => T_('Click to select a color.'),
-						'defaultvalue' => '#333',
-						'type' => 'color',
-					),
-				'3_end' => array(
-					'layout' => 'end_fieldset',
-				),
-				'4_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('Featured posts Settings')
-				),
-					'bgimg_text_color' => array(
-						'label' => T_('Text color on background image'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#fff',
-						'type' => 'color',
-					),
-					'bgimg_link_color' => array(
-						'label' => T_('Link color on background image'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#6cb2ef',
-						'type' => 'color',
-					),
-					'bgimg_hover_link_color' => array(
-						'label' => T_('Hover link color on background image'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#6cb2ef',
-						'type' => 'color',
-					),
-				'4_end' => array(
-					'layout' => 'end_fieldset',
-				),
-				
 				'footer_start' => array(
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Footer Settings')
@@ -642,6 +574,32 @@ class jared_Skin extends Skin
 						'defaultvalue' => 'footer_center',
 					),
 				'footer_end' => array(
+					'layout' => 'end_fieldset',
+				),
+
+				'4_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Featured posts Settings')
+				),
+					'bgimg_text_color' => array(
+						'label' => T_('Text color on background image'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#fff',
+						'type' => 'color',
+					),
+					'bgimg_link_color' => array(
+						'label' => T_('Link color on background image'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#6cb2ef',
+						'type' => 'color',
+					),
+					'bgimg_hover_link_color' => array(
+						'label' => T_('Hover link color on background image'),
+						'note' => T_('E-g: #00ff00 for green'),
+						'defaultvalue' => '#6cb2ef',
+						'type' => 'color',
+					),
+				'4_end' => array(
 					'layout' => 'end_fieldset',
 				),
 				

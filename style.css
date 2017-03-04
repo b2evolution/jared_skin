@@ -85,13 +85,21 @@ body {
   letter-spacing: .15em;
   text-transform: uppercase;
 }
-.navbar.main-header-navigation .collapse {
-  padding: 0;
-}
 .navbar.main-header-navigation .collapse .nav {
   margin: 0;
 }
 .navbar.main-header-navigation .collapse .nav li a {
+  transition: .1s opacity linear;
+}
+.navbar.main-header-navigation .collapse .nav li.menu-button a {
+  border: 2px solid;
+  border-radius: 300px;
+  padding: 9px 26px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-top: 5px;
   transition: .1s opacity linear;
 }
 .navbar.main-header-navigation .collapse .nav:hover li a {
