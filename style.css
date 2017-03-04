@@ -7,6 +7,11 @@
 .evo_container__page_top .ufld_icon_links {
   text-align: right;
 }
+div.evo_widget.widget_core_coll_tagline {
+  letter-spacing: 0.2px;
+  font-style: italic;
+  font-size: 20px;
+}
 .evo_container__front_page_primary {
   padding-bottom: 30px;
 }
@@ -53,7 +58,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 #skin_wrapper {
-  @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700|Montserrat:700,900');
+  @import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700|Montserrat:600,700');
   font-family: 'Cormorant Garamond', serif;
 }
 #skin_wrapper h1 {
