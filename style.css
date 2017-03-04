@@ -573,3 +573,18 @@ div.widget_core_coll_related_post_list.evo_withexcerpt ul li div.item_title,
 div.widget_core_coll_related_post_list.evo_withteaser ul li div.item_title {
   font-size: 18px;
 }
+.evo_widget > .btn.btn-default {
+  margin: 20px 0;
+  border: none;
+  border-radius: 300px;
+  padding: 13px 26px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  transition: .1s opacity linear;
+}
+.evo_widget > .btn.btn-default:hover {
+  opacity: 0.8;
+}

@@ -142,6 +142,26 @@ class jared_Skin extends Skin
 				'navigation_section_end' => array(
 					'layout' => 'end_fieldset',
 				),
+				
+				'pageTop_section_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Navigation Settings')
+				),
+					'pageTop_button_bg_color' => array(
+						'label' => T_('Button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'pageTop_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
+				'pageTop_section_end' => array(
+					'layout' => 'end_fieldset',
+				),
 
 				'1_start' => array(
 					'layout' => 'begin_fieldset',
@@ -224,6 +244,18 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#CCCCCC',
 						'type' => 'color',
 					),
+					'section_1_button_bg_color' => array(
+						'label' => T_('Button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_1_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_1_text_align' => array(
 						'label'    => T_('Align text'),
 						'note'     => '',
@@ -281,6 +313,18 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#318780',
 						'type' => 'color',
 					),
+					'section_2_button_bg_color' => array(
+						'label' => T_('Button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_2_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_2_text_align' => array(
 						'label'    => T_('Align text'),
 						'note'     => '',
@@ -335,6 +379,18 @@ class jared_Skin extends Skin
 						'label' => T_('Links hover color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_3_button_bg_color' => array(
+						'label' => T_('Button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_3_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
 					'section_3_text_align' => array(
@@ -394,6 +450,18 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#318780',
 						'type' => 'color',
 					),
+					'section_4_button_bg_color' => array(
+						'label' => T_('Button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_4_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_4_text_align' => array(
 						'label'    => T_('Align text'),
 						'note'     => '',
@@ -448,6 +516,18 @@ class jared_Skin extends Skin
 						'label' => T_('Links hover color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_5_button_bg_color' => array(
+						'label' => T_('Button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_5_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
 					'section_5_text_align' => array(
@@ -530,6 +610,18 @@ class jared_Skin extends Skin
 						'label' => T_('Content color'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'footer_button_bg_color' => array(
+						'label' => T_('Button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'footer_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
 					'footer_text_align' => array(
@@ -745,6 +837,16 @@ class jared_Skin extends Skin
 			{
 				$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
 			}
+			
+			// Page Top container customization colors
+			if( $color = $this->get_setting( 'pageTop_button_bg_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__page_top .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			}
+			if( $color = $this->get_setting( 'pageTop_button_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__page_top .evo_widget > .btn.btn-default { color: '.$color." }\n";
+			}
 
 			if( $color = $this->get_setting( 'front_text_color' ) )
 			{ // Custom text color:
@@ -766,6 +868,14 @@ class jared_Skin extends Skin
 				$custom_css .= 'body.pictured .front_main_content .ufld_icon_links a:not([class*="ufld__bgcolor"]):not(:hover) { background-color: '.$link_color." }\n";
 				$custom_css .= 'body.pictured .front_main_content .ufld_icon_links a:hover:not([class*="ufld__hovertextcolor"]) { color: '.$link_color." }\n";
 				$custom_css .= 'body.pictured .front_main_content .ufld_icon_links a:hover:not([class*="ufld__hoverbgcolor"]) { background-color: '.$icon_color." }\n";
+			}
+			if( $color = $this->get_setting( 'section_1_button_bg_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_primary .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			}
+			if( $color = $this->get_setting( 'section_1_button_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_primary .evo_widget > .btn.btn-default { color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'section_1_text_align' ) == 'section_1_center' )
 			{
@@ -830,6 +940,14 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_1_link_h_color' );
 				$custom_css .= '.evo_container__front_page_secondary__one a:hover { color: '.$color." }\n";
 			}
+			if( $color = $this->get_setting( 'section_2_button_bg_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_secondary__one .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			}
+			if( $color = $this->get_setting( 'section_2_button_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_secondary__one .evo_widget > .btn.btn-default { color: '.$color." }\n";
+			}
 			if( $this->get_setting( 'section_2_text_align' ) == 'section_2_center' )
 			{
 				$custom_css .= ".evo_container__front_page_secondary__one { text-align: center }\n";
@@ -871,6 +989,14 @@ class jared_Skin extends Skin
 			{
 				$color = $this->get_setting( 'secondary_2_link_h_color' );
 				$custom_css .= '.evo_container__front_page_secondary__two a:hover { color: '.$color." }\n";
+			}
+			if( $color = $this->get_setting( 'section_3_button_bg_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_secondary__two .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			}
+			if( $color = $this->get_setting( 'section_3_button_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_secondary__two .evo_widget > .btn.btn-default { color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'section_3_text_align' ) == 'section_3_center' )
 			{
@@ -914,6 +1040,14 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_3_link_h_color' );
 				$custom_css .= '.evo_container__front_page_secondary__three a:hover { color: '.$color." }\n";
 			}
+			if( $color = $this->get_setting( 'section_4_button_bg_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_secondary__three .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			}
+			if( $color = $this->get_setting( 'section_4_button_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_secondary__three .evo_widget > .btn.btn-default { color: '.$color." }\n";
+			}
 			if( $this->get_setting( 'section_4_text_align' ) == 'section_4_center' )
 			{
 				$custom_css .= ".evo_container__front_page_secondary__three { text-align: center }\n";
@@ -956,6 +1090,14 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'secondary_4_link_h_color' );
 				$custom_css .= '.evo_container__front_page_secondary__four a:hover { color: '.$color." }\n";
 			}
+			if( $color = $this->get_setting( 'section_5_button_bg_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_secondary__four .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			}
+			if( $color = $this->get_setting( 'section_5_button_color' ) )
+			{ // Custom background color:
+				$custom_css .= '.evo_container__front_page_secondary__four .evo_widget > .btn.btn-default { color: '.$color." }\n";
+			}
 			if( $this->get_setting( 'section_5_text_align' ) == 'section_5_center' )
 			{
 				$custom_css .= ".evo_container__front_page_secondary__four { text-align: center }\n";
@@ -996,6 +1138,14 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'footer_link_h_color' ) )
 		{	// Custom link color on background image:
 			$custom_css .= '.footer_wrapper a:hover { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'footer_button_bg_color' ) )
+		{ // Custom background color:
+			$custom_css .= '.footer_wrapper .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'footer_button_color' ) )
+		{ // Custom background color:
+			$custom_css .= '.footer_wrapper .evo_widget > .btn.btn-default { color: '.$color." }\n";
 		}
 		if( $this->get_setting( 'footer_text_align' ) == 'footer_center' )
 		{
