@@ -132,7 +132,7 @@ div.front_main_area .front_main_content {
 div.front_main_area div.widget {
   margin: 30px 0;
 }
-div.front_main_area div.widget_core_coll_title h1 a {
+div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
   font-size: 80px;
   line-height: 1.2em;
   text-transform: uppercase;
@@ -534,43 +534,6 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 .slide_button_wrap #slide_button:hover {
   cursor: pointer;
   opacity: 0.9;
-}
-/* background setup */
-.background {
-  background-repeat: no-repeat;
-  /* custom background-position */
-  background-position: 50% 50%;
-  /* ie8- graceful degradation */
-  background-position: 50% 50%\9 !important;
-}
-/* fullscreen setup */
-html,
-body {
-  /* give this to all tags from html to .fullscreen */
-}
-.fullscreen,
-.content-a {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.fullscreen.overflow,
-.fullscreen.overflow .content-a {
-  height: auto;
-  min-height: 100%;
-}
-/* content centering styles */
-.content-a {
-  display: table;
-}
-.content-b {
-  display: table-cell;
-  position: relative;
-  vertical-align: middle;
-  text-align: center;
-}
-.not-fullscreen {
-  height: 50%;
 }
 .evo_container__front_page_primary,
 .evo_container__front_page_secondary {

@@ -728,11 +728,6 @@ class jared_Skin extends Skin
 			) );
 
 		// Skin specific initializations:
-		
-		if( $disp == 'front' )
-		{
-			require_js( 'assets/js/parallax.js', 'relative' );
-		}
 
 		// Limit images by max height:
 		$max_image_height = intval( $this->get_setting( 'max_image_height' ) );

@@ -39,7 +39,7 @@ if( $bg_File_ID = $Skin->get_setting( 'front_bg_image_file_ID' ) )
 {
 	$bg_File = & $FileCache->get_by_ID( $bg_File_ID, false, false );
 }
-echo '<div class="evo_pictured_layout fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">';
+echo '<div class="evo_pictured_layout">';
 if( ! empty( $bg_File ) && $bg_File->exists() )
 { // If it exists in media folder
 	echo '<img class="evo_pictured__image" src="'.$bg_File->get_url().'" />';
@@ -245,44 +245,13 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 
 </div><!-- .evo_pictured_layout -->
 
-<!--
-<div class="fullscreen background parallax" style="background-image:url(http://localhost/b2evolution/media/blogs/home/z2qpo2p485.jpg?mtime=1488368559);height: 300px;" data-img-width="3872" data-img-height="2592" data-diff="800">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content1
-        </div>
-    </div>
-</div>
-<div class="not-fullscreen background parallax" style="background-image:url(http://localhost/b2evolution/media/blogs/home/z2qpo2p485.jpg?mtime=1488368559);height: 300px;" data-img-width="3872" data-img-height="2592" data-diff="300">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content2
-        </div>
-    </div>
-</div>
-<div class="fullscreen background parallax" style="background-image:url(http://localhost/b2evolution/media/blogs/home/z2qpo2p485.jpg?mtime=1488368559);height: 300px;" data-img-width="3872" data-img-height="2592" data-diff="100">
-    <div class="content-wrapper">
-        <div class="content-b">
-            Centered content3
-        </div>
-    </div>
-</div>
-<div class="fullscreen background parallax" style="background-image:url(http://localhost/b2evolution/media/blogs/home/z2qpo2p485.jpg?mtime=1488368559);height: 300px;" data-img-width="3872" data-img-height="2592" data-diff="400">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content4
-        </div>
-    </div>
-</div>
--->
-
 <!-- =================================== START OF SECONDARY AREA =================================== -->
 <section class="secondary_area" id="slide_destination"><!-- white background, ID is used to slide here from "slide_button" -->
 <div class="container-fluid">
 
 	<div class="row">
 
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__one fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__one">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -299,7 +268,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 			</div>
 		</div>
 			
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__two fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__two">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -316,7 +285,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 			</div>
 		</div>
 			
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__three fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__three">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -333,7 +302,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 			</div>
 		</div>
 		
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__four fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__four">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
