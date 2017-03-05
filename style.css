@@ -537,6 +537,8 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 }
 .evo_container__front_page_primary,
 .evo_container__front_page_secondary {
+  background-size: cover;
+  background-position: center center;
   padding: 80px 0;
 }
 .evo_container__front_page_primary .evo_widget h2,
