@@ -204,7 +204,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'front_link_color' => array(
-						'label' => T_('Link color'),
+						'label' => T_('Links color'),
 						'note' => T_('Click to select a color.'),
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
