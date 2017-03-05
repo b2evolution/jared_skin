@@ -9,6 +9,7 @@ body {
 }
 #skin_wrapper {
 	@import url('https://fonts.googleapis.com/css?family=Ek+Mukta:300,700|Josefin+Sans:100');
+	font-size: 18px; // Default font-size
 	font-family: 'Ek Mukta', sans-serif;
 	font-weight: 300;
 }
@@ -23,7 +24,7 @@ body {
 		text-align: right;
 	}
 }
-div.evo_widget.widget_core_coll_tagline {
+.evo_widget.widget_core_coll_tagline {
 	letter-spacing: 0.2px;
 	font-style: italic;
 	font-size: 20px;
@@ -61,7 +62,6 @@ div.evo_widget.widget_core_coll_tagline {
 
 // Footer
 body.pictured .footer_wrapper {
-	font-size: 18px;
 	padding: 48px 15px;
 	
 	p {		
@@ -632,28 +632,23 @@ body.pictured .secondary_area .widget_core_org_members {
     background-size: cover;
     background-position: center center;
 	padding: 80px 0;
-	.evo_widget {
-		h2 {
-			border: none;
-			margin-top: 0;
-			padding: 0 0 17px;
-			font-size: 38px;
-			font-weight: 700;
-		}
-		p, ul, > div, & {
-			margin-bottom: 0;
-			padding: 0 0 18px;
-			font-size: 18px;
-		}
-		ul {
-			display: inline-block; // important for keeping list circles next to the li elements if not align-left
-		}
-	}
 }
-div.widget_core_coll_featured_posts.evo_withexcerpt ul li div.item_title, div.widget_core_coll_featured_posts.evo_withteaser ul li div.item_title, div.widget_core_coll_item_list.evo_withexcerpt ul li div.item_title, div.widget_core_coll_item_list.evo_withteaser ul li div.item_title, div.widget_core_coll_page_list.evo_withexcerpt ul li div.item_title, div.widget_core_coll_page_list.evo_withteaser ul li div.item_title, div.widget_core_coll_post_list.evo_withexcerpt ul li div.item_title, div.widget_core_coll_post_list.evo_withteaser ul li div.item_title, div.widget_core_coll_related_post_list.evo_withexcerpt ul li div.item_title, div.widget_core_coll_related_post_list.evo_withteaser ul li div.item_title {
-	font-size: 18px;
-}
+
 .evo_widget {
+	h2 {
+		border: none;
+		margin-top: 0;
+		padding: 0 0 17px;
+		font-size: 38px;
+		font-weight: 700;
+	}
+	p, ul, > div, & {
+		margin-bottom: 0;
+		padding: 0 0 18px;
+	}
+	ul {
+		display: inline-block; // important for keeping list circles next to the li elements if not align-left
+	}
 	& > .btn.btn-default {
 		margin: 20px 0;
 		border: none;
@@ -672,7 +667,7 @@ div.widget_core_coll_featured_posts.evo_withexcerpt ul li div.item_title, div.wi
 }
 
 // Custom font size classes - available for users to modify widgets
-.text-xl { font-size: 160% }
-.text-lg { font-size: 130% }
-.text-sm { font-size: 80% }
-.text-xs { font-size: 60% }
+.text-xl, .text-xl div, .text-xl a, .text-xl h1, .text-xl h2, .text-xl h3, .text-xl h4, .text-xl h5, .text-xl h6 { font-size: 160% !important }
+.text-lg, .text-lg div, .text-lg a, .text-lg h1, .text-lg h2, .text-lg h3, .text-lg h4, .text-lg h5, .text-lg h6 { font-size: 130% !important }
+.text-sm, .text-sm div, .text-sm a, .text-sm h1, .text-sm h2, .text-sm h3, .text-sm h4, .text-sm h5, .text-sm h6 { font-size: 80% !important }
+.text-xs, .text-xs div, .text-xs a, .text-xs h1, .text-xs h2, .text-xs h3, .text-xs h4, .text-xs h5, .text-xs h6 { font-size: 60% !important }
