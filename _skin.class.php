@@ -179,6 +179,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section 1 - Front Page Main Area')
 				),
+					'section_1_display' => array(
+						'label' => T_('Display this section'),
+						'note' => T_('Check this to enable Front Page Main Area.'),
+						'defaultvalue' => 1,
+						'type' => 'checkbox',
+					),
 					'front_bg_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -253,6 +259,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section 2 - Front Page Secondary Area')
 				),
+					'section_2_display' => array(
+						'label' => T_('Display this section'),
+						'note' => T_('Check this to enable Front Page Secondary Area.'),
+						'defaultvalue' => 1,
+						'type' => 'checkbox',
+					),
 					'secondary_1_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -322,6 +334,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section 3 - Front Page Area 3')
 				),
+					'section_3_display' => array(
+						'label' => T_('Display this section'),
+						'note' => T_('Check this to enable Front Page Area 3.'),
+						'defaultvalue' => 1,
+						'type' => 'checkbox',
+					),
 					'secondary_2_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -390,6 +408,18 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section 4 - Front Page Area 4')
 				),
+					'section_4_display' => array(
+						'label' => T_('Display this section'),
+						'note' => T_('Check this to enable Front Page Area 4.'),
+						'defaultvalue' => 1,
+						'type' => 'checkbox',
+					),
+					'section_4_display' => array(
+						'label' => T_('Display this section'),
+						'note' => T_('Check this to enable Front Page Area 4.'),
+						'defaultvalue' => 1,
+						'type' => 'checkbox',
+					),
 					'secondary_3_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -459,6 +489,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section 5 - Front Page Area 5')
 				),
+					'section_5_display' => array(
+						'label' => T_('Display this section'),
+						'note' => T_('Check this to enable Front Page Area 5.'),
+						'defaultvalue' => 1,
+						'type' => 'checkbox',
+					),
 					'secondary_4_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -743,6 +779,8 @@ class jared_Skin extends Skin
 		{
 			$FileCache = & get_FileCache();
 
+			if( $this->get_setting( 'section_1_display' ) )
+			{
 			if( $this->get_setting( 'front_bg_image_file_ID' ) )
 			{
 				$bg_image_File = & $FileCache->get_by_ID( $this->get_setting( 'front_bg_image_file_ID' ), false, false );
@@ -786,6 +824,7 @@ class jared_Skin extends Skin
 				// }
 				// $custom_css .= '.front_main_content { background-color: rgba('.implode( ',', array_map( 'hexdec', $color ) ).','.$color_transparency.')'." }\n";
 			// }
+			}
 
 			// Navbar color customization
 			if( $color = $this->get_setting( 'nav_bg_color' ) )
@@ -811,6 +850,8 @@ class jared_Skin extends Skin
 				$custom_css .= '.evo_container__page_top .evo_widget > .btn.btn-default { color: '.$color." }\n";
 			}
 
+			if( $this->get_setting( 'section_1_display' ) )
+			{
 			if( $color = $this->get_setting( 'front_text_color' ) )
 			{ // Custom text color:
 				$custom_css .= 'body.pictured .front_main_content, body.pictured .front_main_content h1 small, .evo_container__header, .evo_container__page_top { color: '.$color." }\n";
@@ -848,6 +889,7 @@ class jared_Skin extends Skin
 			{
 				$custom_css .= ".evo_container__front_page_primary { text-align: right }\n";
 			}
+			}
 			// if( $width = $this->get_setting( 'front_width' ) )
 			// { // Custom width for front main area:
 				// $custom_css .= 'div.front_main_area { width: '.$width." }\n";
@@ -865,6 +907,8 @@ class jared_Skin extends Skin
 				// }
 			// }
 
+			if( $this->get_setting( 'section_2_display' ) )
+			{
 			if( $color = $this->get_setting( 'secondary_text_color' ) )
 			{ // Custom text color on secondary area:
 				$custom_css .= 'section.secondary_area, .widget_core_org_members { color: '.$color." !important }\n";
@@ -919,7 +963,10 @@ class jared_Skin extends Skin
 			{
 				$custom_css .= ".evo_container__front_page_secondary__one { text-align: right }\n";
 			}
+			}
 
+			if( $this->get_setting( 'section_3_display' ) )
+			{
 			// Secondary Area 2 Customization Options
 			if( $this->get_setting( 'secondary_2_image_file_ID' ) )
 			{
@@ -969,7 +1016,10 @@ class jared_Skin extends Skin
 			{
 				$custom_css .= ".evo_container__front_page_secondary__two { text-align: right }\n";
 			}
+			}
 			
+			if( $this->get_setting( 'section_4_display' ) )
+			{
 			// Secondary Area 3 Customization Options
 			if( $this->get_setting( 'secondary_3_image_file_ID' ) )
 			{
@@ -1019,7 +1069,10 @@ class jared_Skin extends Skin
 			{
 				$custom_css .= ".evo_container__front_page_secondary__three { text-align: right }\n";
 			}
+			}
 			
+			if( $this->get_setting( 'section_5_display' ) )
+			{
 			// Secondary Area 4 Customization Options
 			if( $this->get_setting( 'secondary_4_image_file_ID' ) )
 			{
@@ -1068,6 +1121,7 @@ class jared_Skin extends Skin
 			if( $this->get_setting( 'section_5_text_align' ) == 'section_5_right' )
 			{
 				$custom_css .= ".evo_container__front_page_secondary__four { text-align: right }\n";
+			}
 			}
 		}
 
