@@ -1,3 +1,18 @@
+// Body content
+html {
+	// TODO: this should NOT apply to all pages. It must apply to a certain class only!
+	height: 100%;
+}
+body {
+	overflow-x: visible !important;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+#skin_wrapper {
+	@import url('https://fonts.googleapis.com/css?family=Ek+Mukta:300,700|Josefin+Sans:100');
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: 300;
+}
+
 // Header
 .evo_container__header {
 	margin-bottom: 30px;
@@ -12,8 +27,11 @@ div.evo_widget.widget_core_coll_tagline {
 	letter-spacing: 0.2px;
 	font-style: italic;
 	font-size: 20px;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 .evo_container__front_page_primary {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 100;
 	padding-bottom: 30px;
 	.evo_widget {
 		margin-top: 30px;
@@ -56,24 +74,6 @@ body.pictured .footer_wrapper {
 		padding: 2px;
 	}
 }
-
-// Body content
-html {
-	// TODO: this should NOT apply to all pages. It must apply to a certain class only!
-	height: 100%;
-}
-body {
-	overflow-x: visible !important;
-	-webkit-font-smoothing: subpixel-antialiased;
-}
-#skin_wrapper {
-	@import url('https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,700|Montserrat:600,700');
-	font-family: 'Cormorant Garamond', serif;
-	h1 {
-		font-family: 'Montserrat', sans-serif;
-	}
-}
-
 // .affix {
 	// width: 100%;
 	// z-index: 9999;
@@ -102,7 +102,7 @@ body {
 		> h3 {
 			margin-top: 10px;
 			a {
-				font-weight: 600;
+				font-weight: 700;
 				font-size: 18px;
 				letter-spacing: .15em;
 				text-transform: uppercase;
@@ -118,10 +118,10 @@ body {
 				border: 2px solid;
 				border-radius: 300px;
 				padding: 9px 26px;
-				font-family: 'Montserrat', sans-serif;
+				// font-family: 'Montserrat', sans-serif;
 				text-transform: uppercase;
 				letter-spacing: 1px;
-				font-weight: 500;
+				font-weight: 700;
 				margin-top: 5px;
 				transition: .1s opacity linear;
 			}
@@ -137,8 +137,8 @@ body {
 	&.navbar-default .navbar-nav>.active>a, &.navbar-default .navbar-nav>.active>a:focus, &.navbar-default .navbar-nav>.active>a:hover, &.navbar-default .navbar-nav li > a {
 		background-color: transparent;
 		text-transform: uppercase;
-		font-weight: 600;
-		font-family: 'Montserrat', sans-serif;
+		font-weight: 700;
+		// font-family: 'Montserrat', sans-serif;
 		font-size: 12px;
 		letter-spacing: .18em;
 	}
@@ -638,6 +638,7 @@ body.pictured .secondary_area .widget_core_org_members {
 			margin-top: 0;
 			padding: 0 0 17px;
 			font-size: 38px;
+			font-weight: 700;
 		}
 		p, ul, > div, & {
 			margin-bottom: 0;
@@ -658,7 +659,7 @@ div.widget_core_coll_featured_posts.evo_withexcerpt ul li div.item_title, div.wi
 		border: none;
 		border-radius: 300px;
 		padding: 13px 26px;
-		font-family: 'Montserrat', sans-serif;
+		// font-family: 'Montserrat', sans-serif;
 		font-size: 14px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -669,3 +670,9 @@ div.widget_core_coll_featured_posts.evo_withexcerpt ul li div.item_title, div.wi
 		}
 	}
 }
+
+// Custom font size classes - available for users to modify widgets
+.text-xl { font-size: 160% }
+.text-lg { font-size: 130% }
+.text-sm { font-size: 80% }
+.text-xs { font-size: 60% }
