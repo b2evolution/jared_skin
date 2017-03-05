@@ -6,10 +6,10 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 #skin_wrapper {
-  @import url('https://fonts.googleapis.com/css?family=Ek+Mukta:300,700|Josefin+Sans:100');
+  @import url('https://fonts.googleapis.com/css?family=Ek+Mukta:500,700|Josefin+Sans:100');
   font-size: 18px;
   font-family: 'Ek Mukta', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
 }
 .evo_container__header {
   margin-bottom: 30px;
@@ -81,13 +81,18 @@ body.pictured .footer_wrapper .powered_by img {
   margin-top: 10px;
 }
 .navbar.main-header-navigation .navbar-brand > h3 a {
-  font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
   font-size: 18px;
   letter-spacing: .15em;
   text-transform: uppercase;
 }
 .navbar.main-header-navigation .collapse .nav {
   margin: 0;
+}
+.navbar.main-header-navigation .collapse .nav li {
+  padding: 0;
+  padding-bottom: 3px;
 }
 .navbar.main-header-navigation .collapse .nav li a {
   transition: .1s opacity linear;
@@ -98,7 +103,7 @@ body.pictured .footer_wrapper .powered_by img {
   padding: 9px 26px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 700;
+  font-weight: 100;
   margin-top: 5px;
   transition: .1s opacity linear;
 }
@@ -114,7 +119,8 @@ body.pictured .footer_wrapper .powered_by img {
 .navbar.main-header-navigation.navbar-default .navbar-nav li > a {
   background-color: transparent;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 100;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 12px;
   letter-spacing: .18em;
 }
@@ -545,7 +551,13 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
   margin-top: 0;
   padding: 0 0 17px;
   font-size: 38px;
-  font-weight: 700;
+  font-weight: 100;
+}
+.evo_widget h3,
+.evo_widget h4,
+.evo_widget h5,
+.evo_widget h6 {
+  font-weight: 100;
 }
 .evo_widget p,
 .evo_widget ul,
@@ -565,11 +577,15 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 100;
   transition: .1s opacity linear;
 }
 .evo_widget > .btn.btn-default:hover {
   opacity: 0.8;
+}
+div[class*="_list"],
+.evo_layout_list {
+  text-align: left;
 }
 .text-xl,
 .text-xl div,

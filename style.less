@@ -8,10 +8,10 @@ body {
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 #skin_wrapper {
-	@import url('https://fonts.googleapis.com/css?family=Ek+Mukta:300,700|Josefin+Sans:100');
+	@import url('https://fonts.googleapis.com/css?family=Ek+Mukta:500,700|Josefin+Sans:100');
 	font-size: 18px; // Default font-size
 	font-family: 'Ek Mukta', sans-serif;
-	font-weight: 300;
+	font-weight: 500;
 }
 
 // Header
@@ -102,7 +102,8 @@ body.pictured .footer_wrapper {
 		> h3 {
 			margin-top: 10px;
 			a {
-				font-weight: 700;
+				font-family: 'Josefin Sans', sans-serif;
+				font-weight: 100;
 				font-size: 18px;
 				letter-spacing: .15em;
 				text-transform: uppercase;
@@ -111,6 +112,10 @@ body.pictured .footer_wrapper {
 	}
 	.collapse {
 		.nav {
+			li {
+				padding: 0;
+				padding-bottom: 3px;
+			}
 			li a {
 				transition: .1s opacity linear;
 			}
@@ -118,10 +123,9 @@ body.pictured .footer_wrapper {
 				border: 2px solid;
 				border-radius: 300px;
 				padding: 9px 26px;
-				// font-family: 'Montserrat', sans-serif;
 				text-transform: uppercase;
 				letter-spacing: 1px;
-				font-weight: 700;
+				font-weight: 100;
 				margin-top: 5px;
 				transition: .1s opacity linear;
 			}
@@ -137,8 +141,8 @@ body.pictured .footer_wrapper {
 	&.navbar-default .navbar-nav>.active>a, &.navbar-default .navbar-nav>.active>a:focus, &.navbar-default .navbar-nav>.active>a:hover, &.navbar-default .navbar-nav li > a {
 		background-color: transparent;
 		text-transform: uppercase;
-		font-weight: 700;
-		// font-family: 'Montserrat', sans-serif;
+		font-weight: 100;
+		font-family: 'Josefin Sans', sans-serif;
 		font-size: 12px;
 		letter-spacing: .18em;
 	}
@@ -640,7 +644,10 @@ body.pictured .secondary_area .widget_core_org_members {
 		margin-top: 0;
 		padding: 0 0 17px;
 		font-size: 38px;
-		font-weight: 700;
+		font-weight: 100;
+	}
+	h3, h4, h5, h6 {
+		font-weight: 100;
 	}
 	p, ul, > div, & {
 		margin-bottom: 0;
@@ -658,12 +665,16 @@ body.pictured .secondary_area .widget_core_org_members {
 		font-size: 14px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
-		font-weight: 500;
+		font-weight: 100;
 		transition: .1s opacity linear;
 		&:hover {
 			opacity: 0.8;
 		}
 	}
+}
+// We want all lists to have left alignment
+div[class*="_list"], .evo_layout_list {
+	text-align: left;
 }
 
 // Custom font size classes - available for users to modify widgets
