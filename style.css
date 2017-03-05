@@ -177,19 +177,9 @@ body.pictured div#debug_info.debug {
   top: 100%;
 }
 .evo_pictured_layout {
-  display: table;
-  height: 100%;
   min-height: 100%;
-  min-width: 100%;
-  position: relative;
-  width: 100%;
-  background-attachment: fixed;
   background-size: cover;
   background-position: center center;
-}
-.evo_pictured_layout > .evo_pictured__image {
-  display: none;
-  width: 100%;
 }
 @media only screen and (max-width: 640px) {
   body.disp_front .sitewide_header {
