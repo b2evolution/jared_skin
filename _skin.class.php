@@ -227,6 +227,12 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
+					// 'section_1_link_h_color' => array(
+						// 'label' => T_('Links hover color'),
+						// 'note' => T_('Click to select a color.'),
+						// 'defaultvalue' => '#FFFFFF',
+						// 'type' => 'color',
+					// ),
 					'section_1_muted_color' => array(
 						'label' => T_('Muted text color'),
 						'note' => T_('Click to select a color.'),
@@ -857,8 +863,9 @@ class jared_Skin extends Skin
 				$custom_css .= 'body.pictured .front_main_content, body.pictured .front_main_content h1 small, .evo_container__header, .evo_container__page_top { color: '.$color." }\n";
 			}
 
-			$link_color = $this->get_setting( 'section_1_link_color' );
-			$icon_color = $this->get_setting( 'section_1_icon_color' );
+			$link_color 		= $this->get_setting( 'section_1_link_color' );
+			// $link_hover_color   = $this->get_setting( 'section_1_link_h_color' );
+			$icon_color			= $this->get_setting( 'section_1_icon_color' );
 			if( $link_color )
 			{
 				$custom_css .= 'body.pictured .main_page_wrapper .front_main_area a,

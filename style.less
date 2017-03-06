@@ -166,7 +166,7 @@ div.front_main_area {
 		margin: 30px 0;
 	}
 	
-	// Title widget style
+	// Collection title widget style
 	.evo_container__front_page_primary .widget_core_coll_title h1 a {
 		font-size: 80px;
 		line-height: 1.2em;
@@ -672,6 +672,12 @@ body.pictured .secondary_area .widget_core_org_members {
 		}
 	}
 }
+
+// Remove hover background color
+a[rel~=nofollow]:not([class~=btn]):hover {
+	background-color: transparent;
+}
+
 // We want all lists to have left alignment
 div[class*="_list"], .evo_layout_list {
 	text-align: left;

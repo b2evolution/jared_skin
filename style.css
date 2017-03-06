@@ -575,6 +575,9 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 .evo_widget > .btn.btn-default:hover {
   opacity: 0.8;
 }
+a[rel~=nofollow]:not([class~=btn]):hover {
+  background-color: transparent;
+}
 div[class*="_list"],
 .evo_layout_list {
   text-align: left;
