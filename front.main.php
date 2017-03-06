@@ -39,6 +39,7 @@ if( $bg_File_ID = $Skin->get_setting( 'front_bg_image_file_ID' ) )
 {
 	$bg_File = & $FileCache->get_by_ID( $bg_File_ID, false, false );
 }
+if( $Skin->get_setting( 'section_1_display' ) ) {
 echo '<div class="evo_pictured_layout">';
 // if( ! empty( $bg_File ) && $bg_File->exists() )
 // { // If it exists in media folder
@@ -244,6 +245,7 @@ echo '<div class="evo_pictured_layout">';
 </div><!-- .container -->
 
 </div><!-- .evo_pictured_layout -->
+<?php } ?>
 
 <!-- =================================== START OF SECONDARY AREA =================================== -->
 <section class="secondary_area" id="slide_destination"><!-- white background, ID is used to slide here from "slide_button" -->
@@ -251,6 +253,7 @@ echo '<div class="evo_pictured_layout">';
 
 	<div class="row">
 
+		<?php if( $Skin->get_setting( 'section_2_display' ) ) { ?>
 		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__one">
 			<div class="container">
 			<?php
@@ -267,7 +270,9 @@ echo '<div class="evo_pictured_layout">';
 			?>
 			</div>
 		</div>
-			
+		<?php } ?>
+		
+		<?php if( $Skin->get_setting( 'section_3_display' ) ) { ?>	
 		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__two">
 			<div class="container">
 			<?php
@@ -284,7 +289,9 @@ echo '<div class="evo_pictured_layout">';
 			?>
 			</div>
 		</div>
-			
+		<?php } ?>
+		
+		<?php if( $Skin->get_setting( 'section_4_display' ) ) { ?>
 		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__three">
 			<div class="container">
 			<?php
@@ -301,7 +308,9 @@ echo '<div class="evo_pictured_layout">';
 			?>
 			</div>
 		</div>
+		<?php } ?>
 		
+		<?php if( $Skin->get_setting( 'section_5_display' ) ) { ?>
 		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__four">
 			<div class="container">
 			<?php
@@ -318,6 +327,7 @@ echo '<div class="evo_pictured_layout">';
 			?>
 			</div>
 		</div>
+		<?php } ?>
 
 		<footer class="col-md-12 footer_wrapper">
 

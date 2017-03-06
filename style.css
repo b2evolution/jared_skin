@@ -536,17 +536,19 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
   background-position: center center;
   padding: 80px 0;
 }
-.evo_widget h2 {
+.evo_widget h2.page-header {
   border: none;
   margin-top: 0;
   padding: 0 0 17px;
   font-size: 38px;
-  font-weight: 100;
 }
+.evo_widget h1,
+.evo_widget h2,
 .evo_widget h3,
 .evo_widget h4,
 .evo_widget h5,
 .evo_widget h6 {
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: 100;
 }
 .evo_widget p,
