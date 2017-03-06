@@ -630,10 +630,12 @@ div[class*="_list"],
 .text-xs ul {
   font-size: 60% !important;
 }
-.disp_threads .nav li {
+.disp_threads .nav li,
+.disp_msgform .nav li {
   padding: 0;
 }
-.disp_threads .evo_widget .btn.btn-default {
+.disp_threads .evo_widget .btn.btn-default,
+.disp_msgform .evo_widget .btn.btn-default {
   color: #FFFFFF;
   background-color: #318780;
 }
