@@ -87,17 +87,17 @@ body.pictured .footer_wrapper .powered_by img {
   letter-spacing: .15em;
   text-transform: uppercase;
 }
-.navbar.main-header-navigation .collapse .nav {
+.navbar.main-header-navigation .navbar-collapse .nav {
   margin: 0;
 }
-.navbar.main-header-navigation .collapse .nav li {
+.navbar.main-header-navigation .navbar-collapse .nav li {
   padding: 0;
   padding-bottom: 3px;
 }
-.navbar.main-header-navigation .collapse .nav li a {
+.navbar.main-header-navigation .navbar-collapse .nav li a {
   transition: .1s opacity linear;
 }
-.navbar.main-header-navigation .collapse .nav li.menu-button a {
+.navbar.main-header-navigation .navbar-collapse .nav li.menu-button a {
   border: 2px solid;
   border-radius: 300px;
   padding: 9px 26px;
@@ -107,10 +107,10 @@ body.pictured .footer_wrapper .powered_by img {
   margin-top: 5px;
   transition: .1s opacity linear;
 }
-.navbar.main-header-navigation .collapse .nav:hover li a {
+.navbar.main-header-navigation .navbar-collapse .nav:hover li a {
   opacity: 0.8;
 }
-.navbar.main-header-navigation .collapse .nav:hover li a:hover {
+.navbar.main-header-navigation .navbar-collapse .nav:hover li a:hover {
   opacity: 1;
 }
 .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a,
@@ -629,4 +629,11 @@ div[class*="_list"],
 .text-xs h6,
 .text-xs ul {
   font-size: 60% !important;
+}
+.disp_threads .nav li {
+  padding: 0;
+}
+.disp_threads .evo_widget .btn.btn-default {
+  color: #FFFFFF;
+  background-color: #318780;
 }

@@ -52,10 +52,6 @@ echo '<div class="evo_pictured_layout">';
 <header class="row">
 
 	<div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8">
-		<?php
-		if( $Skin->show_container_when_access_denied( 'page_top' ) )
-		{ // Display 'Page Top' widget container
-		?>
 		<div class="evo_container evo_container__page_top">
 		<?php
 			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
@@ -73,7 +69,6 @@ echo '<div class="evo_pictured_layout">';
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
 		?>
 		</div>
-		<?php } ?>
 	</div><!-- .col -->
 
 </header><!-- .row -->
