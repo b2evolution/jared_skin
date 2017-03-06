@@ -94,6 +94,29 @@ siteskin_include( '_site_body_header.inc.php' );
 
 </header><!-- .row -->
 
+<header class="row">
+
+	<div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8">
+		<div class="evo_container evo_container__page_top">
+		<?php
+			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
+			// Display container and contents:
+			skin_container( NT_('Page Top'), array(
+					// The following params will be used as defaults for widgets included in this container:
+					'block_start'         => '<div class="evo_widget $wi_class$">',
+					'block_end'           => '</div>',
+					'block_display_title' => false,
+					'list_start'          => '<ul>',
+					'list_end'            => '</ul>',
+					'item_start'          => '<li>',
+					'item_end'            => '</li>',
+				) );
+			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
+		?>
+		</div>
+	</div><!-- .col -->
+
+</header><!-- .row -->
 
 <?php
 if( $Skin->show_container_when_access_denied( 'menu' ) )

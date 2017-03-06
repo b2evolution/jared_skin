@@ -631,11 +631,22 @@ div[class*="_list"],
   font-size: 60% !important;
 }
 .disp_threads .nav li,
-.disp_msgform .nav li {
+.disp_msgform .nav li,
+.disp_posts .nav li,
+.disp_single .nav li,
+.disp_page .nav li,
+.disp_help .nav li {
   padding: 0;
 }
 .disp_threads .evo_widget .btn.btn-default,
-.disp_msgform .evo_widget .btn.btn-default {
+.disp_msgform .evo_widget .btn.btn-default,
+.disp_posts .evo_widget .btn.btn-default,
+.disp_single .evo_widget .btn.btn-default,
+.disp_page .evo_widget .btn.btn-default,
+.disp_help .evo_widget .btn.btn-default {
   color: #FFFFFF;
   background-color: #318780;
+}
+.nav.nav-tabs li {
+  padding: 0;
 }
