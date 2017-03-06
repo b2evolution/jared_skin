@@ -33,12 +33,12 @@ skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
 // Display a picture from skin setting as background image
-$FileCache = & get_FileCache();
-$bg_File = NULL;
-if( $bg_File_ID = $Skin->get_setting( 'front_bg_image_file_ID' ) )
-{
-	$bg_File = & $FileCache->get_by_ID( $bg_File_ID, false, false );
-}
+// $FileCache = & get_FileCache();
+// $bg_File = NULL;
+// if( $bg_File_ID = $Skin->get_setting( 'front_bg_image_file_ID' ) )
+// {
+	// $bg_File = & $FileCache->get_by_ID( $bg_File_ID, false, false );
+// }
 if( $Skin->get_setting( 'section_1_display' ) ) {
 echo '<div class="evo_pictured_layout">';
 // if( ! empty( $bg_File ) && $bg_File->exists() )
@@ -46,7 +46,6 @@ echo '<div class="evo_pictured_layout">';
 	// echo '<img class="evo_pictured__image" src="'.$bg_File->get_url().'" />';
 // }
 ?>
-
 
 <div class="container main_page_wrapper">
 
@@ -254,7 +253,7 @@ echo '<div class="evo_pictured_layout">';
 	<div class="row">
 
 		<?php if( $Skin->get_setting( 'section_2_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__one">
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary_area">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -273,7 +272,7 @@ echo '<div class="evo_pictured_layout">';
 		<?php } ?>
 		
 		<?php if( $Skin->get_setting( 'section_3_display' ) ) { ?>	
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__two">
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_3">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -292,7 +291,7 @@ echo '<div class="evo_pictured_layout">';
 		<?php } ?>
 		
 		<?php if( $Skin->get_setting( 'section_4_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__three">
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_4">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -311,7 +310,7 @@ echo '<div class="evo_pictured_layout">';
 		<?php } ?>
 		
 		<?php if( $Skin->get_setting( 'section_5_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__four">
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_5">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
