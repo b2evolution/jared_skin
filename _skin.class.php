@@ -1270,7 +1270,7 @@ class jared_Skin extends Skin
 			{
 				$bg_image_File5 = & $FileCache->get_by_ID( $this->get_setting( 'section_5_image_file_ID' ), false, false );
 			}
-			if( !empty( $bg_image_File5 ) && $bg_image_File4->exists() )
+			if( !empty( $bg_image_File5 ) && $bg_image_File5->exists() )
 			{
 				$custom_css .= '.evo_container__front_page_area_5 { background-image: url('.$bg_image_File5->get_url().") }\n";
 			}
