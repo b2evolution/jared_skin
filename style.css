@@ -537,10 +537,38 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 }
 .evo_container__front_page_secondary,
 .evo_container__standalone_page_area_6,
-.evo_container__standalone_page_area_7 {
+.evo_container__standalone_page_area_7,
+.evo_container__standalone_page_area_oth {
   background-size: cover;
   background-position: center center;
   padding: 80px 0;
+}
+.evo_container__front_page_secondary h1,
+.evo_container__standalone_page_area_6 h1,
+.evo_container__standalone_page_area_7 h1,
+.evo_container__standalone_page_area_oth h1,
+.evo_container__front_page_secondary h2,
+.evo_container__standalone_page_area_6 h2,
+.evo_container__standalone_page_area_7 h2,
+.evo_container__standalone_page_area_oth h2,
+.evo_container__front_page_secondary h3,
+.evo_container__standalone_page_area_6 h3,
+.evo_container__standalone_page_area_7 h3,
+.evo_container__standalone_page_area_oth h3,
+.evo_container__front_page_secondary h4,
+.evo_container__standalone_page_area_6 h4,
+.evo_container__standalone_page_area_7 h4,
+.evo_container__standalone_page_area_oth h4,
+.evo_container__front_page_secondary h5,
+.evo_container__standalone_page_area_6 h5,
+.evo_container__standalone_page_area_7 h5,
+.evo_container__standalone_page_area_oth h5,
+.evo_container__front_page_secondary h6,
+.evo_container__standalone_page_area_6 h6,
+.evo_container__standalone_page_area_7 h6,
+.evo_container__standalone_page_area_oth h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
 }
 .evo_widget h2.page-header,
 .evo_post h2.page-header {
@@ -596,7 +624,9 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
   opacity: 0.8;
 }
 .evo_post .evo_container__item_page,
-.detail_msgform .main_page_wrapper {
+.detail_msgform .main_page_wrapper,
+.disp_help .main_page_wrapper,
+.main_page_wrapper_other_disps {
   padding-top: 80px;
   padding-bottom: 80px;
 }

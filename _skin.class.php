@@ -713,6 +713,75 @@ class jared_Skin extends Skin
 				),
 				
 				
+				// ============ Section - Header for other disps ============
+				'section_oth_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Section - Header for other disps')
+				),
+					'section_oth_image_file_ID' => array(
+						'label' => T_('Background image'),
+						'type' => 'fileselect',
+						'initialize_with' => 'shared/global/monument-valley/john-ford-point.jpg',
+						'thumbnail_size' => 'fit-320x320'
+					),
+					'section_oth_bg_color' => array(
+						'label' => T_('Background color'),
+						'note' => T_('This color will be used if Background image is not set or does not exist.'),
+						'defaultvalue' => '#333333',
+						'type' => 'color',
+					),
+					'section_oth_title_color' => array(
+						'label' => T_('Title color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
+					'section_oth_text_color' => array(
+						'label' => T_('Content color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#adadad',
+						'type' => 'color',
+					),
+					'section_oth_link_color' => array(
+						'label' => T_('Links color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_oth_link_h_color' => array(
+						'label' => T_('Links hover color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_oth_button_bg_color' => array(
+						'label' => T_('Button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_oth_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
+					'section_oth_text_align' => array(
+						'label'    => T_('Align text'),
+						'note'     => '',
+						'type'     => 'radio',
+						'options'  => array(
+							array( 'section_oth_left', T_('Left') ),
+							array( 'section_oth_center', T_('Center') ),
+							array( 'section_oth_right', T_('Right') ),
+						),
+						'defaultvalue' => 'section_oth_center',
+					),
+				'section_oth_end' => array(
+					'layout' => 'end_fieldset',
+				),
+				
+				
 				// ============ Footer Section ============
 				'footer_start' => array(
 					'layout' => 'begin_fieldset',
@@ -1345,6 +1414,54 @@ class jared_Skin extends Skin
 		{
 			$custom_css .= ".evo_container__standalone_page_area_7 { text-align: right }\n";
 		}
+		}
+		
+		
+		// ============ Section - Header for other disps  ============
+		if( $this->get_setting( 'section_oth_image_file_ID' ) )
+		{
+			$bg_image_File_oth = & $FileCache->get_by_ID( $this->get_setting( 'section_oth_image_file_ID' ), false, false );
+		}
+		if( !empty( $bg_image_File_oth ) && $bg_image_File_oth->exists() )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth { background-image: url('.$bg_image_File_oth->get_url().") }\n";
+		}
+		else
+		{
+			$color = $this->get_setting( 'section_oth_bg_color' );
+			$custom_css .= '.evo_container__standalone_page_area_oth { background: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_oth_title_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth h1.page_title { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_oth_text_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_oth_link_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth a { color: '.$color." }\n";
+		}
+		if( $color =  $this->get_setting( 'section_oth_link_h_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth a:hover { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_oth_button_bg_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_oth_button_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth .evo_widget > .btn.btn-default { color: '.$color." }\n";
+		}
+		if( $this->get_setting( 'section_oth_text_align' ) == 'section_oth_center' )
+		{
+			$custom_css .= ".evo_container__standalone_page_area_oth { text-align: center }\n";
+		}
+		if( $this->get_setting( 'section_oth_text_align' ) == 'section_oth_right' )
+		{
+			$custom_css .= ".evo_container__standalone_page_area_oth { text-align: right }\n";
 		}
 		
 

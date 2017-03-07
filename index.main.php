@@ -28,6 +28,7 @@ skin_init( $disp );
 
 // Check if current page has a big picture as background
 $is_pictured_page = in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) );
+$is_other_disp = !in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'page', 'msgform', 'threads', 'help', 'front' ) );
 
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
 skin_include( '_html_header.inc.php', array(
@@ -38,7 +39,7 @@ skin_include( '_html_header.inc.php', array(
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
-siteskin_include( '_site_body_header.inc.php' );
+skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
 if( $is_pictured_page )
@@ -55,10 +56,11 @@ if( $is_pictured_page )
 		echo '<img class="evo_pictured__image" src="'.$bg_File->get_url().'" />';
 	}
 }
+if( $is_other_disp ) { echo '<div class="evo_container__standalone_page_area_oth">'; }
 ?>
 
 
-<div class="container main_page_wrapper">
+<div class="container">
 
 <header class="row">
 
@@ -81,6 +83,43 @@ if( $is_pictured_page )
 		?>
 		</div>
 	</div><!-- .col -->
+	
+	<?php if( $is_other_disp ) { ?>
+	
+	<div class="evo_page_title col-md-12">
+		<?php
+			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
+			request_title( array(
+					'title_before'      => '<h1 class="page_title">',
+					'title_after'       => '</h1>',
+					'title_none'        => '',
+					'glue'              => ' - ',
+					'title_single_disp' => false,
+					'title_page_disp'   => false,
+					'format'            => 'htmlbody',
+					'register_text'     => '',
+					'login_text'        => '',
+					'lostpassword_text' => '',
+					'account_activation' => '',
+					'msgform_text'      => '',
+					'user_text'         => '',
+					'users_text'        => '',
+					'display_edit_links'=> false,
+				) );
+			
+			if( $disp = '404' ) { echo '<h1 class="page_title">' . T_( '404 Not Found' ) . '</h1>'; }
+			// ----------------------------- END OF REQUEST TITLE ----------------------------
+		?>
+	</div>
+
+</header><!-- .row -->
+
+</div><!-- .container -->
+
+</div><!-- .evo_container__standalone_page_area_oth -->
+
+<div class="container main_page_wrapper_other_disps">
+	<?php } else { ?>
 
 	<div class="coll-xs-12 col-sm-12 col-md-8 col-md-pull-4">
 		<div class="evo_container evo_container__header">
@@ -100,35 +139,7 @@ if( $is_pictured_page )
 	</div><!-- .col -->
 
 </header><!-- .row -->
-
-<nav class="row">
-
-	<div class="col-md-12">
-		<ul class="nav nav-tabs evo_container evo_container__menu">
-		<?php
-			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
-			// Display container and contents:
-			// Note: this container is designed to be a single <ul> list
-			skin_container( NT_('Menu'), array(
-					// The following params will be used as defaults for widgets included in this container:
-					'block_start'         => '',
-					'block_end'           => '',
-					'block_display_title' => false,
-					'list_start'          => '',
-					'list_end'            => '',
-					'item_start'          => '<li class="evo_widget $wi_class$">',
-					'item_end'            => '</li>',
-					'item_selected_start' => '<li class="active evo_widget $wi_class$">',
-					'item_selected_end'   => '</li>',
-					'item_title_before'   => '',
-					'item_title_after'    => '',
-				) );
-			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
-		?>
-		</ul>
-	</div><!-- .col -->
-
-</nav><!-- .row -->
+	<?php } ?>
 
 <div class="row">
 
@@ -161,28 +172,6 @@ if( $is_pictured_page )
 					'block_end'   => '</ul>',
 				) );
 			// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
-		?>
-
-		<?php
-			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-			request_title( array(
-					'title_before'      => '<h2>',
-					'title_after'       => '</h2>',
-					'title_none'        => '',
-					'glue'              => ' - ',
-					'title_single_disp' => false,
-					'title_page_disp'   => false,
-					'format'            => 'htmlbody',
-					'register_text'     => '',
-					'login_text'        => '',
-					'lostpassword_text' => '',
-					'account_activation' => '',
-					'msgform_text'      => '',
-					'user_text'         => '',
-					'users_text'        => '',
-					'display_edit_links'=> false,
-				) );
-			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 
 		<?php
