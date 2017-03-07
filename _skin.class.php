@@ -895,9 +895,9 @@ class jared_Skin extends Skin
 		}
 
 		
+		$FileCache = & get_FileCache();
 		if( in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
 		{
-			$FileCache = & get_FileCache();
 
 			
 			// ============ Section 1 - Front Page Main Area ============
