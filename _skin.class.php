@@ -998,7 +998,7 @@ class jared_Skin extends Skin
 
 		// Limit images by max height:
 		
-		add_headline( '<link href="https://fonts.googleapis.com/css?family=Ek+Mukta:500|Josefin+Sans:100" rel="stylesheet">' );
+		add_headline( '<link href="https://fonts.googleapis.com/css?family=Ek+Mukta:300|Josefin+Sans:300,400" rel="stylesheet">' );
 		
 		$max_image_height = intval( $this->get_setting( 'max_image_height' ) );
 		if( $max_image_height > 0 )
@@ -1431,13 +1431,13 @@ class jared_Skin extends Skin
 			$color = $this->get_setting( 'section_oth_bg_color' );
 			$custom_css .= '.evo_container__standalone_page_area_oth { background: '.$color." }\n";
 		}
-		if( $color = $this->get_setting( 'section_oth_title_color' ) )
-		{
-			$custom_css .= '.evo_container__standalone_page_area_oth h1.page_title { color: '.$color." }\n";
-		}
 		if( $color = $this->get_setting( 'section_oth_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_oth { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_oth_title_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth h1.page_title { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_oth_link_color' ) )
 		{

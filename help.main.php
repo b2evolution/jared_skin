@@ -126,8 +126,7 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 		<?php } ?>
 	</div><!-- .col -->
 	
-
-	<div class="help_disp_title col-md-12">
+	<div class="col-md-12">
 		<?php
 			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
 			// request_title( array(
@@ -137,7 +136,7 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 					// 'glue'              => ' - ',
 				// ) );
 				
-				echo '<h1>'.T_('Content issues').'</h1>'; // Hardcoded, since dynamic content is not properly installed for disp=help
+				echo '<h1 class="page_title">'.T_('Content issues').'</h1>'; // Hardcoded, since dynamic content is not properly installed for disp=help
 			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 	</div>
@@ -184,11 +183,11 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 
 <!-- =================================== START OF SECONDARY AREA =================================== -->
 <section class="secondary_area"><!-- white background -->
-<div class="container">
+<div class="container-fluid">
 
 	<div class="row">
 
-		<footer class="col-md-12 center">
+		<footer class="col-md-12 footer_wrapper">
 
 			<?php
 			if( $Skin->show_container_when_access_denied( 'footer' ) )

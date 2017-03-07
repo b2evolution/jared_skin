@@ -1,7 +1,7 @@
 #skin_wrapper {
   font-size: 18px;
   font-family: 'Ek Mukta', sans-serif;
-  font-weight: 500;
+  font-weight: 300;
 }
 html {
   height: 100%;
@@ -56,16 +56,25 @@ body {
 .secondary_area p {
   margin-top: 10px;
 }
-body.pictured .footer_wrapper {
+.footer_wrapper {
   padding: 48px 15px;
 }
-body.pictured .footer_wrapper p {
+.footer_wrapper p {
   padding: 0 0 18px;
 }
-body.pictured .footer_wrapper .powered_by img {
+.footer_wrapper .powered_by img {
   background: #fff;
   border-radius: 4px;
   padding: 2px;
+}
+.footer_wrapper h1,
+.footer_wrapper h2,
+.footer_wrapper h3,
+.footer_wrapper h4,
+.footer_wrapper h5,
+.footer_wrapper h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
 }
 .navbar.main-header-navigation {
   padding: 0 20px;
@@ -84,7 +93,7 @@ body.pictured .footer_wrapper .powered_by img {
 }
 .navbar.main-header-navigation .navbar-brand > h3 a {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 18px;
   letter-spacing: .15em;
   text-transform: uppercase;
@@ -105,7 +114,7 @@ body.pictured .footer_wrapper .powered_by img {
   padding: 9px 26px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 100;
+  font-weight: 400;
   margin-top: 5px;
   transition: .1s opacity linear;
 }
@@ -121,7 +130,7 @@ body.pictured .footer_wrapper .powered_by img {
 .navbar.main-header-navigation.navbar-default .navbar-nav li > a {
   background-color: transparent;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 400;
   font-family: 'Josefin Sans', sans-serif;
   font-size: 12px;
   letter-spacing: .18em;
@@ -464,7 +473,7 @@ div.log_container {
 .evo_post_title h5,
 .evo_post_title h6 {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .evo_post_title h2 {
   display: table-cell;
@@ -573,7 +582,7 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 .evo_container__standalone_page_area_7 h6,
 .evo_container__standalone_page_area_oth h6 {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .evo_widget h2.page-header,
 .evo_post h2.page-header {
@@ -595,7 +604,7 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 .evo_widget h6,
 .evo_post h6 {
   font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
 }
 .evo_widget p,
 .evo_post p,

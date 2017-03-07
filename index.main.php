@@ -288,11 +288,11 @@ if( $is_other_disp ) { echo '<div class="evo_container__standalone_page_area_oth
 
 <!-- =================================== START OF SECONDARY AREA =================================== -->
 <section class="secondary_area"><!-- white background -->
-<div class="container">
+<div class="container-fluid">
 
 	<div class="row">
 
-		<footer class="col-md-12 center">
+		<footer class="col-md-12 footer_wrapper">
 
 			<div class="evo_container evo_container__footer">
 			<?php
