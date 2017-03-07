@@ -102,12 +102,10 @@ if( $is_other_disp ) { echo '<div class="evo_container__standalone_page_area_oth
 					'lostpassword_text' => '',
 					'account_activation' => '',
 					'msgform_text'      => '',
-					'user_text'         => '',
+					'user_text'         => T_( 'User settings' ),
 					'users_text'        => '',
 					'display_edit_links'=> false,
 				) );
-			
-			if( $disp = '404' ) { echo '<h1 class="page_title">' . T_( '404 Not Found' ) . '</h1>'; }
 			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 	</div>
