@@ -39,6 +39,7 @@ skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
+
 <div class="evo_container__standalone_page_area_6">
 
 <div class="container">
@@ -71,9 +72,9 @@ skin_include( '_body_header.inc.php' );
 
 </header><!-- .row -->
 
-</div>
+</div><!-- .container -->
 
-</div>
+</div><!-- .evo_container__standalone_page_area_6 -->
 
 <div class="container">
 

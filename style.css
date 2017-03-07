@@ -536,7 +536,8 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
   opacity: 0.9;
 }
 .evo_container__front_page_secondary,
-.evo_container__standalone_page_area_6 {
+.evo_container__standalone_page_area_6,
+.evo_container__standalone_page_area_7 {
   background-size: cover;
   background-position: center center;
   padding: 80px 0;
@@ -594,8 +595,10 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 .evo_post > .btn.btn-default:hover {
   opacity: 0.8;
 }
-.evo_post .evo_container__item_page {
-  padding: 80px 0;
+.evo_post .evo_container__item_page,
+.detail_msgform .main_page_wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 a[rel~=nofollow]:not([class~=btn]):hover {
   background-color: transparent;
