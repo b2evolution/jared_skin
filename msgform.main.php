@@ -183,11 +183,11 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 
 <!-- =================================== START OF SECONDARY AREA =================================== -->
 <section class="secondary_area"><!-- white background -->
-<div class="container">
+<div class="containe-fluid">
 
 	<div class="row">
 
-		<footer class="col-md-12 center">
+		<footer class="col-md-12 footer_wrapper">
 
 			<?php
 			if( $Skin->show_container_when_access_denied( 'footer' ) )
