@@ -103,7 +103,7 @@ if( $is_other_disp ) { echo '<div class="evo_container__standalone_page_area_oth
 					'account_activation' => '',
 					'msgform_text'      => '',
 					'user_text'         => T_( 'User settings' ),
-					'users_text'        => '',
+					'users_text'        => T_( 'Users' ),
 					'display_edit_links'=> false,
 				) );
 			// ----------------------------- END OF REQUEST TITLE ----------------------------

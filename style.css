@@ -18,7 +18,7 @@ body {
 .disp_register .evo_container__header {
   margin-top: 70px;
 }
-.evo_container__page_top {
+.evo_container__page_top > .evo_widget {
   margin-top: 70px;
 }
 .evo_container__page_top .ufld_icon_links {
@@ -583,6 +583,13 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 .evo_container__standalone_page_area_oth h6 {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
+}
+.evo_container__front_page_secondary h1,
+.evo_container__standalone_page_area_6 h1,
+.evo_container__standalone_page_area_7 h1,
+.evo_container__standalone_page_area_oth h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
 }
 .evo_widget h2.page-header,
 .evo_post h2.page-header {

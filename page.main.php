@@ -241,11 +241,14 @@ skin_include( '_body_header.inc.php' );
 
 </div><!-- .row -->
 
+</div><!-- .container -->
+
 
 <footer class="row">
-
 	<!-- =================================== START OF FOOTER =================================== -->
-	<div class="col-md-12 center">
+	<div class="container-fluid">
+	
+	<div class="col-md-12 footer_wrapper">
 
 		<div class="evo_container evo_container__footer">
 		<?php
@@ -311,10 +314,9 @@ skin_include( '_body_header.inc.php' );
 		?>
 	</div><!-- .col -->
 	
+	</div><!-- .container-fluid -->
+	
 </footer><!-- .row -->
-
-
-</div><!-- .container -->
 
 
 <?php
