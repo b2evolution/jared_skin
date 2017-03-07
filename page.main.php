@@ -1,12 +1,18 @@
 <?php
 /**
- * This is the template that displays the front page of a collection (when front page enabled)
+ * This is the main/default page template for the "bootstrap_blog" skin.
+ *
+ * This skin only uses one single template which includes most of its features.
+ * It will also rely on default includes for specific dispays (like the comment form).
  *
  * For a quick explanation of b2evo 2.0 skins, please start here:
  * {@link http://b2evolution.net/man/skin-development-primer}
  *
+ * The main page template is used to display the blog when no specific page template is available
+ * to handle the request (based on $disp).
+ *
  * @package evoskins
- * @subpackage bootstrap_main
+ * @subpackage bootstrap_blog
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
@@ -31,24 +37,11 @@ skin_include( '_html_header.inc.php', array(
 // If site headers are enabled, they will be included here:
 skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
-
-// Display a picture from skin setting as background image
-// $FileCache = & get_FileCache();
-// $bg_File = NULL;
-// if( $bg_File_ID = $Skin->get_setting( 'front_bg_image_file_ID' ) )
-// {
-	// $bg_File = & $FileCache->get_by_ID( $bg_File_ID, false, false );
-// }
-if( $Skin->get_setting( 'section_1_display' ) ) {
-echo '<div class="evo_pictured_layout">';
-// if( ! empty( $bg_File ) && $bg_File->exists() )
-// { // If it exists in media folder
-	// echo '<img class="evo_pictured__image" src="'.$bg_File->get_url().'" />';
-// }
 ?>
 
+<div class="evo_container__standalone_page_area_6">
 
-<div class="container main_page_wrapper">
+<div class="container">
 
 <header class="row">
 
@@ -72,11 +65,21 @@ echo '<div class="evo_pictured_layout">';
 		</div>
 	</div><!-- .col -->
 
+	<div class="evo_post_title col-md-12">
+		<h1><?php $Item->title(); // PAGE TITLE ?></h1>
+	</div>
+
 </header><!-- .row -->
+
+</div>
+
+</div>
+
+<div class="container">
 
 <div class="row">
 
-	<div class="col-md-12 front_main_area">
+	<div class="col-md-12">
 
 		<main><!-- This is were a link like "Jump to main content" would land -->
 
@@ -92,20 +95,17 @@ echo '<div class="evo_pictured_layout">';
 				) );
 			// --------------------------------- END OF MESSAGES ---------------------------------
 		}
-
-		// Start of wrapper for front page area, in order to have the $Messages outside this block
-		echo '<div class="front_main_content">';
 		?>
 
 		<?php
 			// ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
 			item_prevnext_links( array(
-					'block_start' => '<ul class="pager">',
-					'prev_start'  => '<li class="previous">',
-					'prev_end'    => '</li>',
-					'next_start'  => '<li class="next">',
-					'next_end'    => '</li>',
-					'block_end'   => '</ul>',
+					'block_start' => '<nav><ul class="pager">',
+						'prev_start'  => '<li class="previous">',
+						'prev_end'    => '</li>',
+						'next_start'  => '<li class="next">',
+						'next_end'    => '</li>',
+					'block_end'   => '</ul></nav>',
 				) );
 			// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
 		?>
@@ -127,23 +127,35 @@ echo '<div class="evo_pictured_layout">';
 					'msgform_text'      => '',
 					'user_text'         => '',
 					'users_text'        => '',
+					'display_edit_links'=> false,
 				) );
 			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 
 		<?php
 		// Go Grab the featured post:
-		if( $Item = & get_featured_Item() )
-		{ // We have a featured/intro post to display:
+		if( ! in_array( $disp, array( 'single', 'page' ) ) && $Item = & get_featured_Item() )
+		{	// We have a featured/intro post to display:
+			$intro_item_style = '';
+			$LinkOwner = new LinkItem( $Item );
+			$LinkList = $LinkOwner->get_attachment_LinkList( 1, 'cover' );
+			if( ! empty( $LinkList ) &&
+					$Link = & $LinkList->get_next() &&
+					$File = & $Link->get_File() &&
+					$File->exists() &&
+					$File->is_image() )
+			{	// Use cover image of intro-post as background:
+				$intro_item_style = 'background-image: url("'.$File->get_url().'")';
+			}
 			// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
-			echo '<div class="panel panel-default"><div class="panel-body">';
 			skin_include( '_item_block.inc.php', array(
 					'feature_block' => true,
-					'content_mode'  => 'auto',		// 'auto' will auto select depending on $disp-detail
+					'content_mode'  => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
 					'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
+					'item_class'    => ($Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post').( empty( $intro_item_style ) ? '' : ' evo_hasbgimg' ),
+					'item_style'    => $intro_item_style,
 					'Item'          => $Item,
 				) );
-			echo '</div></div>';
 			// ----------------------------END ITEM BLOCK  ----------------------------
 		}
 		?>
@@ -173,6 +185,8 @@ echo '<div class="evo_pictured_layout">';
 						'prev_text'             => '<i class="fa fa-angle-double-left"></i>',
 						'next_text'             => '<i class="fa fa-angle-double-right"></i>',
 					),
+					// Item content:
+					'url_link_position'     => 'top',
 					// Form params for the forms below: login, register, lostpassword, activateinfo and msgform
 					'skin_form_before'      => '<div class="panel panel-default skin-form">'
 																				.'<div class="panel-heading">'
@@ -211,10 +225,8 @@ echo '<div class="evo_pictured_layout">';
 					'search_submit_before' => '<span class="input-group-btn">',
 					'search_submit_after'  => '</span></div>',
 					// Front page
-					'front_block_first_title_start' => '<h1>',
-					'front_block_first_title_end'   => '</h1>',
-					'front_block_title_start'       => '<h2>',
-					'front_block_title_end'         => '</h2>',
+					'featured_intro_before' => '<div class="jumbotron">',
+					'featured_intro_after'  => '</div>',
 					// Form "Sending a message"
 					'msgform_form_title' => T_('Sending a message'),
 				) );
@@ -222,141 +234,37 @@ echo '<div class="evo_pictured_layout">';
 			// copying the matching php file into your skin directory.
 			// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
 		?>
-
-		<?php
-			// End of wrapper for front page area, in order to have the $Messages outside this block
-			echo '</div>';// END OF <div class="front_main_content">
-		?>
-
 		</main>
 
 	</div><!-- .col -->
 
-	<!-- "Slide down" button -->
-	<div class="slide_button_wrap"><a href="#" id="slide_button"><i class="fa fa-angle-down" ></i></a></div>
-
 </div><!-- .row -->
 
-</div><!-- .container -->
 
-</div><!-- .evo_pictured_layout -->
-<?php } ?>
+<footer class="row">
 
-<!-- =================================== START OF SECONDARY AREA =================================== -->
-<section class="secondary_area" id="slide_destination"><!-- white background, ID is used to slide here from "slide_button" -->
-<div class="container-fluid">
+	<!-- =================================== START OF FOOTER =================================== -->
+	<div class="col-md-12 center">
 
-	<div class="row">
-
-		<?php if( $Skin->get_setting( 'section_2_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary_area">
-			<div class="container">
-			<?php
-				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
-				// Display container and contents:
-				skin_container( NT_('Front Page Secondary Area'), array(
-						// The following params will be used as defaults for widgets included in this container:
-						'block_start'       => '<div class="evo_widget $wi_class$">',
-						'block_end'         => '</div>',
-						'block_title_start' => '<h2 class="page-header">',
-						'block_title_end'   => '</h2>',
-					) );
-				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
-			?>
-			</div>
+		<div class="evo_container evo_container__footer">
+		<?php
+			// Display container and contents:
+			skin_container( NT_("Footer"), array(
+					// The following params will be used as defaults for widgets included in this container:
+					'block_start'       => '<div class="evo_widget $wi_class$">',
+					'block_end'         => '</div>',
+				) );
+			// Note: Double quotes have been used around "Footer" only for test purposes.
+		?>
 		</div>
-		<?php } ?>
-		
-		<?php if( $Skin->get_setting( 'section_3_display' ) ) { ?>	
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_3">
-			<div class="container">
-			<?php
-				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
-				// Display container and contents:
-				skin_container( NT_('Front Page Area 3'), array(
-						// The following params will be used as defaults for widgets included in this container:
-						'block_start'       => '<div class="evo_widget $wi_class$">',
-						'block_end'         => '</div>',
-						'block_title_start' => '<h2 class="page-header">',
-						'block_title_end'   => '</h2>',
-					) );
-				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
-			?>
-			</div>
-		</div>
-		<?php } ?>
-		
-		<?php if( $Skin->get_setting( 'section_4_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_4">
-			<div class="container">
-			<?php
-				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
-				// Display container and contents:
-				skin_container( NT_('Front Page Area 4'), array(
-						// The following params will be used as defaults for widgets included in this container:
-						'block_start'       => '<div class="evo_widget $wi_class$">',
-						'block_end'         => '</div>',
-						'block_title_start' => '<h2 class="page-header">',
-						'block_title_end'   => '</h2>',
-					) );
-				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
-			?>
-			</div>
-		</div>
-		<?php } ?>
-		
-		<?php if( $Skin->get_setting( 'section_5_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_5">
-			<div class="container">
-			<?php
-				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
-				// Display container and contents:
-				skin_container( NT_('Front Page Area 5'), array(
-						// The following params will be used as defaults for widgets included in this container:
-						'block_start'       => '<div class="evo_widget $wi_class$">',
-						'block_end'         => '</div>',
-						'block_title_start' => '<h2 class="page-header">',
-						'block_title_end'   => '</h2>',
-					) );
-				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
-			?>
-			</div>
-		</div>
-		<?php } ?>
 
-		<footer class="col-md-12 footer_wrapper">
-
-			<div class="evo_container evo_container__footer">
-			<?php
-				// ------------------------- "Footer" CONTAINER EMBEDDED HERE --------------------------
-				// Display container and contents:
-				skin_container( NT_('Footer'), array(
-						// The following params will be used as defaults for widgets included in this container:
-						'block_start'         => '<span class="evo_widget $wi_class$">',
-						'block_end'           => '</span> ',
-						'block_display_title' => false,
-						'list_start'          => '',
-						'list_end'            => '',
-						'item_start'          => '',
-						'item_end'            => '',
-						'item_selected_start' => '',
-						'item_selected_end'   => '',
-						'link_default_class'  => 'btn btn-default btn-sm',
-						'link_selected_class' => 'btn btn-default btn-sm active',
-					) );
-				// ----------------------------- END OF "Footer" CONTAINER -----------------------------
-			?>
-			</div>
-
-			<p>
+		<p>
 			<?php
 				// Display footer text (text can be edited in Blog Settings):
 				$Blog->footer_text( array(
 						'before' => '',
 						'after'  => ' &bull; ',
 					) );
-
-			// TODO: dh> provide a default class for pTyp, too. Should be a name and not the ityp_ID though..?!
 			?>
 
 			<?php
@@ -369,9 +277,9 @@ echo '<div class="evo_pictured_layout">';
 					) );
 				// Display a link to help page:
 				$Blog->help_link( array(
-						'before' => ' ',
-						'after'  => ' ',
-						'text'   => T_('Help'),
+						'before'      => ' ',
+						'after'       => ' ',
+						'text'        => T_('Help'),
 					) );
 			?>
 
@@ -380,47 +288,33 @@ echo '<div class="evo_pictured_layout">';
 				// If you can add your own credits without removing the defaults, you'll be very cool :))
 				// Please leave this at the bottom of the page to make sure your blog gets listed on b2evolution.net
 				credits( array(
-						'list_start' => '&bull;',
-						'list_end'   => ' ',
-						'separator'  => '&bull;',
-						'item_start' => ' ',
-						'item_end'   => ' ',
+						'list_start'  => '&bull;',
+						'list_end'    => ' ',
+						'separator'   => '&bull;',
+						'item_start'  => ' ',
+						'item_end'    => ' ',
 					) );
 			?>
-			</p>
+		</p>
 
-			<?php
-				// Please help us promote b2evolution and leave this logo on your blog:
-				powered_by( array(
-						'block_start' => '<div class="powered_by">',
-						'block_end'   => '</div>',
-						// Check /rsc/img/ for other possible images -- Don't forget to change or remove width & height too
-						'img_url'     => '$rsc$img/powered-by-b2evolution-120t.gif',
-						'img_width'   => 120,
-						'img_height'  => 32,
-					) );
-			?>
+		<?php
+			// Please help us promote b2evolution and leave this logo on your blog:
+			powered_by( array(
+					'block_start' => '<div class="powered_by">',
+					'block_end'   => '</div>',
+					// Check /rsc/img/ for other possible images -- Don't forget to change or remove width & height too
+					'img_url'     => '$rsc$img/powered-by-b2evolution-120t.gif',
+					'img_width'   => 120,
+					'img_height'  => 32,
+				) );
+		?>
+	</div><!-- .col -->
+	
+</footer><!-- .row -->
 
-		</footer><!-- .col -->
-
-	</div><!-- .row -->
 
 </div><!-- .container -->
 
-</section><!-- .secondary_area -->
-
-<script>
-// Scroll Down to content
-// ======================================================================== /
-$slide_down = $( "#slide_button" );
-// Smooth scroll to top
-$slide_down.on( "click", function(event) {
-	event.preventDefault();
-	$( "body, html, #skin_wrapper" ).animate({
-		scrollTop: $("#slide_destination").offset().top +26
-	}, 1000);
-});
-</script>
 
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------

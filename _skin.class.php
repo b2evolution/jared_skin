@@ -574,6 +574,76 @@ class jared_Skin extends Skin
 					'layout' => 'end_fieldset',
 				),
 				
+				
+				// ============ Section 6 - Header for Standalone Pages ============
+				'section_6_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Section 6 - Header for Standalone Pages')
+				),
+					'section_6_image_file_ID' => array(
+						'label' => T_('Background image'),
+						'type' => 'fileselect',
+						'initialize_with' => 'shared/global/monument-valley/monument-valley.jpg',
+						'thumbnail_size' => 'fit-320x320'
+					),
+					'section_6_bg_color' => array(
+						'label' => T_('Background color'),
+						'note' => T_('This color will be used if Background image is not set or does not exist.'),
+						'defaultvalue' => '#333333',
+						'type' => 'color',
+					),
+					'section_6_title_color' => array(
+						'label' => T_('Title color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
+					'section_6_text_color' => array(
+						'label' => T_('Content color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#adadad',
+						'type' => 'color',
+					),
+					'section_6_link_color' => array(
+						'label' => T_('Links color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_6_link_h_color' => array(
+						'label' => T_('Links hover color'),
+						'note' => T_('Click to select a color'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_6_button_bg_color' => array(
+						'label' => T_('Button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#318780',
+						'type' => 'color',
+					),
+					'section_6_button_color' => array(
+						'label' => T_('Button text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
+					'section_6_text_align' => array(
+						'label'    => T_('Align text'),
+						'note'     => '',
+						'type'     => 'radio',
+						'options'  => array(
+							array( 'section_6_left', T_('Left') ),
+							array( 'section_6_center', T_('Center') ),
+							array( 'section_6_right', T_('Right') ),
+						),
+						'defaultvalue' => 'section_6_center',
+					),
+				'section_6_end' => array(
+					'layout' => 'end_fieldset',
+				),
+				
+				
 				// ============ Footer Section ============
 				'footer_start' => array(
 					'layout' => 'begin_fieldset',
@@ -798,6 +868,33 @@ class jared_Skin extends Skin
 		// Add custom CSS:
 		$custom_css = '';
 
+		
+		// ============ Navigation Section ============
+		if( $color = $this->get_setting( 'nav_bg_color' ) )
+		{
+			$custom_css .= '.navbar { background-color: ' . $color . " }\n";
+		}
+		if( $color = $this->get_setting( 'nav_links_color' ) )
+		{
+			$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+		}
+		if( $this->get_setting( 'nav_bg_transparent' ) )
+		{
+			$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
+		}
+		
+		
+		// ============ Page Top Section ============
+		if( $color = $this->get_setting( 'pagetop_button_bg_color' ) )
+		{
+			$custom_css .= '.evo_container__page_top .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'pagetop_button_color' ) )
+		{
+			$custom_css .= '.evo_container__page_top .evo_widget > .btn.btn-default { color: '.$color." }\n";
+		}
+
+		
 		if( in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
 		{
 			$FileCache = & get_FileCache();
@@ -806,40 +903,13 @@ class jared_Skin extends Skin
 			// ============ Section 1 - Front Page Main Area ============
 			if( $this->get_setting( 'section_1_display' ) )
 			{
-
-			// ============ Navigation Section ============
-			if( $color = $this->get_setting( 'nav_bg_color' ) )
-			{
-				$custom_css .= '.navbar { background-color: ' . $color . " }\n";
-			}
-			if( $color = $this->get_setting( 'nav_links_color' ) )
-			{
-				$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
-			}
-			if( $this->get_setting( 'nav_bg_transparent' ) )
-			{
-				$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
-			}
-			
-			
-			// ============ Page Top Section ============
-			if( $color = $this->get_setting( 'pagetop_button_bg_color' ) )
-			{
-				$custom_css .= '.evo_container__page_top .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
-			}
-			if( $color = $this->get_setting( 'pagetop_button_color' ) )
-			{
-				$custom_css .= '.evo_container__page_top .evo_widget > .btn.btn-default { color: '.$color." }\n";
-			}
-			
-
 			if( $this->get_setting( 'section_1_image_file_ID' ) )
 			{
-				$bg_image_File = & $FileCache->get_by_ID( $this->get_setting( 'section_1_image_file_ID' ), false, false );
+				$bg_image_File1 = & $FileCache->get_by_ID( $this->get_setting( 'section_1_image_file_ID' ), false, false );
 			}
-			if( !empty( $bg_image_File ) && $bg_image_File->exists() )
+			if( !empty( $bg_image_File1 ) && $bg_image_File1->exists() )
 			{
-				$custom_css .= '.evo_pictured_layout { background-image: url('.$bg_image_File->get_url().") }\n";
+				$custom_css .= '.evo_pictured_layout { background-image: url('.$bg_image_File1->get_url().") }\n";
 			}
 			else
 			{
@@ -904,11 +974,11 @@ class jared_Skin extends Skin
 			{
 			if( $this->get_setting( 'section_2_image_file_ID' ) )
 			{
-				$bg_image_File1 = & $FileCache->get_by_ID( $this->get_setting( 'section_2_image_file_ID' ), false, false );
+				$bg_image_File2 = & $FileCache->get_by_ID( $this->get_setting( 'section_2_image_file_ID' ), false, false );
 			}
-			if( !empty( $bg_image_File1 ) && $bg_image_File1->exists() )
+			if( !empty( $bg_image_File2 ) && $bg_image_File2->exists() )
 			{
-				$custom_css .= '.evo_container__front_page_secondary_area { background-image: url('.$bg_image_File1->get_url().") }\n";
+				$custom_css .= '.evo_container__front_page_secondary_area { background-image: url('.$bg_image_File2->get_url().") }\n";
 			}
 			else
 			{
@@ -955,11 +1025,11 @@ class jared_Skin extends Skin
 			{
 			if( $this->get_setting( 'section_3_image_file_ID' ) )
 			{
-				$bg_image_File2 = & $FileCache->get_by_ID( $this->get_setting( 'section_3_image_file_ID' ), false, false );
+				$bg_image_File3 = & $FileCache->get_by_ID( $this->get_setting( 'section_3_image_file_ID' ), false, false );
 			}
-			if( !empty( $bg_image_File2 ) && $bg_image_File2->exists() )
+			if( !empty( $bg_image_File3 ) && $bg_image_File3->exists() )
 			{
-				$custom_css .= '.evo_container__front_page_area_3 { background-image: url('.$bg_image_File2->get_url().") }\n";
+				$custom_css .= '.evo_container__front_page_area_3 { background-image: url('.$bg_image_File3->get_url().") }\n";
 			}
 			else
 			{
@@ -1006,11 +1076,11 @@ class jared_Skin extends Skin
 			{
 			if( $this->get_setting( 'section_4_image_file_ID' ) )
 			{
-				$bg_image_File3 = & $FileCache->get_by_ID( $this->get_setting( 'section_4_image_file_ID' ), false, false );
+				$bg_image_File4 = & $FileCache->get_by_ID( $this->get_setting( 'section_4_image_file_ID' ), false, false );
 			}
-			if( !empty( $bg_image_File3 ) && $bg_image_File3->exists() )
+			if( !empty( $bg_image_File4 ) && $bg_image_File4->exists() )
 			{
-				$custom_css .= '.evo_container__front_page_area_4 { background-image: url('.$bg_image_File3->get_url().") }\n";
+				$custom_css .= '.evo_container__front_page_area_4 { background-image: url('.$bg_image_File4->get_url().") }\n";
 			}
 			else
 			{
@@ -1057,11 +1127,11 @@ class jared_Skin extends Skin
 			{
 			if( $this->get_setting( 'section_5_image_file_ID' ) )
 			{
-				$bg_image_File4 = & $FileCache->get_by_ID( $this->get_setting( 'section_5_image_file_ID' ), false, false );
+				$bg_image_File5 = & $FileCache->get_by_ID( $this->get_setting( 'section_5_image_file_ID' ), false, false );
 			}
-			if( !empty( $bg_image_File4 ) && $bg_image_File4->exists() )
+			if( !empty( $bg_image_File5 ) && $bg_image_File4->exists() )
 			{
-				$custom_css .= '.evo_container__front_page_area_5 { background-image: url('.$bg_image_File4->get_url().") }\n";
+				$custom_css .= '.evo_container__front_page_area_5 { background-image: url('.$bg_image_File5->get_url().") }\n";
 			}
 			else
 			{
@@ -1102,7 +1172,55 @@ class jared_Skin extends Skin
 			}
 			}
 		}
-
+			
+			
+		// ============ Section 6 - Header for Standalone Pages ============
+		if( $this->get_setting( 'section_6_image_file_ID' ) )
+		{
+			$bg_image_File6 = & $FileCache->get_by_ID( $this->get_setting( 'section_6_image_file_ID' ), false, false );
+		}
+		if( !empty( $bg_image_File6 ) && $bg_image_File6->exists() )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_6 { background-image: url('.$bg_image_File6->get_url().") }\n";
+		}
+		else
+		{
+			$color = $this->get_setting( 'section_6_bg_color' );
+			$custom_css .= '.evo_container__standalone_page_area_6 { background: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_6_title_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_6 .evo_post_title h1 { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_6_text_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_6 { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_6_link_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_6 a { color: '.$color." }\n";
+		}
+		if( $color =  $this->get_setting( 'section_6_link_h_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_6 a:hover { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_6_button_bg_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'section_6_button_color' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget > .btn.btn-default { color: '.$color." }\n";
+		}
+		if( $this->get_setting( 'section_6_text_align' ) == 'section_6_center' )
+		{
+			$custom_css .= ".evo_container__standalone_page_area_6 { text-align: center }\n";
+		}
+		if( $this->get_setting( 'section_6_text_align' ) == 'section_6_right' )
+		{
+			$custom_css .= ".evo_container__standalone_page_area_6 { text-align: right }\n";
+		}
+			
 
 		// ============ Featured Posts Settings ============
 		if( $color = $this->get_setting( 'bgimg_text_color' ) )

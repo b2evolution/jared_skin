@@ -27,7 +27,7 @@ body {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 .evo_container__front_page_primary {
-  padding-bottom: 30px;
+  padding: 80px;
 }
 .evo_container__front_page_primary .evo_widget {
   margin-top: 30px;
@@ -125,8 +125,7 @@ body.pictured .footer_wrapper .powered_by img {
 div.front_main_area {
   max-width: 100%;
   padding: 0;
-  margin-top: 85px;
-  margin-bottom: 100px;
+  margin: 85px 0;
 }
 div.front_main_area .front_main_content {
   border-radius: 6px;
@@ -528,38 +527,51 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
   cursor: pointer;
   opacity: 0.9;
 }
-.evo_container__front_page_primary,
-.evo_container__front_page_secondary {
+.evo_container__front_page_secondary,
+.evo_container__standalone_page_area_6 {
   background-size: cover;
   background-position: center center;
   padding: 80px 0;
 }
-.evo_widget h2.page-header {
+.evo_widget h2.page-header,
+.evo_post h2.page-header {
   border: none;
   margin-top: 0;
   padding: 0 0 17px;
   font-size: 38px;
 }
 .evo_widget h1,
+.evo_post h1,
 .evo_widget h2,
+.evo_post h2,
 .evo_widget h3,
+.evo_post h3,
 .evo_widget h4,
+.evo_post h4,
 .evo_widget h5,
-.evo_widget h6 {
+.evo_post h5,
+.evo_widget h6,
+.evo_post h6 {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 100;
 }
 .evo_widget p,
+.evo_post p,
 .evo_widget ul,
+.evo_post ul,
 .evo_widget > div,
-.evo_widget {
+.evo_post > div,
+.evo_widget,
+.evo_post {
   margin-bottom: 0;
   padding: 0 0 18px;
 }
-.evo_widget ul {
+.evo_widget ul,
+.evo_post ul {
   display: inline-block;
 }
-.evo_widget > .btn.btn-default {
+.evo_widget > .btn.btn-default,
+.evo_post > .btn.btn-default {
   margin: 20px 0;
   border: none;
   border-radius: 300px;
@@ -570,7 +582,8 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
   font-weight: 100;
   transition: .1s opacity linear;
 }
-.evo_widget > .btn.btn-default:hover {
+.evo_widget > .btn.btn-default:hover,
+.evo_post > .btn.btn-default:hover {
   opacity: 0.8;
 }
 a[rel~=nofollow]:not([class~=btn]):hover {
