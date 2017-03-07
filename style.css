@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 #skin_wrapper {
-  @import url('https://fonts.googleapis.com/css?family=Ek+Mukta:500,700|Josefin+Sans:100');
+  @import url('fonts.googleapis.com/css?family=Ek+Mukta:300,600,700|Josefin+Sans:100');
   font-size: 18px;
   font-family: 'Ek Mukta', sans-serif;
   font-weight: 500;
@@ -27,8 +27,6 @@ body {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 .evo_container__front_page_primary {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
   padding-bottom: 30px;
 }
 .evo_container__front_page_primary .evo_widget {
@@ -142,7 +140,7 @@ div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h
   line-height: 1.2em;
   text-transform: uppercase;
   letter-spacing: .02em;
-  font-weight: 700;
+  font-weight: 100;
 }
 body.pictured #skin_wrapper {
   width: 100%;
