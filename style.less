@@ -1,4 +1,9 @@
 // Body content
+#skin_wrapper {
+	font-size: 18px; // Default font-size
+	font-family: 'Ek Mukta', sans-serif;
+	font-weight: 500;
+}
 html {
 	// TODO: this should NOT apply to all pages. It must apply to a certain class only!
 	height: 100%;
@@ -6,12 +11,6 @@ html {
 body {
 	overflow-x: visible !important;
 	-webkit-font-smoothing: subpixel-antialiased;
-}
-#skin_wrapper {
-	@import url('fonts.googleapis.com/css?family=Ek+Mukta:300,600,700|Josefin+Sans:100');
-	font-size: 18px; // Default font-size
-	font-family: 'Ek Mukta', sans-serif;
-	font-weight: 500;
 }
 
 // Header
@@ -546,6 +545,10 @@ div.action_messages, div.log_container {
 // Positions on the action buttons near page titles
 .evo_post_title {
 	display: table;
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: 100;
+	}
 	h2 {
 		display: table-cell;
 		margin: 0;

@@ -1,15 +1,14 @@
+#skin_wrapper {
+  font-size: 18px;
+  font-family: 'Ek Mukta', sans-serif;
+  font-weight: 500;
+}
 html {
   height: 100%;
 }
 body {
   overflow-x: visible !important;
   -webkit-font-smoothing: subpixel-antialiased;
-}
-#skin_wrapper {
-  @import url('fonts.googleapis.com/css?family=Ek+Mukta:300,600,700|Josefin+Sans:100');
-  font-size: 18px;
-  font-family: 'Ek Mukta', sans-serif;
-  font-weight: 500;
 }
 .evo_container__header {
   margin-bottom: 30px;
@@ -452,6 +451,15 @@ div.log_container {
 }
 .evo_post_title {
   display: table;
+}
+.evo_post_title h1,
+.evo_post_title h2,
+.evo_post_title h3,
+.evo_post_title h4,
+.evo_post_title h5,
+.evo_post_title h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 100;
 }
 .evo_post_title h2 {
   display: table-cell;

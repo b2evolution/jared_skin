@@ -859,6 +859,9 @@ class jared_Skin extends Skin
 		// Skin specific initializations:
 
 		// Limit images by max height:
+		
+		add_css_headline( "#skin_wrapper {@import url('https://fonts.googleapis.com/css?family=Ek+Mukta:300,600,700|Josefin+Sans:100')}");
+		
 		$max_image_height = intval( $this->get_setting( 'max_image_height' ) );
 		if( $max_image_height > 0 )
 		{
