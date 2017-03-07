@@ -18,17 +18,18 @@ body {
 	margin-bottom: 30px;
 }
 .disp_login, .disp_lostpassword, .disp_register {
-	.evo_container__header {
-		margin-top: 70px;
+	.evo_container__header, .evo_container__page_top {
+		margin-top: 80px;
 	}
 }
 .evo_container__page_top {
-	// margin-top: 70px;
-	& > .evo_widget {
-		margin-top: 70px;
-	}
 	.ufld_icon_links {
 		text-align: right;
+	}
+}
+.disp_front {
+	.evo_container__page_top {
+		margin-top: 80px;
 	}
 }
 .evo_widget.widget_core_coll_tagline {
@@ -39,18 +40,18 @@ body {
 }
 .evo_container__front_page_primary {
 	padding: 80px;
-	.evo_widget {
-		margin-top: 30px;
-		div, h1, h2, p {
-			margin-top: 0;
-		}
-		div > p:last-child,
-		&:last-child > h2,
-		&:last-child > ul,
-		& > ul li:last-child {
-			margin-bottom: 0 !important;
-		}
-	}
+	// .evo_widget {
+		// margin-top: 30px;
+		// div, h1, h2, p {
+			// margin-top: 0;
+		// }
+		// div > p:last-child,
+		// &:last-child > h2,
+		// &:last-child > ul,
+		// & > ul li:last-child {
+			// margin-bottom: 0 !important;
+		// }
+	// }
 }
 
 // Secondary Area:
@@ -175,12 +176,15 @@ div.front_main_area {
 	}
 	
 	// Collection title widget style
-	.evo_container__front_page_primary .widget_core_coll_title h1 a {
-		font-size: 80px;
-		line-height: 1.2em;
-		text-transform: uppercase;
-		letter-spacing: .02em;
-		font-weight: 100;	
+	.evo_container__front_page_primary .widget_core_coll_title h1 {
+		margin: 0;
+		a {
+			font-size: 80px;
+			line-height: 1.2em;
+			text-transform: uppercase;
+			letter-spacing: .02em;
+			font-weight: 100;	
+		}
 	}
 }
 
@@ -660,7 +664,13 @@ body.pictured .secondary_area .widget_core_org_members {
 	}
 }
 
-.evo_widget, .evo_post {
+.evo_widget/*, .evo_post*/ {
+	padding: 20px 0;
+	
+	> h2 {
+		margin-top: 0;
+	}
+	
 	h2.page-header {
 		border: none;
 		margin-top: 0;
@@ -671,15 +681,28 @@ body.pictured .secondary_area .widget_core_org_members {
 		font-family: 'Josefin Sans', sans-serif;
 		font-weight: 300;
 	}
-	p, ul, > div, & {
-		margin-bottom: 0;
-		padding: 0 0 18px;
+	// p, ul, > div, & {
+		// margin-bottom: 0;
+		// padding: 0 0 18px;
+	// }
+	
+	div {
+		margin: 0;
+		padding: 0;
+		& > p, & > ul {
+			padding: 0 0 18px;
+			&:last-child {
+				padding: 0;
+				margin: 0;
+			}
+		}
 	}
+	
 	ul {
 		display: inline-block; // important for keeping list circles next to the li elements if not align-left
 	}
 	& > .btn.btn-default {
-		margin: 20px 0;
+		margin: 0;
 		border: none;
 		border-radius: 300px;
 		padding: 13px 26px;
@@ -717,21 +740,3 @@ div[class*="_list"], .evo_layout_list {
 .text-lg, .text-lg div, .text-lg a, .text-lg h1, .text-lg h2, .text-lg h3, .text-lg h4, .text-lg h5, .text-lg h6, .text-lg ul { font-size: 130% !important }
 .text-sm, .text-sm div, .text-sm a, .text-sm h1, .text-sm h2, .text-sm h3, .text-sm h4, .text-sm h5, .text-sm h6, .text-sm ul { font-size: 80% !important }
 .text-xs, .text-xs div, .text-xs a, .text-xs h1, .text-xs h2, .text-xs h3, .text-xs h4, .text-xs h5, .text-xs h6, .text-xs ul { font-size: 60% !important }
-
-// Fixes for temporary disp=threads
-.disp_threads, .disp_msgform, .disp_posts, .disp_single, .disp_page, .disp_help {
-	.nav li {
-		padding: 0;
-	}
-	.evo_widget .btn.btn-default {
-		color: #FFFFFF;
-		background-color: #318780;
-	}
-}
-
-// Fixes for temporary other disps
-.nav.nav-tabs {
-	li {
-		padding: 0;
-	}
-}
