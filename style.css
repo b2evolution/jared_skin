@@ -41,29 +41,6 @@ body {
   z-index: 1;
   width: 100%;
 }
-.secondary_area p {
-  margin-top: 10px;
-}
-.footer_wrapper {
-  padding: 48px 15px;
-}
-.footer_wrapper p {
-  padding: 0 0 18px;
-}
-.footer_wrapper .powered_by img {
-  background: #fff;
-  border-radius: 4px;
-  padding: 2px;
-}
-.footer_wrapper h1,
-.footer_wrapper h2,
-.footer_wrapper h3,
-.footer_wrapper h4,
-.footer_wrapper h5,
-.footer_wrapper h6 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 300;
-}
 .navbar.main-header-navigation {
   padding: 0 20px;
   position: absolute;
@@ -130,7 +107,7 @@ div.front_main_area {
 }
 div.front_main_area .front_main_content {
   border-radius: 6px;
-  padding: 5px 15px;
+  padding: 0 15px;
 }
 div.front_main_area div.widget {
   margin: 30px 0;
@@ -486,8 +463,11 @@ body.pictured .front_main_content .ufld_icon_links a .fa {
   line-height: 60px;
 }
 .widget_core_org_members {
-  margin: 5em 0 30px;
+  margin: 0;
   color: #333;
+}
+.widget_core_org_members div.widget_rwd_content {
+  margin-top: 0;
 }
 .widget_core_org_members img {
   width: 200px;
@@ -585,7 +565,8 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 .evo_widget {
   padding: 20px 0;
 }
-.evo_widget > h2 {
+.evo_widget > h2,
+.evo_widget h3 {
   margin-top: 0;
 }
 .evo_widget h2.page-header {
@@ -646,6 +627,38 @@ a[rel~=nofollow]:not([class~=btn]):hover {
 div[class*="_list"],
 .evo_layout_list {
   text-align: left;
+}
+.footer_wrapper {
+  padding: 48px 15px;
+  position: relative;
+}
+.footer_wrapper .evo_container__footer {
+  margin-bottom: 0;
+  padding: 0;
+}
+.footer_wrapper p {
+  margin: 0;
+}
+.footer_wrapper p.baseline {
+  padding: 20px 0;
+}
+.footer_wrapper .powered_by {
+  margin: 0;
+  padding: 20px 0;
+}
+.footer_wrapper .powered_by img {
+  background: #fff;
+  border-radius: 4px;
+  padding: 2px;
+}
+.footer_wrapper h1,
+.footer_wrapper h2,
+.footer_wrapper h3,
+.footer_wrapper h4,
+.footer_wrapper h5,
+.footer_wrapper h6 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
 }
 .text-xl,
 .text-xl div,

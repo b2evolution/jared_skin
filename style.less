@@ -40,18 +40,6 @@ body {
 }
 .evo_container__front_page_primary {
 	padding: 80px;
-	// .evo_widget {
-		// margin-top: 30px;
-		// div, h1, h2, p {
-			// margin-top: 0;
-		// }
-		// div > p:last-child,
-		// &:last-child > h2,
-		// &:last-child > ul,
-		// & > ul li:last-child {
-			// margin-bottom: 0 !important;
-		// }
-	// }
 }
 
 // Secondary Area:
@@ -59,28 +47,7 @@ body {
 	// Important for hiding "Slide down" arrow behind this div
 	position: relative;
 	z-index: 1;
-	
 	width: 100%;
-	p {
-		margin-top: 10px;
-	}
-}
-
-// Footer
-.footer_wrapper {
-	padding: 48px 15px;
-	p {		
-		padding: 0 0 18px;
-	}
-	.powered_by img {
-		background: #fff;
-		border-radius: 4px;
-		padding: 2px;
-	}
-	h1, h2, h3, h4, h5, h6 {
-		font-family: 'Josefin Sans', sans-serif;
-		font-weight: 300;
-	}
 }
 
 // .affix {
@@ -167,7 +134,7 @@ div.front_main_area {
 	// margin-bottom: 100px;
 	.front_main_content {
 		border-radius: 6px;
-		padding: 5px 15px;
+		padding: 0 15px;
 	}
 
 	// Widgets need to be spaced
@@ -587,8 +554,11 @@ body.pictured .front_main_content .ufld_icon_links a {
 
 // Organization Members widget
 .widget_core_org_members {
-	margin: 5em 0 30px;
+	margin: 0;
 	color: #333;
+	div.widget_rwd_content {
+		margin-top: 0;
+	}
 	img {
 		width: 200px;
 		height: 200px;
@@ -667,7 +637,7 @@ body.pictured .secondary_area .widget_core_org_members {
 .evo_widget/*, .evo_post*/ {
 	padding: 20px 0;
 	
-	> h2 {
+	> h2, h3 {
 		margin-top: 0;
 	}
 	
@@ -677,14 +647,11 @@ body.pictured .secondary_area .widget_core_org_members {
 		padding: 0 0 17px;
 		font-size: 38px;
 	}
+	
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Josefin Sans', sans-serif;
 		font-weight: 300;
 	}
-	// p, ul, > div, & {
-		// margin-bottom: 0;
-		// padding: 0 0 18px;
-	// }
 	
 	div {
 		margin: 0;
@@ -733,6 +700,35 @@ a[rel~=nofollow]:not([class~=btn]):hover {
 // We want all lists to have left alignment
 div[class*="_list"], .evo_layout_list {
 	text-align: left;
+}
+
+// Footer
+.footer_wrapper {
+	padding: 48px 15px;
+	position: relative;
+	.evo_container__footer {
+		margin-bottom: 0;
+		padding: 0;
+	}
+	p {
+		margin: 0;
+		&.baseline {		
+			padding: 20px 0;
+		}
+	}
+	.powered_by {
+		margin: 0;
+		padding: 20px 0;
+		img {
+			background: #fff;
+			border-radius: 4px;
+			padding: 2px;
+		}
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: 300;
+	}
 }
 
 // Custom font size classes - available for users to modify widgets
