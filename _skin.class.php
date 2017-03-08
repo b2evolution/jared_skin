@@ -1022,6 +1022,9 @@ class jared_Skin extends Skin
 		if( $this->get_setting( 'nav_bg_transparent' ) )
 		{
 			$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
+		} else
+		{
+			$custom_css .= ".evo_container__front_page_primary h1, .evo_container__front_page_secondary h1, .evo_container__standalone_page_area_6 h1, .evo_container__standalone_page_area_7 h1, .evo_container__standalone_page_area_oth h1 { margin-top: 75px; }\n";
 		}
 		
 		
@@ -1082,7 +1085,7 @@ class jared_Skin extends Skin
 				$custom_css .= 'body.pictured .main_page_wrapper .front_main_area a,
 				body.pictured .main_page_wrapper .front_main_area div.evo_withteaser div.item_content > a { color: '.$link_color.' }
 				body.pictured .main_page_wrapper .front_main_area div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser ul li div.item_content > a,
-				body.pictured .main_page_wrapper .front_main_area div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser ul li div.item_content > a { color: '.$link_color." }\n";
+				body.pictured .main_page_wrapper .front_main_area div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser ul li div.item_content > a, .evo_container__page_top a { color: '.$link_color." }\n";
 			}
 			if( $link_color && $icon_color )
 			{

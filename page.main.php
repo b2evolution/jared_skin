@@ -76,7 +76,7 @@ skin_include( '_body_header.inc.php' );
 
 </div><!-- .evo_container__standalone_page_area_6 -->
 
-<div class="container">
+<div class="container main_page_wrapper_other_disps">
 
 <div class="row">
 
