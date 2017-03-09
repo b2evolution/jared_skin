@@ -28,7 +28,7 @@ skin_init( $disp );
 
 // Check if current page has a big picture as background
 $is_pictured_page = in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) );
-$is_other_disp = !in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'page', 'msgform', 'threads', 'help', 'front' ) );
+$is_other_disp = !in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'page', 'msgform', 'help', 'front' ) );
 
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
 skin_include( '_html_header.inc.php', array(
@@ -104,6 +104,7 @@ if( $is_other_disp ) { echo '<div class="evo_container__standalone_page_area_oth
 					'msgform_text'      => '',
 					'user_text'         => T_( 'User settings' ),
 					'users_text'        => T_( 'Users' ),
+					'posts_text'        => T_( 'Posts' ),
 					'display_edit_links'=> false,
 				) );
 			// ----------------------------- END OF REQUEST TITLE ----------------------------

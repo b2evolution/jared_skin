@@ -1024,7 +1024,7 @@ class jared_Skin extends Skin
 			$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
 		} else
 		{
-			$custom_css .= ".evo_container__front_page_primary h1, .evo_container__front_page_secondary h1, .evo_container__standalone_page_area_6 h1, .evo_container__standalone_page_area_7 h1, .evo_container__standalone_page_area_oth h1 { margin-top: 75px; }\n";
+			$custom_css .= ".evo_container__front_page_primary h1, .evo_container__front_page_secondary h1, .evo_container__standalone_page_area_6 h1, .evo_container__single_page_cover h1, .evo_container__standalone_page_area_7 h1, .evo_container__standalone_page_area_oth h1 { margin-top: 75px; }\n";
 		}
 		
 		
@@ -1327,44 +1327,44 @@ class jared_Skin extends Skin
 		}
 		if( !empty( $bg_image_File6 ) && $bg_image_File6->exists() )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_6 { background-image: url('.$bg_image_File6->get_url().") }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { background-image: url('.$bg_image_File6->get_url().") }\n";
 		}
 		else
 		{
 			$color = $this->get_setting( 'section_6_bg_color' );
-			$custom_css .= '.evo_container__standalone_page_area_6 { background: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { background: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_title_color' ) )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_6 .evo_post_title h1 { color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6 .evo_post_title h1, .evo_container__single_page_cover .evo_post_title h1 { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_text_color' ) )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_6 { color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_link_color' ) )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_6 a { color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6 a, .evo_container__single_page_cover a { color: '.$color." }\n";
 		}
 		if( $color =  $this->get_setting( 'section_6_link_h_color' ) )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_6 a:hover { color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6 a:hover, .evo_container__single_page_cover a:hover { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_button_bg_color' ) )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget > .btn.btn-default, .evo_container__single_page_cover .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_button_color' ) )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget > .btn.btn-default { color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget > .btn.btn-default, .evo_container__single_page_cover .evo_widget > .btn.btn-default { color: '.$color." }\n";
 		}
 		if( $this->get_setting( 'section_6_text_align' ) == 'section_6_center' )
 		{
-			$custom_css .= ".evo_container__standalone_page_area_6 { text-align: center }\n";
+			$custom_css .= ".evo_container__standalone_page_area_6, .evo_container__single_page_cover { text-align: center }\n";
 		}
 		if( $this->get_setting( 'section_6_text_align' ) == 'section_6_right' )
 		{
-			$custom_css .= ".evo_container__standalone_page_area_6 { text-align: right }\n";
+			$custom_css .= ".evo_container__standalone_page_area_6, .evo_container__single_page_cover { text-align: right }\n";
 		}
 		}
 		

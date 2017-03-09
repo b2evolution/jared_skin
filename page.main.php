@@ -39,8 +39,15 @@ skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
+<?php
+if( $Item->get_cover_image_url() )
+{
+	echo '<div class="evo_container__single_page_cover" style="background-image: url(' . $Item->get_cover_image_url() . ')" >';
+} else {
+	echo '<div class="evo_container__standalone_page_area_6">';
+}
+?>
 
-<div class="evo_container__standalone_page_area_6">
 
 <div class="container">
 
