@@ -581,7 +581,8 @@ class jared_Skin extends Skin
 					'label'  => T_('Section 6 - Header for Standalone Pages')
 				),
 					'section_6_image_file_ID' => array(
-						'label' => T_('Background image'),
+						'label' => T_('Fallback brackground image'),
+						'note' => T_('This will be displayed if the page has no cover image.'),
 						'type' => 'fileselect',
 						'initialize_with' => 'shared/global/monument-valley/monument-valley.jpg',
 						'thumbnail_size' => 'fit-320x320'
