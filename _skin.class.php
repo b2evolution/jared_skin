@@ -1440,7 +1440,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_oth_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_oth { color: '.$color." }\n";
-			if( $disp != 'front' ) { $custom_css .= '.navbar { background-color: '.$color." }\n"; }
+			if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) { $custom_css .= '.navbar { background-color: '.$color." }\n"; }
 		}
 		if( $color = $this->get_setting( 'section_oth_title_color' ) )
 		{
