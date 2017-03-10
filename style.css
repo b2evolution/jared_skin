@@ -156,7 +156,6 @@ body {
   letter-spacing: .18em;
 }
 div.front_main_area {
-  max-width: 100%;
   padding: 0;
   margin: 85px 0;
 }
@@ -733,4 +732,28 @@ div[class*="_list"],
 .text-xs h6,
 .text-xs ul {
   font-size: 60% !important;
+}
+@media (max-width: 767px) {
+  .navbar-toggle {
+    margin-right: 0;
+  }
+  .navbar-collapse {
+    padding: 0;
+  }
+  .nav > li > a {
+    padding: 10px 0;
+  }
+  .evo_container__front_page_primary,
+  .evo_container__front_page_secondary,
+  .evo_container__standalone_page_area_6,
+  .evo_container__single_page_cover,
+  .evo_container__standalone_page_area_7,
+  .evo_container__standalone_page_area_oth {
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 992px) {
+  div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
+    font-size: 50px;
+  }
 }

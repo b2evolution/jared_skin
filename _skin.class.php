@@ -1342,6 +1342,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_6_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { color: '.$color." }\n";
+			$custom_css .= '.navbar { background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_link_color' ) )
 		{
@@ -1393,6 +1394,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_7_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 { color: '.$color." }\n";
+			$custom_css .= '.navbar { background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_7_link_color' ) )
 		{
@@ -1438,6 +1440,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_oth_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_oth { color: '.$color." }\n";
+			if( $disp != 'front' ) { $custom_css .= '.navbar { background-color: '.$color." }\n"; }
 		}
 		if( $color = $this->get_setting( 'section_oth_title_color' ) )
 		{
@@ -1520,13 +1523,6 @@ class jared_Skin extends Skin
 
 		if( ! empty( $custom_css ) )
 		{
-			if( $disp == 'front' )
-			{ // Use standard bootstrap style on width <= 640px only for disp=front
-				$custom_css = '@media only screen and (min-width: 641px)
-					{
-						'.$custom_css.'
-					}';
-			}
 			$custom_css = '<style type="text/css">
 <!--
 '.$custom_css.'
