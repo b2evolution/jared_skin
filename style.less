@@ -122,7 +122,17 @@ body {
 		font-size: 12px;
 		letter-spacing: .18em;
 	}
+	
+	&.affix {
+		position: fixed;
+		transition: 0.1s ease-out;
+		width: 100%;
+	}
 }
+
+body.loggedin .navbar.main-header-navigation.affix { top: 27px }
+body.anonymous .navbar.main-header-navigation.affix { top: 0 }
+
 
 // SPECIAL FRONT PAGE:
 div.front_main_area {

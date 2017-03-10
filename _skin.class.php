@@ -1342,7 +1342,10 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_6_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { color: '.$color." }\n";
-			$custom_css .= '.navbar { background-color: '.$color." }\n";
+			$custom_css .= '.navbar.affix { background-color: '.$color." }\n";
+			if( $this->get_setting( 'nav_bg_transparent' ) ) {
+				$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
+			}
 		}
 		if( $color = $this->get_setting( 'section_6_link_color' ) )
 		{
@@ -1395,6 +1398,9 @@ class jared_Skin extends Skin
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 { color: '.$color." }\n";
 			$custom_css .= '.navbar { background-color: '.$color." }\n";
+			if( $this->get_setting( 'nav_bg_transparent' ) ) {
+				$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
+			}
 		}
 		if( $color = $this->get_setting( 'section_7_link_color' ) )
 		{

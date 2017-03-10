@@ -155,6 +155,17 @@ body {
   font-size: 12px;
   letter-spacing: .18em;
 }
+.navbar.main-header-navigation.affix {
+  position: fixed;
+  transition: 0.1s ease-out;
+  width: 100%;
+}
+body.loggedin .navbar.main-header-navigation.affix {
+  top: 27px;
+}
+body.anonymous .navbar.main-header-navigation.affix {
+  top: 0;
+}
 div.front_main_area {
   padding: 0;
   margin: 85px 0;
