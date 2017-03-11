@@ -127,7 +127,7 @@ class jared_Skin extends Skin
 				// ============ Navigation Section ============
 				'navigation_section_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Navigation Settings')
+					'label'  => T_('Top Navigation Bar Settings')
 				),
 					'nav_bg_transparent' => array(
 						'label' => T_('Transparent background'),
@@ -190,6 +190,12 @@ class jared_Skin extends Skin
 						'note' => T_('Check this to enable Front Page Main Area.'),
 						'defaultvalue' => 1,
 						'type' => 'checkbox',
+					),
+					'section_1_navbar_text_color' => array(
+						'label' => T_('Top navigation text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
 					),
 					'section_1_image_file_ID' => array(
 						'label' => T_('Background image'),
@@ -580,6 +586,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section 6 - Header for Standalone Pages')
 				),
+					'section_6_navbar_text_color' => array(
+						'label' => T_('Top navigation text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_6_image_file_ID' => array(
 						'label' => T_('Fallback brackground image'),
 						'note' => T_('This will be displayed if the page has no cover image.'),
@@ -650,6 +662,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section 7 - Header for Contact form and Messaging')
 				),
+					'section_7_navbar_text_color' => array(
+						'label' => T_('Top navigation text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_7_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -719,6 +737,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section - Header for other disps')
 				),
+					'section_oth_navbar_text_color' => array(
+						'label' => T_('Top navigation text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_oth_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -1048,6 +1072,10 @@ class jared_Skin extends Skin
 			// ============ Section 1 - Front Page Main Area ============
 			if( $this->get_setting( 'section_1_display' ) )
 			{
+			if( $color = $this->get_setting( 'section_1_navbar_text_color' ) )
+			{
+				$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+			}
 			if( $this->get_setting( 'section_1_image_file_ID' ) )
 			{
 				$bg_image_File1 = & $FileCache->get_by_ID( $this->get_setting( 'section_1_image_file_ID' ), false, false );
@@ -1322,6 +1350,10 @@ class jared_Skin extends Skin
 		// ============ Section 6 - Header for Standalone Pages ============
 		if( $disp == 'page' )
 		{
+		if( $color = $this->get_setting( 'section_6_navbar_text_color' ) )
+		{
+			$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+		}
 		if( $this->get_setting( 'section_6_image_file_ID' ) )
 		{
 			$bg_image_File6 = & $FileCache->get_by_ID( $this->get_setting( 'section_6_image_file_ID' ), false, false );
@@ -1374,6 +1406,10 @@ class jared_Skin extends Skin
 		// ============ Section 7 - Header for Contact form and Messaging ============
 		if( $disp == 'msgform' || $disp == 'threads' )
 		{
+		if( $color = $this->get_setting( 'section_7_navbar_text_color' ) )
+		{
+			$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+		}
 		if( $this->get_setting( 'section_7_image_file_ID' ) )
 		{
 			$bg_image_File7 = & $FileCache->get_by_ID( $this->get_setting( 'section_7_image_file_ID' ), false, false );
@@ -1424,6 +1460,12 @@ class jared_Skin extends Skin
 		
 		
 		// ============ Section - Header for other disps  ============
+		if( $color = $this->get_setting( 'section_oth_navbar_text_color' ) )
+		{
+			if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) {
+				$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+			}
+		}
 		if( $this->get_setting( 'section_oth_image_file_ID' ) )
 		{
 			$bg_image_File_oth = & $FileCache->get_by_ID( $this->get_setting( 'section_oth_image_file_ID' ), false, false );
