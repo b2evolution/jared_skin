@@ -1074,7 +1074,7 @@ class jared_Skin extends Skin
 			{
 			if( $color = $this->get_setting( 'section_1_navbar_text_color' ) )
 			{
-				$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
 			}
 			if( $this->get_setting( 'section_1_image_file_ID' ) )
 			{
@@ -1352,7 +1352,7 @@ class jared_Skin extends Skin
 		{
 		if( $color = $this->get_setting( 'section_6_navbar_text_color' ) )
 		{
-			$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+			$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
 		}
 		if( $this->get_setting( 'section_6_image_file_ID' ) )
 		{
@@ -1408,7 +1408,7 @@ class jared_Skin extends Skin
 		{
 		if( $color = $this->get_setting( 'section_7_navbar_text_color' ) )
 		{
-			$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+			$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
 		}
 		if( $this->get_setting( 'section_7_image_file_ID' ) )
 		{
@@ -1463,7 +1463,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_oth_navbar_text_color' ) )
 		{
 			if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) {
-				$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
 			}
 		}
 		if( $this->get_setting( 'section_oth_image_file_ID' ) )
