@@ -216,7 +216,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_1_text_color' => array(
-						'label' => T_('Text color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color.'),
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
@@ -304,7 +304,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_2_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -379,7 +379,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_3_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -455,7 +455,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_4_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -530,7 +530,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_5_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -600,7 +600,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_6_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -669,7 +669,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_7_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -738,7 +738,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_oth_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -795,19 +795,19 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'footer_content_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
 					),
 					'footer_link_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Links color'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
 					),
 					'footer_link_h_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Links hover color'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
