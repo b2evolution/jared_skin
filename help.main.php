@@ -45,7 +45,8 @@ siteskin_include( '_site_body_header.inc.php' );
 if( $Skin->show_container_when_access_denied( 'menu' ) )
 { // Display 'Menu' widget container
 ?>
-<nav class="navbar navbar-default main-header-navigation"><!-- data-spy="affix" data-offset-top="50"-->
+<?php $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-top="43.2"' : 'data-offset-top="1"'; ?>
+<nav class="navbar navbar-default main-header-navigation" data-spy="affix"<?php echo $affix_positioning_fix; ?>>
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
