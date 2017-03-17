@@ -18,7 +18,7 @@ siteskin_include( '_site_body_header.inc.php' );
 
 ?>
 
-<?php $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-top="43.2"' : ''; ?>
+<?php $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-top="43.2"' : 'data-offset-top="1"'; ?>
 <nav class="navbar navbar-default main-header-navigation" data-spy="affix"<?php echo $affix_positioning_fix; ?>>
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">

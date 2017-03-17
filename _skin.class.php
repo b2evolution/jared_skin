@@ -127,7 +127,7 @@ class jared_Skin extends Skin
 				// ============ Navigation Section ============
 				'navigation_section_start' => array(
 					'layout' => 'begin_fieldset',
-					'label'  => T_('Navigation Settings')
+					'label'  => T_('Top Navigation Bar Settings')
 				),
 					'nav_bg_transparent' => array(
 						'label' => T_('Transparent background'),
@@ -191,6 +191,12 @@ class jared_Skin extends Skin
 						'defaultvalue' => 1,
 						'type' => 'checkbox',
 					),
+					'section_1_navbar_text_color' => array(
+						'label' => T_('Top navigation text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_1_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -216,7 +222,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_1_text_color' => array(
-						'label' => T_('Text color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color.'),
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
@@ -304,7 +310,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_2_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -379,7 +385,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_3_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -455,7 +461,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_4_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -530,7 +536,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_5_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -580,6 +586,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section 6 - Header for Standalone Pages')
 				),
+					'section_6_navbar_text_color' => array(
+						'label' => T_('Top navigation text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_6_image_file_ID' => array(
 						'label' => T_('Fallback brackground image'),
 						'note' => T_('This will be displayed if the page has no cover image.'),
@@ -600,7 +612,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_6_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -650,6 +662,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section 7 - Header for Contact form and Messaging')
 				),
+					'section_7_navbar_text_color' => array(
+						'label' => T_('Top navigation text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_7_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -669,7 +687,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_7_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -719,6 +737,12 @@ class jared_Skin extends Skin
 					'layout' => 'begin_fieldset',
 					'label'  => T_('Section - Header for other disps')
 				),
+					'section_oth_navbar_text_color' => array(
+						'label' => T_('Top navigation text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
 					'section_oth_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -738,7 +762,7 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'section_oth_text_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('Click to select a color'),
 						'defaultvalue' => '#adadad',
 						'type' => 'color',
@@ -795,19 +819,19 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					'footer_content_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Normal text color'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
 					),
 					'footer_link_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Links color'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
 					),
 					'footer_link_h_color' => array(
-						'label' => T_('Content color'),
+						'label' => T_('Links hover color'),
 						'note' => T_('E-g: #00ff00 for green'),
 						'defaultvalue' => '#ffffff',
 						'type' => 'color',
@@ -1012,20 +1036,21 @@ class jared_Skin extends Skin
 
 		
 		// ============ Navigation Section ============
-		if( $color = $this->get_setting( 'nav_bg_color' ) )
-		{
-			$custom_css .= '.navbar { background-color: ' . $color . " }\n";
-		}
 		if( $color = $this->get_setting( 'nav_links_color' ) )
 		{
 			$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
 		}
 		if( $this->get_setting( 'nav_bg_transparent' ) )
 		{
-			$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
+			$custom_css .= "@media only screen and (min-width: 768px) { .navbar { background-color: transparent } }\n";
+			$custom_css .= '@media only screen and (max-width: 768px) { .navbar { background-color: ' . $this->get_setting( 'nav_bg_color' ) . " } }\n";
 		} else
 		{
 			$custom_css .= ".evo_container__front_page_primary h1, .evo_container__front_page_secondary h1, .evo_container__standalone_page_area_6 h1, .evo_container__single_page_cover h1, .evo_container__standalone_page_area_7 h1, .evo_container__standalone_page_area_oth h1 { margin-top: 75px; }\n";
+		}
+		if( $color = $this->get_setting( 'nav_bg_color' ) )
+		{
+			$custom_css .= '.affix { background-color: ' . $color . " }\n";
 		}
 		
 		
@@ -1048,6 +1073,10 @@ class jared_Skin extends Skin
 			// ============ Section 1 - Front Page Main Area ============
 			if( $this->get_setting( 'section_1_display' ) )
 			{
+			if( $color = $this->get_setting( 'section_1_navbar_text_color' ) )
+			{
+				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+			}
 			if( $this->get_setting( 'section_1_image_file_ID' ) )
 			{
 				$bg_image_File1 = & $FileCache->get_by_ID( $this->get_setting( 'section_1_image_file_ID' ), false, false );
@@ -1322,6 +1351,10 @@ class jared_Skin extends Skin
 		// ============ Section 6 - Header for Standalone Pages ============
 		if( $disp == 'page' )
 		{
+		if( $color = $this->get_setting( 'section_6_navbar_text_color' ) )
+		{
+			$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+		}
 		if( $this->get_setting( 'section_6_image_file_ID' ) )
 		{
 			$bg_image_File6 = & $FileCache->get_by_ID( $this->get_setting( 'section_6_image_file_ID' ), false, false );
@@ -1342,10 +1375,10 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_6_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { color: '.$color." }\n";
-			$custom_css .= '.navbar.affix { background-color: '.$color." }\n";
-			if( $this->get_setting( 'nav_bg_transparent' ) ) {
-				$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
-			}
+			// $custom_css .= '.navbar.affix { color: '.$color." }\n";
+			// if( $this->get_setting( 'nav_bg_transparent' ) ) {
+				// $custom_css .= "@media only screen and (min-width: 766px) { .affix-top { background-color: transparent } }\n";
+			// }
 		}
 		if( $color = $this->get_setting( 'section_6_link_color' ) )
 		{
@@ -1377,6 +1410,10 @@ class jared_Skin extends Skin
 		// ============ Section 7 - Header for Contact form and Messaging ============
 		if( $disp == 'msgform' || $disp == 'threads' )
 		{
+		if( $color = $this->get_setting( 'section_7_navbar_text_color' ) )
+		{
+			$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+		}
 		if( $this->get_setting( 'section_7_image_file_ID' ) )
 		{
 			$bg_image_File7 = & $FileCache->get_by_ID( $this->get_setting( 'section_7_image_file_ID' ), false, false );
@@ -1397,10 +1434,10 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_7_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 { color: '.$color." }\n";
-			$custom_css .= '.navbar { background-color: '.$color." }\n";
-			if( $this->get_setting( 'nav_bg_transparent' ) ) {
-				$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
-			}
+			// $custom_css .= '.navbar { background-color: '.$color." }\n";
+			// if( $this->get_setting( 'nav_bg_transparent' ) ) {
+				// $custom_css .= "@media only screen and (min-width: 766px) { .affix-top { background-color: transparent } }\n";
+			// }
 		}
 		if( $color = $this->get_setting( 'section_7_link_color' ) )
 		{
@@ -1430,6 +1467,12 @@ class jared_Skin extends Skin
 		
 		
 		// ============ Section - Header for other disps  ============
+		if( $color = $this->get_setting( 'section_oth_navbar_text_color' ) )
+		{
+			if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) {
+				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+			}
+		}
 		if( $this->get_setting( 'section_oth_image_file_ID' ) )
 		{
 			$bg_image_File_oth = & $FileCache->get_by_ID( $this->get_setting( 'section_oth_image_file_ID' ), false, false );
@@ -1446,7 +1489,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_oth_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_oth { color: '.$color." }\n";
-			if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) { $custom_css .= '.navbar { background-color: '.$color." }\n"; }
+			// if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) { $custom_css .= '.navbar { background-color: '.$color." }\n"; }
 		}
 		if( $color = $this->get_setting( 'section_oth_title_color' ) )
 		{
