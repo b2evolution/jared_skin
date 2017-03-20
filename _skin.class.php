@@ -1038,19 +1038,23 @@ class jared_Skin extends Skin
 		// ============ Navigation Section ============
 		if( $color = $this->get_setting( 'nav_links_color' ) )
 		{
-			$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+			if( ! $this->get_setting( 'nav_bg_transparent' ) ) {
+				$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+			}
 		}
 		if( $this->get_setting( 'nav_bg_transparent' ) )
 		{
 			$custom_css .= "@media only screen and (min-width: 768px) { .navbar { background-color: transparent } }\n";
 			$custom_css .= '@media only screen and (max-width: 768px) { .navbar { background-color: ' . $this->get_setting( 'nav_bg_color' ) . " } }\n";
+			
+			$bg_color = $this->get_setting( 'nav_bg_color' );
+			$custom_css .= '.affix { background-color: ' . $bg_color . " }\n";
 		} else
 		{
 			$custom_css .= ".evo_container__front_page_primary h1, .evo_container__front_page_secondary h1, .evo_container__standalone_page_area_6 h1, .evo_container__single_page_cover h1, .evo_container__standalone_page_area_7 h1, .evo_container__standalone_page_area_oth h1 { margin-top: 75px; }\n";
-		}
-		if( $color = $this->get_setting( 'nav_bg_color' ) )
-		{
-			$custom_css .= '.affix { background-color: ' . $color . " }\n";
+			
+			$bg_color = $this->get_setting( 'nav_bg_color' );
+			$custom_css .= '.navbar { background-color: ' . $bg_color . " }\n";
 		}
 		
 		
@@ -1073,9 +1077,12 @@ class jared_Skin extends Skin
 			// ============ Section 1 - Front Page Main Area ============
 			if( $this->get_setting( 'section_1_display' ) )
 			{
-			if( $color = $this->get_setting( 'section_1_navbar_text_color' ) )
+			if( $this->get_setting( 'nav_bg_transparent' ) )
 			{
-				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+				if( $color = $this->get_setting( 'section_1_navbar_text_color' ) ) {
+					$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+					$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default.affix a, .navbar.navbar-defaul.affixt a:hover, .navbar-default.affix .navbar-nav>.active>a, .navbar-default.affix .navbar-nav>.active>a:focus, .navbar-default.affix .navbar-nav>.active>a:hover, .navbar-default.affix .navbar-nav>.active>a, .navbar-default.affix .navbar-nav>li>a, .navbar-default.affix .navbar-nav>li>a:focus, .navbar-default.affix .navbar-nav>li>a:hover { color: ' . $this->get_setting( 'nav_links_color' ) . " }}\n";
+				}
 			}
 			if( $this->get_setting( 'section_1_image_file_ID' ) )
 			{
@@ -1351,9 +1358,12 @@ class jared_Skin extends Skin
 		// ============ Section 6 - Header for Standalone Pages ============
 		if( $disp == 'page' )
 		{
-		if( $color = $this->get_setting( 'section_6_navbar_text_color' ) )
+		if( $this->get_setting( 'nav_bg_transparent' ) )
 		{
-			$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+			if( $color = $this->get_setting( 'section_6_navbar_text_color' ) ) {
+				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default.affix a, .navbar.navbar-defaul.affixt a:hover, .navbar-default.affix .navbar-nav>.active>a, .navbar-default.affix .navbar-nav>.active>a:focus, .navbar-default.affix .navbar-nav>.active>a:hover, .navbar-default.affix .navbar-nav>.active>a, .navbar-default.affix .navbar-nav>li>a, .navbar-default.affix .navbar-nav>li>a:focus, .navbar-default.affix .navbar-nav>li>a:hover { color: ' . $this->get_setting( 'nav_links_color' ) . " }}\n";
+			}
 		}
 		if( $this->get_setting( 'section_6_image_file_ID' ) )
 		{
@@ -1410,9 +1420,12 @@ class jared_Skin extends Skin
 		// ============ Section 7 - Header for Contact form and Messaging ============
 		if( $disp == 'msgform' || $disp == 'threads' )
 		{
-		if( $color = $this->get_setting( 'section_7_navbar_text_color' ) )
+		if( $this->get_setting( 'nav_bg_transparent' ) )
 		{
-			$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+			if( $color = $this->get_setting( 'section_7_navbar_text_color' ) ) {
+				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default.affix a, .navbar.navbar-defaul.affixt a:hover, .navbar-default.affix .navbar-nav>.active>a, .navbar-default.affix .navbar-nav>.active>a:focus, .navbar-default.affix .navbar-nav>.active>a:hover, .navbar-default.affix .navbar-nav>.active>a, .navbar-default.affix .navbar-nav>li>a, .navbar-default.affix .navbar-nav>li>a:focus, .navbar-default.affix .navbar-nav>li>a:hover { color: ' . $this->get_setting( 'nav_links_color' ) . " }}\n";
+			}
 		}
 		if( $this->get_setting( 'section_7_image_file_ID' ) )
 		{
@@ -1434,10 +1447,6 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_7_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 { color: '.$color." }\n";
-			// $custom_css .= '.navbar { background-color: '.$color." }\n";
-			// if( $this->get_setting( 'nav_bg_transparent' ) ) {
-				// $custom_css .= "@media only screen and (min-width: 766px) { .affix-top { background-color: transparent } }\n";
-			// }
 		}
 		if( $color = $this->get_setting( 'section_7_link_color' ) )
 		{
@@ -1467,10 +1476,13 @@ class jared_Skin extends Skin
 		
 		
 		// ============ Section - Header for other disps  ============
-		if( $color = $this->get_setting( 'section_oth_navbar_text_color' ) )
+		if( $this->get_setting( 'nav_bg_transparent' ) )
 		{
-			if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) {
-				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+			if( $color = $this->get_setting( 'section_oth_navbar_text_color' ) ) {
+				if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) {
+					$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+					$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default.affix a, .navbar.navbar-defaul.affixt a:hover, .navbar-default.affix .navbar-nav>.active>a, .navbar-default.affix .navbar-nav>.active>a:focus, .navbar-default.affix .navbar-nav>.active>a:hover, .navbar-default.affix .navbar-nav>.active>a, .navbar-default.affix .navbar-nav>li>a, .navbar-default.affix .navbar-nav>li>a:focus, .navbar-default.affix .navbar-nav>li>a:hover { color: ' . $this->get_setting( 'nav_links_color' ) . " }}\n";
+				}
 			}
 		}
 		if( $this->get_setting( 'section_oth_image_file_ID' ) )
@@ -1489,7 +1501,6 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_oth_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_oth { color: '.$color." }\n";
-			// if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) { $custom_css .= '.navbar { background-color: '.$color." }\n"; }
 		}
 		if( $color = $this->get_setting( 'section_oth_title_color' ) )
 		{

@@ -39,7 +39,6 @@ echo '<div class="evo_pictured_layout">';
 
 ?>
 
-
 <div class="container main_page_wrapper">
 
 <header class="row">

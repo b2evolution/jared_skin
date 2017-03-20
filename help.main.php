@@ -44,9 +44,12 @@ siteskin_include( '_site_body_header.inc.php' );
 <?php
 if( $Skin->show_container_when_access_denied( 'menu' ) )
 { // Display 'Menu' widget container
+
+$affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-top="43.2"' : 'data-offset-top="1"';
+$transparent_Class = '';
+if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_transparent'; }
 ?>
-<?php $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-top="43.2"' : 'data-offset-top="1"'; ?>
-<nav class="navbar navbar-default main-header-navigation" data-spy="affix"<?php echo $affix_positioning_fix; ?>>
+<nav class="navbar navbar-default main-header-navigation<?php echo $transparent_Class; ?>" data-spy="affix"<?php echo $affix_positioning_fix; ?>>
 	<!-- Brand and toggle get grouped for better mobile display -->
 	<div class="navbar-header">
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

@@ -32,19 +32,8 @@ skin_include( '_html_header.inc.php', array(
 skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
-// Display a picture from skin setting as background image
-// $FileCache = & get_FileCache();
-// $bg_File = NULL;
-// if( $bg_File_ID = $Skin->get_setting( 'front_bg_image_file_ID' ) )
-// {
-	// $bg_File = & $FileCache->get_by_ID( $bg_File_ID, false, false );
-// }
 if( $Skin->get_setting( 'section_1_display' ) ) {
 echo '<div class="evo_pictured_layout">';
-// if( ! empty( $bg_File ) && $bg_File->exists() )
-// { // If it exists in media folder
-	// echo '<img class="evo_pictured__image" src="'.$bg_File->get_url().'" />';
-// }
 ?>
 
 <div class="container main_page_wrapper">

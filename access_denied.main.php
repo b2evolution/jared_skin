@@ -50,7 +50,6 @@ if( $bg_File && $bg_File->exists() )
 
 ?>
 
-
 <div class="container main_page_wrapper">
 
 <header class="row">
