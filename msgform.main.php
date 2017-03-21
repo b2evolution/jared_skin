@@ -42,6 +42,9 @@ siteskin_include( '_site_body_header.inc.php' );
 ?>
 
 <?php
+if( $Skin->show_container_when_access_denied( 'menu' ) )
+{ // Display 'Menu' widget container
+
 $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-top="43.2"' : 'data-offset-top="1"';
 $transparent_Class = '';
 if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_transparent'; }
