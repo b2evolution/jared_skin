@@ -145,15 +145,21 @@ body.anonymous .navbar.main-header-navigation.affix { top: 0 }
 	}
 }
 
-// @media only screen and (min-width: 766px) { body.loggedin .navbar.main-header-navigation.affix { top: 27px } }
-// body.anonymous .navbar.main-header-navigation.affix { top: 0 }
-// @media only screen and (min-width: 766px) { .navbar.main-header-navigation.affix { background-color: transparent } }
-// @media only screen and (max-device-width: 1024px) {
-	// .navbar.main-header-navigation.affix {
-		// position: absolute;
-		// top: 0;
-	// }
-// }
+@media only screen and (max-width: 768px) {
+	.navbar.main-header-navigation .navbar-brand > h3 a {
+		display: inline-block;
+		font-size: 15px;
+		max-width: 280px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+@media only screen and (max-width: 414px) {
+	.navbar.main-header-navigation .navbar-brand > h3 a {
+		max-width: 220px;
+	}
+}
 
 // SPECIAL FRONT PAGE:
 div.front_main_area {
