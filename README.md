@@ -1,4 +1,4 @@
-#"Jared" skin for b2evolution CMS.
+# "Jared" skin for b2evolution CMS.
 
 <hr>
 
