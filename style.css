@@ -145,6 +145,9 @@ body {
 .navbar.main-header-navigation .navbar-collapse .nav:hover li a:hover {
   opacity: 1;
 }
+.navbar.main-header-navigation .navbar-toggle:focus {
+  background: transparent;
+}
 .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a,
 .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a:focus,
 .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a:hover,
@@ -787,7 +790,13 @@ div[class*="_list"],
   }
 }
 @media (max-width: 768px) {
+  #skin_wrapper {
+    font-size: 15px;
+  }
   div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
+    font-size: 34px;
+  }
+  .evo_widget h2.page-header {
     font-size: 34px;
   }
   .evo_container__front_page_primary h1,

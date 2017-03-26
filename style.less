@@ -115,6 +115,10 @@ body {
 			}
 		}
 	}
+	// Prevent background color when hamburger icon clicked on devices
+	.navbar-toggle:focus {
+		background: transparent;
+	}
 	&.navbar-default .navbar-nav>.active>a, &.navbar-default .navbar-nav>.active>a:focus, &.navbar-default .navbar-nav>.active>a:hover, &.navbar-default .navbar-nav li > a {
 		background-color: transparent;
 		text-transform: uppercase;
@@ -766,7 +770,7 @@ div[class*="_list"], .evo_layout_list {
 .text-sm, .text-sm div, .text-sm a, .text-sm h1, .text-sm h2, .text-sm h3, .text-sm h4, .text-sm h5, .text-sm h6, .text-sm ul { font-size: 80% !important }
 .text-xs, .text-xs div, .text-xs a, .text-xs h1, .text-xs h2, .text-xs h3, .text-xs h4, .text-xs h5, .text-xs h6, .text-xs ul { font-size: 60% !important }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {	
 	div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
 		font-size: 50px;
 	}
@@ -787,9 +791,18 @@ div[class*="_list"], .evo_layout_list {
 }
 
 @media (max-width: 768px) {
+	#skin_wrapper {
+		font-size: 15px; // Default font-size
+	}
+	
 	div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
 		font-size: 34px;
 	}
+	
+	.evo_widget h2.page-header {
+		font-size: 34px;
+	}
+	
 	.evo_container__front_page_primary,
 	.evo_container__front_page_secondary,
 	.evo_container__standalone_page_area_6, .evo_container__single_page_cover,
