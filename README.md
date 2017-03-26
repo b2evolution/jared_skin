@@ -7,16 +7,16 @@
 
 #### Menu links class
 
-<code>.menu-button</code> - creates special menu link layout
+<code>menu-button</code> - creates special menu link layout
 
 ![b2evolution CMS](menu-buttons-layout.jpg)
 
 #### Font size classes
 
-<code>.text-xl</code> - increases font size by 60%<br>
-<code>.text-lg</code> - increases font size by 30%<br>
-<code>.text-sm</code> - decreases font size by 20%<br>
-<code>.text-xs</code> - decreases font size by 40%<br>
+<code>text-xl</code> - increases font size by 60%<br>
+<code>text-lg</code> - increases font size by 30%<br>
+<code>text-sm</code> - decreases font size by 20%<br>
+<code>text-xs</code> - decreases font size by 40%<br>
 
 #### Special classes implementation
 
