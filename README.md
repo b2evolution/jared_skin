@@ -1,7 +1,5 @@
 # "Jared" skin for b2evolution CMS.
 
-<hr>
-
 "Jared" is equipped with a set of predefined <a href="https://www.w3schools.com/css/css_syntax.asp" target="_blank">CSS classes</a>, that can be used to change content layout througout the skin.
 
 #### Menu links class
