@@ -18,5 +18,5 @@
 #### Special classes implementation
 
 These classes can be simply insert:
-1) in widgets - in <span style="color:#999">CSS Class</span> field, for example <a href="http://b2evolution.net/media/blogs/man/skin-guide/widget_edit_screen.png?mtime=1428614162" target="_blank">here</a> or through HTML Widget;
+1) in widgets - in <code>CSS Class</code> field, for example <a href="http://b2evolution.net/media/blogs/man/skin-guide/widget_edit_screen.png?mtime=1428614162" target="_blank">here</a> or through HTML Widget;
 2) in posts, through Markup post view.
