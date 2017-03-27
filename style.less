@@ -770,6 +770,15 @@ div[class*="_list"], .evo_layout_list {
 .text-sm, .text-sm div, .text-sm a, .text-sm h1, .text-sm h2, .text-sm h3, .text-sm h4, .text-sm h5, .text-sm h6, .text-sm ul { font-size: 80% !important }
 .text-xs, .text-xs div, .text-xs a, .text-xs h1, .text-xs h2, .text-xs h3, .text-xs h4, .text-xs h5, .text-xs h6, .text-xs ul { font-size: 60% !important }
 
+@media (max-width: 1024px) {
+	.disp_front .evo_container__page_top {
+		margin: 0;
+	}
+	body.pictured #skin_wrapper&.skin_wrapper_loggedin {
+		padding-top: 0;
+	}
+}
+
 @media only screen and (max-width: 992px) {	
 	div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
 		font-size: 50px;
@@ -781,13 +790,6 @@ div[class*="_list"], .evo_layout_list {
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
-}
-
-@media (max-width: 1024px) {
-	.disp_front .evo_container__page_top {
-		margin: 0;
-	}
-
 }
 
 @media (max-width: 768px) {

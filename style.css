@@ -773,6 +773,14 @@ div[class*="_list"],
 .text-xs ul {
   font-size: 60% !important;
 }
+@media (max-width: 1024px) {
+  .disp_front .evo_container__page_top {
+    margin: 0;
+  }
+  body.pictured #skin_wrapper.skin_wrapper_loggedin {
+    padding-top: 0;
+  }
+}
 @media only screen and (max-width: 992px) {
   div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
     font-size: 50px;
@@ -782,11 +790,6 @@ div[class*="_list"],
   .main_page_wrapper_other_disps {
     padding-top: 40px;
     padding-bottom: 40px;
-  }
-}
-@media (max-width: 1024px) {
-  .disp_front .evo_container__page_top {
-    margin: 0;
   }
 }
 @media (max-width: 768px) {
