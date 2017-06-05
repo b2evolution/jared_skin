@@ -78,6 +78,11 @@ if( $is_other_disp ) { echo '<div class="evo_container__standalone_page_area_oth
 					'list_end'            => '</ul>',
 					'item_start'          => '<li>',
 					'item_end'            => '</li>',
+					// Widget 'Search form':
+					'search_input_before'  => '<div class="input-group">',
+					'search_input_after'   => '',
+					'search_submit_before' => '<span class="input-group-btn">',
+					'search_submit_after'  => '</span></div>',    
 				) );
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
 		?>
@@ -131,6 +136,11 @@ if( $is_other_disp ) { echo '<div class="evo_container__standalone_page_area_oth
 					'block_end'         => '</div>',
 					'block_title_start' => '<h1>',
 					'block_title_end'   => '</h1>',
+					// Widget 'Search form':
+					'search_input_before'  => '<div class="input-group">',
+					'search_input_after'   => '',
+					'search_submit_before' => '<span class="input-group-btn">',
+					'search_submit_after'  => '</span></div>',    
 				) );
 			// ----------------------------- END OF "Header" CONTAINER -----------------------------
 		?>

@@ -54,6 +54,11 @@ echo '<div class="evo_pictured_layout">';
 					'list_end'            => '</ul>',
 					'item_start'          => '<li>',
 					'item_end'            => '</li>',
+					// Widget 'Search form':
+					'search_input_before'  => '<div class="input-group">',
+					'search_input_after'   => '',
+					'search_submit_before' => '<span class="input-group-btn">',
+					'search_submit_after'  => '</span></div>',    
 				) );
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
 		?>
@@ -248,6 +253,11 @@ echo '<div class="evo_pictured_layout">';
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// Widget 'Search form':
+						'search_input_before'  => '<div class="input-group">',
+						'search_input_after'   => '',
+						'search_submit_before' => '<span class="input-group-btn">',
+						'search_submit_after'  => '</span></div>',    
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
 			?>
@@ -267,6 +277,11 @@ echo '<div class="evo_pictured_layout">';
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// Widget 'Search form':
+						'search_input_before'  => '<div class="input-group">',
+						'search_input_after'   => '',
+						'search_submit_before' => '<span class="input-group-btn">',
+						'search_submit_after'  => '</span></div>',    
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
 			?>
@@ -286,6 +301,11 @@ echo '<div class="evo_pictured_layout">';
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// Widget 'Search form':
+						'search_input_before'  => '<div class="input-group">',
+						'search_input_after'   => '',
+						'search_submit_before' => '<span class="input-group-btn">',
+						'search_submit_after'  => '</span></div>',    
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
 			?>
@@ -305,6 +325,11 @@ echo '<div class="evo_pictured_layout">';
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// Widget 'Search form':
+						'search_input_before'  => '<div class="input-group">',
+						'search_input_after'   => '',
+						'search_submit_before' => '<span class="input-group-btn">',
+						'search_submit_after'  => '</span></div>',    
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
 			?>

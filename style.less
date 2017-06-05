@@ -244,26 +244,26 @@ body.pictured {
 		// width: 100%;
 	// }
 }
-@media only screen and (max-width: 640px) {
-	body.disp_front {
-		.sitewide_header {
-			margin-bottom: 0;
-		}
-		.evo_pictured_layout {
-			position: relative;
-			height: auto;
-			min-height: auto;
-			> .evo_pictured__image {
-				display: block;
-			}
-		}
-		div.front_main_area {
-			width: auto;
-			margin-top: 0;
-			margin-bottom: 0;
-		}
-	}
-}
+// @media only screen and (max-width: 640px) {
+	// body.disp_front {
+		// .sitewide_header {
+			// margin-bottom: 0;
+		// }
+		// .evo_pictured_layout {
+			// position: relative;
+			// height: auto;
+			// min-height: auto;
+			// > .evo_pictured__image {
+				// display: block;
+			// }
+		// }
+		// div.front_main_area {
+			// width: auto;
+			// margin-top: 0;
+			// margin-bottom: 0;
+		// }
+	// }
+// }
 
 // Login widget form
 .widget_core_user_login {
@@ -693,6 +693,10 @@ body.pictured .secondary_area .widget_core_org_members {
 				margin: 0;
 			}
 		}
+		
+		&.widget_rwd_blocks > div {
+			padding: 0 15px 0;
+		}
 	}
 	
 	div.widget_flow_blocks div {
@@ -716,7 +720,42 @@ body.pictured .secondary_area .widget_core_org_members {
 			opacity: 0.8;
 		}
 	}
+	
+	&.widget_core_coll_featured_posts.evo_layout_rwd.evo_withexcerpt,
+	&.widget_core_coll_featured_posts.evo_layout_rwd.evo_withteaser,
+	&.widget_core_coll_item_list.evo_layout_rwd.evo_withexcerpt,
+	&.widget_core_coll_item_list.evo_layout_rwd.evo_withteaser,
+	&.widget_core_coll_page_list.evo_layout_rwd.evo_withexcerpt,
+	&.widget_core_coll_page_list.evo_layout_rwd.evo_withteaser,
+	&.widget_core_coll_post_list.evo_layout_rwd.evo_withexcerpt,
+	&.widget_core_coll_post_list.evo_layout_rwd.evo_withteaser,
+	&.widget_core_coll_related_post_list.evo_layout_rwd.evo_withexcerpt,
+	&.widget_core_coll_related_post_list.evo_layout_rwd.evo_withteaser {
+		.widget_rwd_blocks .widget_rwd_content .item_title {
+			font-size: 24px;
+		}
+	}
 }
+
+// New search layout IN DEV
+// .compact_search_form {
+	// .input-group {
+		// .search_field {
+			// background: transparent;
+			// border-width: 0 0 1px 0;
+			// box-shadow: none;
+			// border-radius: 0;
+		// }
+		// .input-group-btn {
+			// border-bottom: 1px solid;
+			// .search_submit {
+				// border-radius: 0;
+				// background: transparent;
+				// border-width: 0;
+			// }
+		// }
+	// }
+// }
 
 .detail_msgform .main_page_wrapper,
 .disp_help .main_page_wrapper,

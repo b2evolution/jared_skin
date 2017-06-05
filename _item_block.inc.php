@@ -115,6 +115,12 @@ echo '<div class="evo_content_block">'; // Beginning of post display
 				'block_title_end' => '</h3>',
 
 				'author_link_text' => $params['author_link_text'],
+				
+				// Widget 'Search form':
+				'search_input_before'  => '<div class="input-group">',
+				'search_input_after'   => '',
+				'search_submit_before' => '<span class="input-group-btn">',
+				'search_submit_after'  => '</span></div>',
 			) );
 			// ----------------------------- END OF "Item Single - Header" CONTAINER -----------------------------
 		}

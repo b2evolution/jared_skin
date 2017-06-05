@@ -123,6 +123,11 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_tra
 					'list_end'            => '</ul>',
 					'item_start'          => '<li>',
 					'item_end'            => '</li>',
+					// Widget 'Search form':
+					'search_input_before'  => '<div class="input-group">',
+					'search_input_after'   => '',
+					'search_submit_before' => '<span class="input-group-btn">',
+					'search_submit_after'  => '</span></div>',    
 				) );
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
 		?>
@@ -199,6 +204,11 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_tra
 				// The following params will be used as defaults for widgets included in this container:
 				'block_start'         => '<div class="evo_widget $wi_class$">',
 				'block_end'           => '</div>',
+				// Widget 'Search form':
+				'search_input_before'  => '<div class="input-group">',
+				'search_input_after'   => '',
+				'search_submit_before' => '<span class="input-group-btn">',
+				'search_submit_after'  => '</span></div>',    
 			) );
 		// ----------------------------- END OF "Footer" CONTAINER -----------------------------
 		?>

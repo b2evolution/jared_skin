@@ -1129,6 +1129,7 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_1_text_color' ) )
 			{
 				$custom_css .= 'body.pictured .front_main_content, body.pictured .front_main_content h1 small, .evo_container__header, .evo_container__page_top { color: '.$color." }\n";
+				// $custom_css .= '.evo_pictured_layout .compact_search_form .input-group .search_field, .evo_pictured_layout .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 			}
 
 			$link_color 		= $this->get_setting( 'section_1_link_color' );
@@ -1190,6 +1191,7 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_2_text_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_secondary_area { color: '.$color." }\n";
+				// $custom_css .= '.evo_container__front_page_secondary_area .input-group .search_field, .evo_container__front_page_secondary_area .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_2_link_color' ) )
 			{
@@ -1241,6 +1243,7 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_3_text_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_3 { color: '.$color." }\n";
+				// $custom_css .= '.evo_container__front_page_area_3 .input-group .search_field, .evo_container__front_page_area_3 .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_3_link_color' ) )
 			{
@@ -1292,6 +1295,7 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_4_text_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_4 { color: '.$color." }\n";
+				// $custom_css .= '.evo_container__front_page_area_4 .input-group .search_field, .evo_container__front_page_area_4 .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_4_link_color' ) )
 			{
@@ -1343,6 +1347,7 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_5_text_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_5 { color: '.$color." }\n";
+				// $custom_css .= '.evo_container__front_page_area_5 .input-group .search_field, .evo_container__front_page_area_5 .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_5_link_color' ) )
 			{
@@ -1395,6 +1400,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_6_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { color: '.$color." }\n";
+			// $custom_css .= '.evo_container__standalone_page_area_6 .input-group .search_field, .evo_container__standalone_page_area_6 .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_link_color' ) )
 		{
@@ -1446,6 +1452,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_7_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 { color: '.$color." }\n";
+			// $custom_css .= '.evo_container__standalone_page_area_7 .input-group .search_field, .evo_container__standalone_page_area_7 .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_7_link_color' ) )
 		{
@@ -1491,6 +1498,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_oth_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_oth { color: '.$color." }\n";
+			// $custom_css .= '.evo_container__standalone_page_area_oth .input-group .search_field, .evo_container__standalone_page_area_oth .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_oth_title_color' ) )
 		{
@@ -1545,6 +1553,7 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'footer_content_color' ) )
 		{	// Custom link color on background image:
 			$custom_css .= '.footer_wrapper { color: '.$color." }\n";
+			// $custom_css .= '.footer_wrapper .input-group .search_field, .footer_wrapper .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'footer_link_color' ) )
 		{	// Custom link color on background image:

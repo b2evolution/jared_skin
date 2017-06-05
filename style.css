@@ -253,24 +253,6 @@ body.pictured div#debug_info.debug {
   background-size: cover;
   background-position: center center;
 }
-@media only screen and (max-width: 640px) {
-  body.disp_front .sitewide_header {
-    margin-bottom: 0;
-  }
-  body.disp_front .evo_pictured_layout {
-    position: relative;
-    height: auto;
-    min-height: auto;
-  }
-  body.disp_front .evo_pictured_layout > .evo_pictured__image {
-    display: block;
-  }
-  body.disp_front div.front_main_area {
-    width: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
 .widget_core_user_login #login_form .form-group {
   margin: 0;
 }
@@ -660,6 +642,9 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
   padding: 0;
   margin: 0;
 }
+.evo_widget div.widget_rwd_blocks > div {
+  padding: 0 15px 0;
+}
 .evo_widget div.widget_flow_blocks div {
   margin: 3px;
 }
@@ -679,6 +664,18 @@ body.pictured .secondary_area .widget_core_org_members a.user_link:hover {
 }
 .evo_widget > .btn.btn-default:hover {
   opacity: 0.8;
+}
+.evo_widget.widget_core_coll_featured_posts.evo_layout_rwd.evo_withexcerpt .widget_rwd_blocks .widget_rwd_content .item_title,
+.evo_widget.widget_core_coll_featured_posts.evo_layout_rwd.evo_withteaser .widget_rwd_blocks .widget_rwd_content .item_title,
+.evo_widget.widget_core_coll_item_list.evo_layout_rwd.evo_withexcerpt .widget_rwd_blocks .widget_rwd_content .item_title,
+.evo_widget.widget_core_coll_item_list.evo_layout_rwd.evo_withteaser .widget_rwd_blocks .widget_rwd_content .item_title,
+.evo_widget.widget_core_coll_page_list.evo_layout_rwd.evo_withexcerpt .widget_rwd_blocks .widget_rwd_content .item_title,
+.evo_widget.widget_core_coll_page_list.evo_layout_rwd.evo_withteaser .widget_rwd_blocks .widget_rwd_content .item_title,
+.evo_widget.widget_core_coll_post_list.evo_layout_rwd.evo_withexcerpt .widget_rwd_blocks .widget_rwd_content .item_title,
+.evo_widget.widget_core_coll_post_list.evo_layout_rwd.evo_withteaser .widget_rwd_blocks .widget_rwd_content .item_title,
+.evo_widget.widget_core_coll_related_post_list.evo_layout_rwd.evo_withexcerpt .widget_rwd_blocks .widget_rwd_content .item_title,
+.evo_widget.widget_core_coll_related_post_list.evo_layout_rwd.evo_withteaser .widget_rwd_blocks .widget_rwd_content .item_title {
+  font-size: 24px;
 }
 .detail_msgform .main_page_wrapper,
 .disp_help .main_page_wrapper,
