@@ -141,6 +141,22 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'nav_colltitle_size' => array(
+						'label' => T_('Collection title font size'),
+						'note' => 'px. ' . T_('Set font size for collection title in navigation.'),
+						'defaultvalue' => '18',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
+					'nav_links_size' => array(
+						'label' => T_('Links font size'),
+						'note' => 'px. ' . T_('Set font size for navigation links.'),
+						'defaultvalue' => '13',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'nav_links_color' => array(
 						'label' => T_('Links color'),
 						'note' => T_('Click to select a color.'),
@@ -1032,6 +1048,16 @@ class jared_Skin extends Skin
 		// ============ Navigation Section ============
 		$nav_links_color = $this->get_setting( 'nav_links_color' );
 		$nav_bg_color    = $this->get_setting( 'nav_bg_color' );
+		
+		if( $custom_font_size = $this->get_setting( 'nav_colltitle_size' ) )
+		{
+			$custom_css .= ".navbar.main-header-navigation .navbar-brand > h3 a { font-size:". $custom_font_size. "px }\n";
+		}
+		
+		if( $custom_font_size = $this->get_setting( 'nav_links_size' ) )
+		{
+			$custom_css .= ".navbar.main-header-navigation.navbar-default .navbar-nav > .active > a, .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a:focus, .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a:hover, .navbar.main-header-navigation.navbar-default .navbar-nav li > a { font-size:". $custom_font_size. "px }\n";
+		}
 		
 		// If "Transparent background" option for navigation is TRUE
 		if( $this->get_setting( 'nav_bg_transparent' ) )
