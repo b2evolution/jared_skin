@@ -110,7 +110,7 @@ body {
   padding: 0;
 }
 .navbar.main-header-navigation .navbar-brand > h3 {
-  margin-top: 13px;
+  margin-top: 14px;
 }
 .navbar.main-header-navigation .navbar-brand > h3 a {
   font-family: 'Josefin Sans', sans-serif;
@@ -124,9 +124,10 @@ body {
 }
 .navbar.main-header-navigation .navbar-collapse .nav li {
   padding: 0;
-  padding-bottom: 3px;
 }
 .navbar.main-header-navigation .navbar-collapse .nav li a {
+  padding-top: 17px;
+  padding-bottom: 17px;
   transition: .1s opacity linear;
 }
 .navbar.main-header-navigation .navbar-collapse .nav li.menu-button a {
@@ -156,7 +157,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: .18em;
 }
 .navbar.main-header-navigation.affix {
@@ -166,9 +167,6 @@ body {
 }
 body.loggedin .navbar.main-header-navigation.affix {
   top: 27px;
-}
-body.anonymous .navbar.main-header-navigation.affix {
-  top: 0;
 }
 @media (max-width: 1024px) {
   body.loggedin .navbar.main-header-navigation.affix,
@@ -181,10 +179,13 @@ body.anonymous .navbar.main-header-navigation.affix {
   }
 }
 @media only screen and (max-width: 768px) {
+  .navbar.main-header-navigation .navbar-brand {
+    width: calc(100% - 60px);
+  }
   .navbar.main-header-navigation .navbar-brand > h3 a {
     display: inline-block;
     font-size: 15px;
-    max-width: 280px;
+    width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
