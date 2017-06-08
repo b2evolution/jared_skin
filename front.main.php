@@ -32,30 +32,15 @@ skin_include( '_html_header.inc.php', array(
 skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
-// Display a picture from skin setting as background image
-$FileCache = & get_FileCache();
-$bg_File = NULL;
-if( $bg_File_ID = $Skin->get_setting( 'front_bg_image_file_ID' ) )
-{
-	$bg_File = & $FileCache->get_by_ID( $bg_File_ID, false, false );
-}
-echo '<div class="evo_pictured_layout fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">';
-if( ! empty( $bg_File ) && $bg_File->exists() )
-{ // If it exists in media folder
-	echo '<img class="evo_pictured__image" src="'.$bg_File->get_url().'" />';
-}
+if( $Skin->get_setting( 'section_1_display' ) ) {
+echo '<div class="evo_pictured_layout">';
 ?>
-
 
 <div class="container main_page_wrapper">
 
 <header class="row">
 
 	<div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8">
-		<?php
-		if( $Skin->show_container_when_access_denied( 'page_top' ) )
-		{ // Display 'Page Top' widget container
-		?>
 		<div class="evo_container evo_container__page_top">
 		<?php
 			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
@@ -69,11 +54,15 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 					'list_end'            => '</ul>',
 					'item_start'          => '<li>',
 					'item_end'            => '</li>',
+					// Widget 'Search form':
+					'search_input_before'  => '<div class="input-group">',
+					'search_input_after'   => '',
+					'search_submit_before' => '<span class="input-group-btn">',
+					'search_submit_after'  => '</span></div>',    
 				) );
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
 		?>
 		</div>
-		<?php } ?>
 	</div><!-- .col -->
 
 </header><!-- .row -->
@@ -244,37 +233,7 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 </div><!-- .container -->
 
 </div><!-- .evo_pictured_layout -->
-
-<!--
-<div class="fullscreen background parallax" style="background-image:url(http://localhost/b2evolution/media/blogs/home/z2qpo2p485.jpg?mtime=1488368559);height: 300px;" data-img-width="3872" data-img-height="2592" data-diff="800">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content1
-        </div>
-    </div>
-</div>
-<div class="not-fullscreen background parallax" style="background-image:url(http://localhost/b2evolution/media/blogs/home/z2qpo2p485.jpg?mtime=1488368559);height: 300px;" data-img-width="3872" data-img-height="2592" data-diff="300">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content2
-        </div>
-    </div>
-</div>
-<div class="fullscreen background parallax" style="background-image:url(http://localhost/b2evolution/media/blogs/home/z2qpo2p485.jpg?mtime=1488368559);height: 300px;" data-img-width="3872" data-img-height="2592" data-diff="100">
-    <div class="content-wrapper">
-        <div class="content-b">
-            Centered content3
-        </div>
-    </div>
-</div>
-<div class="fullscreen background parallax" style="background-image:url(http://localhost/b2evolution/media/blogs/home/z2qpo2p485.jpg?mtime=1488368559);height: 300px;" data-img-width="3872" data-img-height="2592" data-diff="400">
-    <div class="content-a">
-        <div class="content-b">
-            Centered content4
-        </div>
-    </div>
-</div>
--->
+<?php } ?>
 
 <!-- =================================== START OF SECONDARY AREA =================================== -->
 <section class="secondary_area" id="slide_destination"><!-- white background, ID is used to slide here from "slide_button" -->
@@ -282,7 +241,8 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 
 	<div class="row">
 
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__one fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">
+		<?php if( $Skin->get_setting( 'section_2_display' ) ) { ?>
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary_area">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -293,13 +253,20 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// Widget 'Search form':
+						'search_input_before'  => '<div class="input-group">',
+						'search_input_after'   => '',
+						'search_submit_before' => '<span class="input-group-btn">',
+						'search_submit_after'  => '</span></div>',    
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
 			?>
 			</div>
 		</div>
-			
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__two fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">
+		<?php } ?>
+		
+		<?php if( $Skin->get_setting( 'section_3_display' ) ) { ?>	
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_3">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -310,13 +277,20 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// Widget 'Search form':
+						'search_input_before'  => '<div class="input-group">',
+						'search_input_after'   => '',
+						'search_submit_before' => '<span class="input-group-btn">',
+						'search_submit_after'  => '</span></div>',    
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
 			?>
 			</div>
 		</div>
-			
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__three fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">
+		<?php } ?>
+		
+		<?php if( $Skin->get_setting( 'section_4_display' ) ) { ?>
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_4">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -327,13 +301,20 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// Widget 'Search form':
+						'search_input_before'  => '<div class="input-group">',
+						'search_input_after'   => '',
+						'search_submit_before' => '<span class="input-group-btn">',
+						'search_submit_after'  => '</span></div>',    
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
 			?>
 			</div>
 		</div>
+		<?php } ?>
 		
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary__four fullscreen background parallax" data-img-width="1600" data-img-height="1064" data-diff="800">
+		<?php if( $Skin->get_setting( 'section_5_display' ) ) { ?>
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_5">
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -344,90 +325,17 @@ if( ! empty( $bg_File ) && $bg_File->exists() )
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// Widget 'Search form':
+						'search_input_before'  => '<div class="input-group">',
+						'search_input_after'   => '',
+						'search_submit_before' => '<span class="input-group-btn">',
+						'search_submit_after'  => '</span></div>',    
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
 			?>
 			</div>
 		</div>
-
-		<footer class="col-md-12 footer_wrapper">
-
-			<div class="evo_container evo_container__footer">
-			<?php
-				// ------------------------- "Footer" CONTAINER EMBEDDED HERE --------------------------
-				// Display container and contents:
-				skin_container( NT_('Footer'), array(
-						// The following params will be used as defaults for widgets included in this container:
-						'block_start'         => '<span class="evo_widget $wi_class$">',
-						'block_end'           => '</span> ',
-						'block_display_title' => false,
-						'list_start'          => '',
-						'list_end'            => '',
-						'item_start'          => '',
-						'item_end'            => '',
-						'item_selected_start' => '',
-						'item_selected_end'   => '',
-						'link_default_class'  => 'btn btn-default btn-sm',
-						'link_selected_class' => 'btn btn-default btn-sm active',
-					) );
-				// ----------------------------- END OF "Footer" CONTAINER -----------------------------
-			?>
-			</div>
-
-			<p>
-			<?php
-				// Display footer text (text can be edited in Blog Settings):
-				$Blog->footer_text( array(
-						'before' => '',
-						'after'  => ' &bull; ',
-					) );
-
-			// TODO: dh> provide a default class for pTyp, too. Should be a name and not the ityp_ID though..?!
-			?>
-
-			<?php
-				// Display a link to contact the owner of this blog (if owner accepts messages):
-				$Blog->contact_link( array(
-						'before' => '',
-						'after'  => ' &bull; ',
-						'text'   => T_('Contact'),
-						'title'  => T_('Send a message to the owner of this blog...'),
-					) );
-				// Display a link to help page:
-				$Blog->help_link( array(
-						'before' => ' ',
-						'after'  => ' ',
-						'text'   => T_('Help'),
-					) );
-			?>
-
-			<?php
-				// Display additional credits:
-				// If you can add your own credits without removing the defaults, you'll be very cool :))
-				// Please leave this at the bottom of the page to make sure your blog gets listed on b2evolution.net
-				credits( array(
-						'list_start' => '&bull;',
-						'list_end'   => ' ',
-						'separator'  => '&bull;',
-						'item_start' => ' ',
-						'item_end'   => ' ',
-					) );
-			?>
-			</p>
-
-			<?php
-				// Please help us promote b2evolution and leave this logo on your blog:
-				powered_by( array(
-						'block_start' => '<div class="powered_by">',
-						'block_end'   => '</div>',
-						// Check /rsc/img/ for other possible images -- Don't forget to change or remove width & height too
-						'img_url'     => '$rsc$img/powered-by-b2evolution-120t.gif',
-						'img_width'   => 120,
-						'img_height'  => 32,
-					) );
-			?>
-
-		</footer><!-- .col -->
+		<?php } ?>
 
 	</div><!-- .row -->
 
@@ -451,7 +359,7 @@ $slide_down.on( "click", function(event) {
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
 // If site footers are enabled, they will be included here:
-siteskin_include( '_site_body_footer.inc.php' );
+skin_include( '_body_footer.inc.php' );
 // ------------------------------- END OF SITE FOOTER --------------------------------
 
 

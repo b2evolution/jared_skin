@@ -41,68 +41,39 @@ siteskin_include( '_site_body_header.inc.php' );
 ?>
 
 
-<div class="container main_page_wrapper">
-
-<header class="row">
-
-	<div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8">
-		<?php
-		if( $Skin->show_container_when_access_denied( 'page_top' ) )
-		{ // Display 'Page Top' widget container
-		?>
-		<div class="evo_container evo_container__page_top">
-		<?php
-			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
-			// Display container and contents:
-			skin_container( NT_('Page Top'), array(
-					// The following params will be used as defaults for widgets included in this container:
-					'block_start'         => '<div class="evo_widget $wi_class$">',
-					'block_end'           => '</div>',
-					'block_display_title' => false,
-					'list_start'          => '<ul>',
-					'list_end'            => '</ul>',
-					'item_start'          => '<li>',
-					'item_end'            => '</li>',
-				) );
-			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
-		?>
-		</div>
-		<?php } ?>
-	</div><!-- .col -->
-
-	<div class="coll-xs-12 col-sm-12 col-md-8 col-md-pull-4">
-		<?php
-		if( $Skin->show_container_when_access_denied( 'header' ) )
-		{ // Display 'Header' widget container
-		?>
-		<div class="evo_container evo_container__header">
-		<?php
-			// ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
-			// Display container and contents:
-			skin_container( NT_('Header'), array(
-					// The following params will be used as defaults for widgets included in this container:
-					'block_start'       => '<div class="evo_widget $wi_class$">',
-					'block_end'         => '</div>',
-					'block_title_start' => '<h1>',
-					'block_title_end'   => '</h1>',
-				) );
-			// ----------------------------- END OF "Header" CONTAINER -----------------------------
-		?>
-		</div>
-		<?php } ?>
-	</div><!-- .col -->
-
-</header><!-- .row -->
-
-
 <?php
 if( $Skin->show_container_when_access_denied( 'menu' ) )
 { // Display 'Menu' widget container
-?>
-<nav class="row">
 
-	<div class="col-md-12">
-		<ul class="nav nav-tabs evo_container evo_container__menu">
+$affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-top="43.2"' : 'data-offset-top="1"';
+$transparent_Class = '';
+if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_transparent'; }
+?>
+<nav class="navbar navbar-default main-header-navigation<?php echo $transparent_Class; ?>" data-spy="affix"<?php echo $affix_positioning_fix; ?>>
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<?php
+		skin_widget( array(
+			// CODE for the widget:
+			'widget'              => 'coll_title',
+			// Optional display params
+			'block_start'         => '<div class="navbar-brand">',
+			'block_end'           => '</div>',
+			'item_class'           => 'navbar-brand',
+		) );
+		// ------------------------- "Menu" Collection logo --------------------------
+		?>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<ul class="nav navbar-nav navbar-right">
 		<?php
 			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
 			// Display container and contents:
@@ -124,11 +95,68 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
 		?>
 		</ul>
-	</div><!-- .col -->
-
-</nav><!-- .row -->
+	</div><!-- /.navbar-collapse -->
+</nav>
 <?php } ?>
 
+<div class="evo_container__standalone_page_area_oth">
+
+<div class="container">
+
+<header class="row">
+
+	<div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8">
+		<?php
+		if( $Skin->show_container_when_access_denied( 'page_top' ) )
+		{ // Display 'Page Top' widget container
+		?>
+		<div class="evo_container evo_container__page_top">
+		<?php
+			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
+			// Display container and contents:
+			skin_container( NT_('Page Top'), array(
+					// The following params will be used as defaults for widgets included in this container:
+					'block_start'         => '<div class="evo_widget $wi_class$">',
+					'block_end'           => '</div>',
+					'block_display_title' => false,
+					'list_start'          => '<ul>',
+					'list_end'            => '</ul>',
+					'item_start'          => '<li>',
+					'item_end'            => '</li>',
+					// Widget 'Search form':
+					'search_input_before'  => '<div class="input-group">',
+					'search_input_after'   => '',
+					'search_submit_before' => '<span class="input-group-btn">',
+					'search_submit_after'  => '</span></div>',    
+				) );
+			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
+		?>
+		</div>
+		<?php } ?>
+	</div><!-- .col -->
+	
+	<div class="col-md-12">
+		<?php
+			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
+			// request_title( array(
+					// 'title_before'      => '<h1 class="page_title">',
+					// 'title_after'       => '</h1>',
+					// 'title_none'        => '',
+					// 'glue'              => ' - ',
+				// ) );
+				
+				echo '<h1 class="page_title">'.T_('Content issues').'</h1>'; // Hardcoded, since dynamic content is not properly installed for disp=help
+			// ----------------------------- END OF REQUEST TITLE ----------------------------
+		?>
+	</div>
+
+</header><!-- .row -->
+
+</div><!-- .container -->
+
+</div><!-- .evo_container__standalone_page_area_7 -->
+
+<div class="container main_page_wrapper">
 
 <div class="row">
 	<div class="col-md-12">
@@ -143,17 +171,6 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 					'block_end'   => '</div>',
 				) );
 			// --------------------------------- END OF MESSAGES ---------------------------------
-		?>
-
-		<?php
-			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-			request_title( array(
-					'title_before'      => '<h2 class="page_title">',
-					'title_after'       => '</h2>',
-					'title_none'        => '',
-					'glue'              => ' - ',
-				) );
-			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 
 		<?php
@@ -172,103 +189,82 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 
 </div><!-- .container -->
 
+<!-- =================================== START OF FOOTER =================================== -->
+<footer class="container-fluid footer_wrapper">
+			
+	<?php
+	if( $Skin->show_container_when_access_denied( 'footer' ) )
+	{ // Display 'Footer' widget container
+	?>
+	<div class="container evo_container evo_container__footer">
+		<?php
+		// ------------------------- "Footer" CONTAINER EMBEDDED HERE --------------------------
+		// Display container and contents:
+		skin_container( NT_('Footer'), array(
+				// The following params will be used as defaults for widgets included in this container:
+				'block_start'         => '<div class="evo_widget $wi_class$">',
+				'block_end'           => '</div>',
+				// Widget 'Search form':
+				'search_input_before'  => '<div class="input-group">',
+				'search_input_after'   => '',
+				'search_submit_before' => '<span class="input-group-btn">',
+				'search_submit_after'  => '</span></div>',    
+			) );
+		// ----------------------------- END OF "Footer" CONTAINER -----------------------------
+		?>
+	</div>
+	<?php } ?>
+	
+	<p class="baseline">
+		<?php
+		// Display footer text (text can be edited in Blog Settings):
+		$Blog->footer_text( array(
+				'before' => '',
+				'after'  => ' &bull; ',
+			) );
+		// TODO: dh> provide a default class for pTyp, too. Should be a name and not the ityp_ID though..?!
+		
+		// Display a link to contact the owner of this blog (if owner accepts messages):
+		$Blog->contact_link( array(
+				'before' => '',
+				'after'  => ' &bull; ',
+				'text'   => T_('Contact'),
+				'title'  => T_('Send a message to the owner of this blog...'),
+			) );
+			
+		// Display a link to help page:
+		$Blog->help_link( array(
+				'before' => ' ',
+				'after'  => ' ',
+				'text'   => T_('Help'),
+			) );
+			
+		// Display additional credits:
+		// If you can add your own credits without removing the defaults, you'll be very cool :))
+		// Please leave this at the bottom of the page to make sure your blog gets listed on b2evolution.net
+		credits( array(
+				'list_start' => '&bull;',
+				'list_end'   => ' ',
+				'separator'  => '&bull;',
+				'item_start' => ' ',
+				'item_end'   => ' ',
+			) );
+		?>
+	</p>
 
-<!-- =================================== START OF SECONDARY AREA =================================== -->
-<section class="secondary_area"><!-- white background -->
-<div class="container">
+	<?php
+		// Please help us promote b2evolution and leave this logo on your blog:
+		powered_by( array(
+				'block_start' => '<div class="powered_by">',
+				'block_end'   => '</div>',
+				// Check /rsc/img/ for other possible images -- Don't forget to change or remove width & height too
+				'img_url'     => '$rsc$img/powered-by-b2evolution-120t.gif',
+				'img_width'   => 120,
+				'img_height'  => 32,
+			) );
+	?>
 
-	<div class="row">
-
-		<footer class="col-md-12 center">
-
-			<?php
-			if( $Skin->show_container_when_access_denied( 'footer' ) )
-			{ // Display 'Footer' widget container
-			?>
-			<div class="evo_container evo_container__footer">
-			<?php
-				// ------------------------- "Footer" CONTAINER EMBEDDED HERE --------------------------
-				// Display container and contents:
-				skin_container( NT_('Footer'), array(
-						// The following params will be used as defaults for widgets included in this container:
-						'block_start'         => '<span class="evo_widget $wi_class$">',
-						'block_end'           => '</span> ',
-						'block_display_title' => false,
-						'list_start'          => '',
-						'list_end'            => '',
-						'item_start'          => '',
-						'item_end'            => '',
-						'item_selected_start' => '',
-						'item_selected_end'   => '',
-						'link_default_class'  => 'btn btn-default btn-sm',
-						'link_selected_class' => 'btn btn-default btn-sm active',
-					) );
-				// ----------------------------- END OF "Footer" CONTAINER -----------------------------
-			?>
-			</div>
-			<?php } ?>
-
-			<p>
-			<?php
-				// Display footer text (text can be edited in Blog Settings):
-				$Blog->footer_text( array(
-						'before' => '',
-						'after'  => ' &bull; ',
-					) );
-
-			// TODO: dh> provide a default class for pTyp, too. Should be a name and not the ityp_ID though..?!
-			?>
-
-			<?php
-				// Display a link to contact the owner of this blog (if owner accepts messages):
-				$Blog->contact_link( array(
-						'before' => '',
-						'after'  => ' &bull; ',
-						'text'   => T_('Contact'),
-						'title'  => T_('Send a message to the owner of this blog...'),
-					) );
-				// Display a link to help page:
-				$Blog->help_link( array(
-						'before' => ' ',
-						'after'  => ' ',
-						'text'   => T_('Help'),
-					) );
-			?>
-
-			<?php
-				// Display additional credits:
-				// If you can add your own credits without removing the defaults, you'll be very cool :))
-				// Please leave this at the bottom of the page to make sure your blog gets listed on b2evolution.net
-				credits( array(
-						'list_start' => '&bull;',
-						'list_end'   => ' ',
-						'separator'  => '&bull;',
-						'item_start' => ' ',
-						'item_end'   => ' ',
-					) );
-			?>
-			</p>
-
-			<?php
-				// Please help us promote b2evolution and leave this logo on your blog:
-				powered_by( array(
-						'block_start' => '<div class="powered_by">',
-						'block_end'   => '</div>',
-						// Check /rsc/img/ for other possible images -- Don't forget to change or remove width & height too
-						'img_url'     => '$rsc$img/powered-by-b2evolution-120t.gif',
-						'img_width'   => 120,
-						'img_height'  => 32,
-					) );
-			?>
-
-		</footer><!-- .col -->
-
-	</div><!-- .row -->
-
-</div><!-- .container -->
-
-</section><!-- .secondary_area -->
-
+</footer><!-- .footer_wrapper -->
 
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
