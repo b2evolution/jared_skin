@@ -85,6 +85,30 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 
 </footer><!-- .footer_wrapper -->
 
+<!--<div id="scene">
+  <div class="layer" data-depth="0.00"><img src="http://localhost/b2evolution/media/blogs/a/z2qpo2p485.jpg?mtime=1496390638"></div>
+  <div class="layer" data-depth="0.20"><img src="http://localhost/b2evolution/media/blogs/a/z2qpo2p485.jpg?mtime=1496390638"></div>
+  <div class="layer" data-depth="0.40"><img src="http://localhost/b2evolution/media/blogs/a/z2qpo2p485.jpg?mtime=1496390638"></div>
+  <div class="layer" data-depth="0.60"><img src="http://localhost/b2evolution/media/blogs/a/z2qpo2p485.jpg?mtime=1496390638"></div>
+  <div class="layer" data-depth="0.80"><img src="http://localhost/b2evolution/media/blogs/a/z2qpo2p485.jpg?mtime=1496390638"></div>
+  <div class="layer" data-depth="1.00"><img src="http://localhost/b2evolution/media/blogs/a/z2qpo2p485.jpg?mtime=1496390638"></div>
+</div>
+
+
+<script type="text/javascript" src="assets/js/parallax.js?v=jared_skin+1.0.1+6.9.2-beta-2017-06-03"></script>-->
+
+	<script>
+		$(window).resize(function() {
+			
+			if ( $(window).width() > 768 ) {
+				var nav_width = $( '.navbar.main-header-navigation .navbar-collapse .nav' ).width() + 30;
+				$( '.navbar.main-header-navigation .navbar-header' ).css( "max-width", "calc(100% - " + nav_width + "px)" );
+			}
+			
+		});
+		$(window).trigger('resize');
+	</script>
+	
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
 // If site footers are enabled, they will be included here:

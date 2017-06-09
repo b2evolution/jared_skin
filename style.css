@@ -106,8 +106,17 @@ body {
   z-index: 999;
   transition: 0.2s ease-in;
 }
+.navbar.main-header-navigation .navbar-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .navbar.main-header-navigation .navbar-brand {
   padding: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .navbar.main-header-navigation .navbar-brand > h3 {
   vertical-align: middle;
@@ -126,6 +135,9 @@ body {
   padding-bottom: 17px;
   position: relative;
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .navbar.main-header-navigation .navbar-collapse .nav {
   margin: 0;
@@ -186,7 +198,7 @@ body.loggedin .navbar.main-header-navigation.affix {
     top: 0;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .navbar.main-header-navigation .navbar-brand {
     width: calc(100% - 60px);
   }
@@ -194,14 +206,6 @@ body.loggedin .navbar.main-header-navigation.affix {
     display: inline-block;
     font-size: 15px;
     width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-@media only screen and (max-width: 414px) {
-  .navbar.main-header-navigation .navbar-brand > h3 a {
-    max-width: 220px;
   }
 }
 div.front_main_area {

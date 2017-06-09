@@ -1035,6 +1035,8 @@ class jared_Skin extends Skin
 		
 		add_headline( '<link href="https://fonts.googleapis.com/css?family=Ek+Mukta:300|Josefin+Sans:300,400" rel="stylesheet">' );
 		
+		// require_js( 'assets/js/parallax.js', 'relative' );
+		
 		$max_image_height = intval( $this->get_setting( 'max_image_height' ) );
 		if( $max_image_height > 0 )
 		{
