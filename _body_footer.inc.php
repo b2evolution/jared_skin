@@ -100,7 +100,9 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 	<script>
 		$(window).resize(function() {
 			
-			if ( $(window).width() > 768 ) {
+			if ( $(window).width() < 768 ) {
+				$( '.navbar.main-header-navigation .navbar-header' ).css( "max-width", "100%" );
+			} else {
 				var nav_width = $( '.navbar.main-header-navigation .navbar-collapse .nav' ).width() + 30;
 				$( '.navbar.main-header-navigation .navbar-header' ).css( "max-width", "calc(100% - " + nav_width + "px)" );
 			}
