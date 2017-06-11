@@ -120,7 +120,6 @@ body {
 }
 .navbar.main-header-navigation .navbar-brand > h3 {
   vertical-align: middle;
-  position: relative;
   display: block;
   margin: 0;
 }
@@ -187,6 +186,9 @@ body {
 }
 body.loggedin .navbar.main-header-navigation.affix {
   top: 27px;
+}
+body.anonymous .navbar.main-header-navigation.affix {
+  top: 0;
 }
 @media (max-width: 1024px) {
   body.loggedin .navbar.main-header-navigation.affix,
