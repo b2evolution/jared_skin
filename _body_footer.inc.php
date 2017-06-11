@@ -104,7 +104,14 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 				$( '.navbar.main-header-navigation .navbar-header' ).css( "max-width", "100%" );
 			} else {
 				var nav_width = $( '.navbar.main-header-navigation .navbar-collapse .nav' ).width() + 30;
-				$( '.navbar.main-header-navigation .navbar-header' ).css( "max-width", "calc(100% - " + nav_width + "px)" );
+				
+				if( $.browser.chrome  || $.browser.safari ) {
+					$( '.navbar.main-header-navigation .navbar-header' ).css( "max-width", '-webkit-calc(100% - ' + nav_width + 'px)' );
+				} else {
+					$( '.navbar.main-header-navigation .navbar-header' ).css( "max-width", 'calc(100% - ' + nav_width + 'px)' );
+				}
+				
+				// $( '.navbar.main-header-navigation .navbar-header' ).css( "max-width", 'calc(100% - ' + nav_width + 'px)' );
 			}
 			
 		});
