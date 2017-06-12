@@ -75,3 +75,24 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_tra
 	</div><!-- /.navbar-collapse -->
 </nav>
 <?php } ?>
+
+<script>
+	$(window).resize(function() {
+
+		if ( $(window).width() < 768 ) {
+			$( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', '100%' );
+		} else {
+			var nav_width = $( '.navbar.main-header-navigation .navbar-collapse .nav' ).width() + 30;
+
+			if( $.browser.chrome  || $.browser.safari ) {
+				$( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', '-webkit-calc(100% - ' + nav_width + 'px)' );
+			} else {
+				$( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', 'calc(100% - ' + nav_width + 'px)' );
+			}
+
+		// $( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', 'calc(100% - ' + nav_width + 'px)' );
+	}
+
+	});
+	$(window).trigger('resize');
+</script>
