@@ -329,14 +329,6 @@ class jared_Skin extends Skin
 						'size' => '2',
 						'allow_empty' => false,
 					),
-					'section_2_cont_width' => array(
-						'label' => T_('Maximum content width'),
-						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
-						'defaultvalue' => '1170',
-						'type' => 'integer',
-						'size' => '2',
-						'allow_empty' => false,
-					),
 					'section_2_title_color' => array(
 						'label' => T_('Title color'),
 						'note' => T_('Click to select a color'),
