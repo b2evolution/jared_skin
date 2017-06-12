@@ -225,6 +225,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'section_1_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'section_1_coll_title_color' => array(
 						'label' => T_('Collection title color'),
 						'note' => T_('Click to select a color.'),
@@ -313,6 +321,22 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
+					'section_2_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
+					'section_2_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'section_2_title_color' => array(
 						'label' => T_('Title color'),
 						'note' => T_('Click to select a color'),
@@ -387,6 +411,14 @@ class jared_Skin extends Skin
 						'note' => T_('This color will be used if Background image is not set or does not exist.'),
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
+					),
+					'section_3_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
 					),
 					'section_3_title_color' => array(
 						'label' => T_('Title color'),
@@ -464,6 +496,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
+					'section_4_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'section_4_title_color' => array(
 						'label' => T_('Title color'),
 						'note' => T_('Click to select a color'),
@@ -538,6 +578,14 @@ class jared_Skin extends Skin
 						'note' => T_('This color will be used if Background image is not set or does not exist.'),
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
+					),
+					'section_5_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
 					),
 					'section_5_title_color' => array(
 						'label' => T_('Title color'),
@@ -615,6 +663,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'section_6_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'section_6_title_color' => array(
 						'label' => T_('Title color'),
 						'note' => T_('Click to select a color'),
@@ -690,6 +746,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'section_7_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'section_7_title_color' => array(
 						'label' => T_('Title color'),
 						'note' => T_('Click to select a color'),
@@ -764,6 +828,14 @@ class jared_Skin extends Skin
 						'note' => T_('This color will be used if Background image is not set or does not exist.'),
 						'defaultvalue' => '#333333',
 						'type' => 'color',
+					),
+					'section_oth_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
 					),
 					'section_oth_title_color' => array(
 						'label' => T_('Title color'),
@@ -1146,6 +1218,10 @@ class jared_Skin extends Skin
 			{
 				$custom_css .= 'body.pictured .main_page_wrapper .widget_core_coll_title h1 a { color: '.$color." }\n";
 			}
+			if( $max_width = $this->get_setting( 'section_1_cont_width' ) )
+			{
+				$custom_css .= 'body.pictured .container.main_page_wrapper { max-width: '.$max_width."px }\n";
+			}
 			if( $color = $this->get_setting( 'section_1_title_color' ) )
 			{
 				$custom_css .= 'body.pictured .main_page_wrapper h2.page-header { color: '.$color." }\n";
@@ -1212,6 +1288,10 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'section_2_bg_color' );
 				$custom_css .= '.evo_container__front_page_secondary_area { background: '.$color." }\n";
 			}
+			if( $max_width = $this->get_setting( 'section_2_cont_width' ) )
+			{
+				$custom_css .= '.evo_container__front_page_secondary_area > .container { max-width: '.$max_width."px }\n";
+			}
 			if( $color = $this->get_setting( 'section_2_title_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_secondary_area h2.page-header { color: '.$color." }\n";
@@ -1263,6 +1343,10 @@ class jared_Skin extends Skin
 			{
 				$color = $this->get_setting( 'section_3_bg_color' );
 				$custom_css .= '.evo_container__front_page_area_3 { background: '.$color." }\n";
+			}
+			if( $max_width = $this->get_setting( 'section_3_cont_width' ) )
+			{
+				$custom_css .= '.evo_container__front_page_area_3 > .container { max-width: '.$max_width."px }\n";
 			}
 			if( $color = $this->get_setting( 'section_3_title_color' ) )
 			{
@@ -1316,6 +1400,10 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'section_4_bg_color' );
 				$custom_css .= '.evo_container__front_page_area_4 { background: '.$color." }\n";
 			}
+			if( $max_width = $this->get_setting( 'section_4_cont_width' ) )
+			{
+				$custom_css .= '.evo_container__front_page_area_4 > .container { max-width: '.$max_width."px }\n";
+			}
 			if( $color = $this->get_setting( 'section_4_title_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_4 h2.page-header { color: '.$color." }\n";
@@ -1367,6 +1455,10 @@ class jared_Skin extends Skin
 			{
 				$color = $this->get_setting( 'section_5_bg_color' );
 				$custom_css .= '.evo_container__front_page_area_5 { background: '.$color." }\n";
+			}
+			if( $max_width = $this->get_setting( 'section_5_cont_width' ) )
+			{
+				$custom_css .= '.evo_container__front_page_area_5 > .container { max-width: '.$max_width."px }\n";
 			}
 			if( $color = $this->get_setting( 'section_5_title_color' ) )
 			{
@@ -1421,6 +1513,10 @@ class jared_Skin extends Skin
 			$color = $this->get_setting( 'section_6_bg_color' );
 			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { background: '.$color." }\n";
 		}
+		if( $max_width = $this->get_setting( 'section_6_cont_width' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_6 > .container { max-width: '.$max_width."px }\n";
+		}
 		if( $color = $this->get_setting( 'section_6_title_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_6 .evo_post_title h1, .evo_container__single_page_cover .evo_post_title h1 { color: '.$color." }\n";
@@ -1473,6 +1569,10 @@ class jared_Skin extends Skin
 			$color = $this->get_setting( 'section_7_bg_color' );
 			$custom_css .= '.evo_container__standalone_page_area_7 { background: '.$color." }\n";
 		}
+		if( $max_width = $this->get_setting( 'section_7_cont_width' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_7 > .container { max-width: '.$max_width."px }\n";
+		}
 		if( $color = $this->get_setting( 'section_7_title_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 .msgform_disp_title h1 { color: '.$color." }\n";
@@ -1522,6 +1622,10 @@ class jared_Skin extends Skin
 		{
 			$color = $this->get_setting( 'section_oth_bg_color' );
 			$custom_css .= '.evo_container__standalone_page_area_oth { background: '.$color." }\n";
+		}
+		if( $max_width = $this->get_setting( 'section_oth_cont_width' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth > .container { max-width: '.$max_width."px }\n";
 		}
 		if( $color = $this->get_setting( 'section_oth_text_color' ) )
 		{
