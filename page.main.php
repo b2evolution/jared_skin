@@ -80,6 +80,18 @@ if( $Item->get_cover_image_url() )
 
 	<div class="evo_post_title col-md-12">
 		<h1><?php $Item->title(); // PAGE TITLE ?></h1>
+		
+		<?php
+		// if( is_logged_in() )
+		// { // Display edit link only for intro posts, because for all other posts the link is displayed on the info line.
+			// $Item->edit_link( array(
+				// 'before' => '<div class="'.button_class( 'group' ).'">',
+				// 'after'  => '</div>',
+				// 'text'   => $Item->is_intro() ? get_icon( 'edit' ).' '.T_('Edit Intro') : '#',
+				// 'class'  => button_class( 'text' ),
+			// ) );
+		// }		
+		?>
 	</div>
 
 </header><!-- .row -->

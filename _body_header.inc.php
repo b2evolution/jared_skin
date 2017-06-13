@@ -80,7 +80,12 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_tra
 		} else {
 			var nav_width = $( '.navbar.main-header-navigation .navbar-collapse .nav' ).width() + 30;
 
-			if( $.browser.chrome  || $.browser.safari ) {
+			// Chrome 1+
+			var isChrome = !!window.chrome && !!window.chrome.webstore;
+			// Safari 3.0+ "[object HTMLElementConstructor]" 
+			var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+			
+			if( isChrome || isSafari ) {
 				$( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', '-webkit-calc(100% - ' + nav_width + 'px)' );
 			} else {
 				$( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', 'calc(100% - ' + nav_width + 'px)' );
