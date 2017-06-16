@@ -35,9 +35,9 @@ skin_include( '_html_header.inc.php', array(
 skin_include( '_body_header.inc.access.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
-echo '<div class="evo_pictured_layout">';
-
 ?>
+
+<div class="evo_pictured_layout">
 
 <div class="container main_page_wrapper">
 

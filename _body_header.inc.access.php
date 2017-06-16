@@ -26,9 +26,9 @@ $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-
 $transparent_Class = '';
 if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_transparent'; }
 ?>
-<nav class="navbar navbar-default main-header-navigation<?php echo $transparent_Class; ?>" data-spy="affix"<?php echo $affix_positioning_fix; ?>>
+<nav class="navbar navbar-default main-header-navigation<?php echo $transparent_Class; ?> flex-parent" data-spy="affix"<?php echo $affix_positioning_fix; ?>>
 	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="navbar-header">
+	<div class="navbar-header flex-child long-and-truncated">
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 			<span class="sr-only">Toggle navigation</span>
 			<span class="icon-bar"></span>
@@ -50,7 +50,7 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_tra
 
     <!-- Collect the nav links, forms, and other content for toggling -->
 	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<ul class="nav navbar-nav navbar-right">
+		<ul class="nav navbar-nav navbar-right flex-child short-and-fixed">
 		<?php
 			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
 			// Display container and contents:
@@ -75,24 +75,3 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) ) { $transparent_Class = ' is_tra
 	</div><!-- /.navbar-collapse -->
 </nav>
 <?php } ?>
-
-<script>
-	$(window).resize(function() {
-
-		if ( $(window).width() < 768 ) {
-			$( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', '100%' );
-		} else {
-			var nav_width = $( '.navbar.main-header-navigation .navbar-collapse .nav' ).width() + 30;
-
-			if( $.browser.chrome  || $.browser.safari ) {
-				$( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', '-webkit-calc(100% - ' + nav_width + 'px)' );
-			} else {
-				$( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', 'calc(100% - ' + nav_width + 'px)' );
-			}
-
-		// $( '.navbar.main-header-navigation .navbar-header' ).css( 'max-width', 'calc(100% - ' + nav_width + 'px)' );
-	}
-
-	});
-	$(window).trigger('resize');
-</script>
