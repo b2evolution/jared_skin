@@ -106,12 +106,20 @@ body {
   z-index: 999;
   transition: 0.2s ease-in;
 }
+.navbar.main-header-navigation .navbar-header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .navbar.main-header-navigation .navbar-brand {
   padding: 0;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .navbar.main-header-navigation .navbar-brand > h3 {
   vertical-align: middle;
-  position: relative;
   display: block;
   margin: 0;
 }
@@ -126,6 +134,9 @@ body {
   padding-bottom: 17px;
   position: relative;
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .navbar.main-header-navigation .navbar-collapse .nav {
   margin: 0;
@@ -176,6 +187,9 @@ body {
 body.loggedin .navbar.main-header-navigation.affix {
   top: 27px;
 }
+body.anonymous .navbar.main-header-navigation.affix {
+  top: 0;
+}
 @media (max-width: 1024px) {
   body.loggedin .navbar.main-header-navigation.affix,
   body.anonymous .navbar.main-header-navigation.affix,
@@ -186,7 +200,7 @@ body.loggedin .navbar.main-header-navigation.affix {
     top: 0;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   .navbar.main-header-navigation .navbar-brand {
     width: calc(100% - 60px);
   }
@@ -194,14 +208,6 @@ body.loggedin .navbar.main-header-navigation.affix {
     display: inline-block;
     font-size: 15px;
     width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-}
-@media only screen and (max-width: 414px) {
-  .navbar.main-header-navigation .navbar-brand > h3 a {
-    max-width: 220px;
   }
 }
 div.front_main_area {
@@ -877,5 +883,47 @@ div[class*="_list"],
   .evo_container__standalone_page_area_7,
   .evo_container__standalone_page_area_oth {
     padding: 40px 0;
+  }
+}
+@media (min-width: 768px) {
+  .flex-parent {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 30px 0;
+  }
+  .long-and-truncated {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .short-and-fixed {
+    white-space: nowrap;
+  }
+  .short-and-fixed > div {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: lightgreen;
+    display: inline-block;
+  }
+  .long-and-truncated-with-child {
+    flex: 1;
+  }
+  .long-and-truncated-with-child h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .long-and-truncated-with-child-corrected {
+    flex: 1;
+    min-width: 0;
+    /* or some value */
+  }
+  .long-and-truncated-with-child-corrected h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }

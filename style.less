@@ -74,11 +74,26 @@ body {
 	margin: 0;
 	z-index: 999; // Important for placing the menu container OVER the background image
 	transition: 0.2s ease-in;
+	
+	.navbar-header {
+		// display: inline-block;
+		// width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
 	.navbar-brand {
 		padding: 0;
+		
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		
 		> h3 {
 			vertical-align: middle;
-			position: relative;
+			// position: relative; --- Causing issue on Safari
 			display: block;
 			// float: left;
 		
@@ -95,6 +110,10 @@ body {
 				padding-bottom: 17px;
 				position: relative;
 				display: block;
+				
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
 			}
 		}
 	}
@@ -150,7 +169,7 @@ body {
 
 body.loggedin .navbar.main-header-navigation.affix { top: 27px }
 // SEEMS TO INTERFERE WITH THE DEFAULT SITENAV BEHAVIOR
-// body.anonymous .navbar.main-header-navigation.affix { top: 0 }
+body.anonymous .navbar.main-header-navigation.affix { top: 0 }
 
 @media (max-width: 1024px) {
 	body.loggedin, body.anonymous {
@@ -163,24 +182,24 @@ body.loggedin .navbar.main-header-navigation.affix { top: 27px }
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
 	.navbar.main-header-navigation .navbar-brand {
 		width: ~"calc(100% - 60px)";
 		> h3 a {
 			display: inline-block;
 			font-size: 15px;
 			width: 100%;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			white-space: nowrap;
 		}
 	}
 }
-@media only screen and (max-width: 414px) {
-	.navbar.main-header-navigation .navbar-brand > h3 a {
-		max-width: 220px;
-	}
+@media (max-width: 767px) {
+	
 }
+// @media only screen and (max-width: 414px) {
+	// .navbar.main-header-navigation .navbar-brand > h3 a {
+		// max-width: 220px;
+	// }
+// }
 
 // SPECIAL FRONT PAGE:
 div.front_main_area {
@@ -595,6 +614,16 @@ div.action_messages, div.log_container {
 	}
 }
 
+// .disp_page,
+// .disp_single {
+	// .evo_post_title {
+		// width: 100%;
+		// .btn-group {
+		    // padding: 5px 0 10px 30px;
+		// }
+	// }
+// }
+
 // User links widget
 body.pictured .front_main_content .ufld_icon_links a {
 	width: 60px;
@@ -899,4 +928,53 @@ div[class*="_list"], .evo_layout_list {
 	.evo_container__standalone_page_area_oth {
 		padding: 40px 0;
 	}
+}
+
+
+@media (min-width: 768px) {
+.flex-parent {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 30px 0;
+}
+
+.long-and-truncated {
+  flex: 1;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.short-and-fixed {
+  white-space: nowrap;
+  > div {
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background: lightgreen;
+    display: inline-block;
+  }
+}
+
+.long-and-truncated-with-child {
+  flex: 1;
+  h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.long-and-truncated-with-child-corrected {
+  flex: 1;
+  min-width: 0; /* or some value */
+  h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
 }
