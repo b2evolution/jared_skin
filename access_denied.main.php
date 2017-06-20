@@ -35,9 +35,22 @@ skin_include( '_html_header.inc.php', array(
 skin_include( '_body_header.inc.access.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
+$parallax_bg_sec_access = '';
+// Check if image is uploaded
+if( $Skin->get_setting( 'section_access_image_file_ID' ) )
+{
+	// Get image...
+	$bg_image_File_access = & $FileCache->get_by_ID( $Skin->get_setting( 'section_access_image_file_ID' ), false, false );
+	if( !empty( $bg_image_File_access ) && $bg_image_File_access->exists() )
+	{
+		// Store everything needed for parallax
+		$parallax_bg_sec_access = 'data-parallax="scroll" data-image-src="'. $bg_image_File_access->get_url() .'"';
+	}
+}
+
 ?>
 
-<div class="evo_pictured_layout">
+<div class="evo_pictured_layout parallax-window" <?php echo $parallax_bg_sec_access; ?>>
 
 <div class="container main_page_wrapper">
 
@@ -63,28 +76,6 @@ skin_include( '_body_header.inc.access.php' );
 					'item_end'            => '</li>',
 				) );
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
-		?>
-		</div>
-		<?php } ?>
-	</div><!-- .col -->
-
-	<div class="coll-xs-12 col-sm-12 col-md-8 col-md-pull-4">
-		<?php
-		if( $Skin->show_container_when_access_denied( 'header' ) )
-		{ // Display 'Header' widget container
-		?>
-		<div class="evo_container evo_container__header">
-		<?php
-			// ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
-			// Display container and contents:
-			skin_container( NT_('Header'), array(
-					// The following params will be used as defaults for widgets included in this container:
-					'block_start'       => '<div class="evo_widget $wi_class$">',
-					'block_end'         => '</div>',
-					'block_title_start' => '<h1>',
-					'block_title_end'   => '</h1>',
-				) );
-			// ----------------------------- END OF "Header" CONTAINER -----------------------------
 		?>
 		</div>
 		<?php } ?>

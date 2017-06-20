@@ -43,20 +43,40 @@ skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
 if( $is_pictured_page )
-{ // Display a picture from skin setting as background image
-	$FileCache = & get_FileCache();
-	$bg_File = NULL;
-	if( $bg_File_ID = $Skin->get_setting( 'front_bg_image_file_ID' ) )
+{
+	$parallax_bg_sec_oth = '';
+	// Check if image is uploaded
+	if( $Skin->get_setting( 'section_oth_image_file_ID' ) )
 	{
-		$bg_File = & $FileCache->get_by_ID( $bg_File_ID, false, false );
+		// Get image...
+		$bg_image_File_oth = & $FileCache->get_by_ID( $Skin->get_setting( 'section_oth_image_file_ID' ), false, false );
+		if( !empty( $bg_image_File_oth ) && $bg_image_File_oth->exists() )
+		{
+			// Store everything needed for parallax
+			$parallax_bg_sec_oth = 'data-parallax="scroll" data-image-src="'. $bg_image_File_oth->get_url() .'"';
+		}
 	}
-	echo '<div class="evo_pictured_layout">';
-	if( $bg_File && $bg_File->exists() )
-	{ // If it exists in media folder
-		echo '<img class="evo_pictured__image" src="'.$bg_File->get_url().'" />';
-	}
+	
+	echo '<div class="evo_pictured_layout parallax-window" '. $parallax_bg_sec_oth .'>';
 }
-if( $is_other_disp ) { echo '<div class="evo_container__standalone_page_area_oth">'; }
+if( $is_other_disp )
+{
+	
+	$parallax_bg_sec_oth = '';
+	// Check if image is uploaded
+	if( $Skin->get_setting( 'section_oth_image_file_ID' ) )
+	{
+		// Get image...
+		$bg_image_File_oth = & $FileCache->get_by_ID( $Skin->get_setting( 'section_oth_image_file_ID' ), false, false );
+		if( !empty( $bg_image_File_oth ) && $bg_image_File_oth->exists() )
+		{
+			// Store everything needed for parallax
+			$parallax_bg_sec_oth = 'data-parallax="scroll" data-image-src="'. $bg_image_File_oth->get_url() .'"';
+		}
+	}	
+	
+	echo '<div class="evo_container__standalone_page_area_oth" '. $parallax_bg_sec_oth .'>';
+}
 ?>
 
 

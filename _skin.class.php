@@ -881,6 +881,36 @@ class jared_Skin extends Skin
 				),
 				
 				
+				// ============ Section - Header for restricted access disps ============
+				'section_pictured_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Section - Restricted access disps') . ' (disp=login || disp=register || disp=lostpassword|| disp=activateinfo || disp=access_denied || disp=access_requires_login)'
+				),
+					'section_access_image_file_ID' => array(
+						'label' => T_('Background image'),
+						'type' => 'fileselect',
+						'initialize_with' => 'shared/global/monument-valley/john-ford-point.jpg',
+						'thumbnail_size' => 'fit-320x320'
+					),
+					'section_access_bg_color' => array(
+						'label' => T_('Background color'),
+						'note' => T_('This color will be used if Background image is not set or does not exist.'),
+						'defaultvalue' => '#333333',
+						'type' => 'color',
+					),
+					'section_access_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
+				'section_pictured_end' => array(
+					'layout' => 'end_fieldset',
+				),
+				
+				
 				// ============ Footer Section ============
 				'footer_start' => array(
 					'layout' => 'begin_fieldset',
