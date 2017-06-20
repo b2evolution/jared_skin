@@ -40,11 +40,24 @@ skin_include( '_html_header.inc.php' );
 skin_include( '_body_header.inc.access.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
+$parallax_bg_sec_msg = '';
+// Check if image is uploaded
+if( $Skin->get_setting( 'section_7_image_file_ID' ) )
+{
+	// Get image...
+	$bg_image_File7 = & $FileCache->get_by_ID( $Skin->get_setting( 'section_7_image_file_ID' ), false, false );
+	if( !empty( $bg_image_File7 ) && $bg_image_File7->exists() )
+	{
+		// Store everything needed for parallax
+		$parallax_bg_sec_msg = 'data-parallax="scroll" data-image-src="'. $bg_image_File7->get_url() .'"';
+	}
+}
+
 ?>
 
 <div class="evo_pictured_layout">
 
-<div class="evo_container__standalone_page_area_7">
+<div class="evo_container__standalone_page_area_7 parallax-window" <?php echo $parallax_bg_sec_msg; ?>>
 
 <div class="container">
 

@@ -1099,7 +1099,8 @@ class jared_Skin extends Skin
 		
 		add_headline( '<link href="https://fonts.googleapis.com/css?family=Ek+Mukta:300|Josefin+Sans:300,400" rel="stylesheet">' );
 		
-		// require_js( 'assets/js/parallax.js', 'relative' );
+		add_headline( '<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>' );
+		require_js( 'assets/js/parallax.js', 'relative' );
 		
 		$max_image_height = intval( $this->get_setting( 'max_image_height' ) );
 		if( $max_image_height > 0 )
@@ -1199,7 +1200,7 @@ class jared_Skin extends Skin
 			}
 			if( !empty( $bg_image_File1 ) && $bg_image_File1->exists() )
 			{
-				$custom_css .= '.evo_pictured_layout { background-image: url('.$bg_image_File1->get_url().") }\n";
+				// $custom_css .= '.evo_pictured_layout { background-image: url('.$bg_image_File1->get_url().") }\n";
 			}
 			else
 			{
@@ -1273,7 +1274,7 @@ class jared_Skin extends Skin
 			}
 			if( !empty( $bg_image_File2 ) && $bg_image_File2->exists() )
 			{
-				$custom_css .= '.evo_container__front_page_secondary_area { background-image: url('.$bg_image_File2->get_url().") }\n";
+				// $custom_css .= '.evo_container__front_page_secondary_area { background-image: url('.$bg_image_File2->get_url().") }\n";
 			}
 			else
 			{
@@ -1329,7 +1330,7 @@ class jared_Skin extends Skin
 			}
 			if( !empty( $bg_image_File3 ) && $bg_image_File3->exists() )
 			{
-				$custom_css .= '.evo_container__front_page_area_3 { background-image: url('.$bg_image_File3->get_url().") }\n";
+				// $custom_css .= '.evo_container__front_page_area_3 { background-image: url('.$bg_image_File3->get_url().") }\n";
 			}
 			else
 			{
@@ -1385,7 +1386,7 @@ class jared_Skin extends Skin
 			}
 			if( !empty( $bg_image_File4 ) && $bg_image_File4->exists() )
 			{
-				$custom_css .= '.evo_container__front_page_area_4 { background-image: url('.$bg_image_File4->get_url().") }\n";
+				// $custom_css .= '.evo_container__front_page_area_4 { background-image: url('.$bg_image_File4->get_url().") }\n";
 			}
 			else
 			{
@@ -1441,7 +1442,7 @@ class jared_Skin extends Skin
 			}
 			if( !empty( $bg_image_File5 ) && $bg_image_File5->exists() )
 			{
-				$custom_css .= '.evo_container__front_page_area_5 { background-image: url('.$bg_image_File5->get_url().") }\n";
+				// $custom_css .= '.evo_container__front_page_area_5 { background-image: url('.$bg_image_File5->get_url().") }\n";
 			}
 			else
 			{
@@ -1492,15 +1493,7 @@ class jared_Skin extends Skin
 		// ============ Section 6 - Header for Standalone Pages ============
 		if( $disp == 'page' )
 		{
-		if( $this->get_setting( 'section_6_image_file_ID' ) )
-		{
-			$bg_image_File6 = & $FileCache->get_by_ID( $this->get_setting( 'section_6_image_file_ID' ), false, false );
-		}
-		if( !empty( $bg_image_File6 ) && $bg_image_File6->exists() )
-		{
-			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { background-image: url('.$bg_image_File6->get_url().") }\n";
-		}
-		else
+		if ( ! $this->get_setting( 'section_6_image_file_ID' ) )
 		{
 			$color = $this->get_setting( 'section_6_bg_color' );
 			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { background: '.$color." }\n";
@@ -1554,7 +1547,7 @@ class jared_Skin extends Skin
 		}
 		if( !empty( $bg_image_File7 ) && $bg_image_File7->exists() )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_7 { background-image: url('.$bg_image_File7->get_url().") }\n";
+			// $custom_css .= '.evo_container__standalone_page_area_7 { background-image: url('.$bg_image_File7->get_url().") }\n";
 		}
 		else
 		{
@@ -1608,7 +1601,7 @@ class jared_Skin extends Skin
 		}
 		if( !empty( $bg_image_File_oth ) && $bg_image_File_oth->exists() )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_oth { background-image: url('.$bg_image_File_oth->get_url().") }\n";
+			// $custom_css .= '.evo_container__standalone_page_area_oth { background-image: url('.$bg_image_File_oth->get_url().") }\n";
 		}
 		else
 		{

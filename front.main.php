@@ -33,7 +33,21 @@ skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
 if( $Skin->get_setting( 'section_1_display' ) ) {
-echo '<div class="evo_pictured_layout">';
+
+$parallax_bg_sec_1 = '';
+// Check if image is uploaded
+if( $Skin->get_setting( 'section_1_image_file_ID' ) )
+{
+	// Get image...
+	$bg_image_File1 = & $FileCache->get_by_ID( $Skin->get_setting( 'section_1_image_file_ID' ), false, false );
+	if( !empty( $bg_image_File1 ) && $bg_image_File1->exists() )
+	{
+		// Store everything needed for parallax
+		$parallax_bg_sec_1 = 'data-parallax="scroll" data-image-src="'. $bg_image_File1->get_url() .'"';
+	}
+}
+
+echo '<div class="evo_pictured_layout parallax-window" '. $parallax_bg_sec_1 .'>';
 ?>
 
 <div class="container main_page_wrapper">
@@ -241,8 +255,25 @@ echo '<div class="evo_pictured_layout">';
 
 	<div class="row">
 
-		<?php if( $Skin->get_setting( 'section_2_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary_area">
+		<?php
+		if( $Skin->get_setting( 'section_2_display' ) ) {
+
+		$parallax_bg_sec_2 = '';
+		// Check if image is uploaded
+		if( $Skin->get_setting( 'section_2_image_file_ID' ) )
+		{
+			// Get image...
+			$bg_image_File2 = & $FileCache->get_by_ID( $Skin->get_setting( 'section_2_image_file_ID' ), false, false );
+			if( !empty( $bg_image_File2 ) && $bg_image_File2->exists() )
+			{
+				// Store everything needed for parallax
+				$parallax_bg_sec_2 = 'data-parallax="scroll" data-image-src="'. $bg_image_File2->get_url() .'"';
+			}
+		}
+
+		?>
+
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary_area" <?php echo $parallax_bg_sec_2; ?>>
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -265,8 +296,24 @@ echo '<div class="evo_pictured_layout">';
 		</div>
 		<?php } ?>
 		
-		<?php if( $Skin->get_setting( 'section_3_display' ) ) { ?>	
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_3">
+		<?php
+		if( $Skin->get_setting( 'section_3_display' ) ) {
+			
+		$parallax_bg_sec_3 = '';
+		// Check if image is uploaded
+		if( $Skin->get_setting( 'section_3_image_file_ID' ) )
+		{
+			// Get image...
+			$bg_image_File3 = & $FileCache->get_by_ID( $Skin->get_setting( 'section_3_image_file_ID' ), false, false );
+			if( !empty( $bg_image_File3 ) && $bg_image_File3->exists() )
+			{
+				// Store everything needed for parallax
+				$parallax_bg_sec_3 = 'data-parallax="scroll" data-image-src="'. $bg_image_File3->get_url() .'"';
+			}
+		}		
+		
+		?>
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_3" <?php echo $parallax_bg_sec_3; ?>>
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -289,8 +336,23 @@ echo '<div class="evo_pictured_layout">';
 		</div>
 		<?php } ?>
 		
-		<?php if( $Skin->get_setting( 'section_4_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_4">
+		<?php if( $Skin->get_setting( 'section_4_display' ) ) {
+		
+		$parallax_bg_sec_4 = '';
+		// Check if image is uploaded
+		if( $Skin->get_setting( 'section_4_image_file_ID' ) )
+		{
+			// Get image...
+			$bg_image_File4 = & $FileCache->get_by_ID( $Skin->get_setting( 'section_4_image_file_ID' ), false, false );
+			if( !empty( $bg_image_File4 ) && $bg_image_File4->exists() )
+			{
+				// Store everything needed for parallax
+				$parallax_bg_sec_4 = 'data-parallax="scroll" data-image-src="'. $bg_image_File4->get_url() .'"';
+			}
+		}
+		
+		?>
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_4" <?php echo $parallax_bg_sec_4; ?>>
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
@@ -313,8 +375,23 @@ echo '<div class="evo_pictured_layout">';
 		</div>
 		<?php } ?>
 		
-		<?php if( $Skin->get_setting( 'section_5_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_5">
+		<?php if( $Skin->get_setting( 'section_5_display' ) ) {
+			
+		$parallax_bg_sec_5 = '';
+		// Check if image is uploaded
+		if( $Skin->get_setting( 'section_5_image_file_ID' ) )
+		{
+			// Get image...
+			$bg_image_File5 = & $FileCache->get_by_ID( $Skin->get_setting( 'section_5_image_file_ID' ), false, false );
+			if( !empty( $bg_image_File5 ) && $bg_image_File5->exists() )
+			{
+				// Store everything needed for parallax
+				$parallax_bg_sec_5 = 'data-parallax="scroll" data-image-src="'. $bg_image_File5->get_url() .'"';
+			}
+		}		
+		
+		?>
+		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_5" <?php echo $parallax_bg_sec_5; ?>>
 			<div class="container">
 			<?php
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------

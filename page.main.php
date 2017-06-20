@@ -40,11 +40,26 @@ skin_include( '_body_header.inc.php' );
 ?>
 
 <?php
+		
 if( $Item->get_cover_image_url() )
 {
-	echo '<div class="evo_container__single_page_cover" style="background-image: url(' . $Item->get_cover_image_url() . ')" >';
+	echo '<div class="evo_container__single_page_cover parallax-window" data-parallax="scroll" data-image-src="' . $Item->get_cover_image_url() . '" >';
 } else {
-	echo '<div class="evo_container__standalone_page_area_6">';
+	
+	$parallax_bg_sec_6 = '';
+	// Check if image is uploaded
+	if( $Skin->get_setting( 'section_6_image_file_ID' ) )
+	{
+		// Get image...
+		$bg_image_File6 = & $FileCache->get_by_ID( $Skin->get_setting( 'section_6_image_file_ID' ), false, false );
+		if( !empty( $bg_image_File6 ) && $bg_image_File6->exists() )
+		{
+			// Store everything needed for parallax
+			$parallax_bg_sec_6 = 'data-parallax="scroll" data-image-src="'. $bg_image_File6->get_url() .'"';
+		}
+	}
+		
+	echo '<div class="evo_container__standalone_page_area_6 parallax-window" '. $parallax_bg_sec_6 .'>';
 }
 ?>
 

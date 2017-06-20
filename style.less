@@ -598,6 +598,7 @@ div.action_messages, div.log_container {
 // Positions on the action buttons near page titles
 .evo_post_title {
 	display: table;
+	width: 100%;
 	h1, h2, h3, h4, h5, h6 {
 		font-family: 'Josefin Sans', sans-serif;
 		font-weight: 300;
@@ -932,49 +933,53 @@ div[class*="_list"], .evo_layout_list {
 
 
 @media (min-width: 768px) {
-.flex-parent {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  margin: 30px 0;
+	.flex-parent {
+	  display: flex;
+	  align-items: center;
+	  padding: 10px;
+	  margin: 30px 0;
+	}
+
+	.long-and-truncated {
+	  flex: 1;
+	  
+	  white-space: nowrap;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	}
+
+	.short-and-fixed {
+	  white-space: nowrap;
+	  > div {
+		width: 30px;
+		height: 30px;
+		border-radius: 10px;
+		background: lightgreen;
+		display: inline-block;
+	  }
+	}
+
+	.long-and-truncated-with-child {
+	  flex: 1;
+	  h2 {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	  }
+	}
+
+	.long-and-truncated-with-child-corrected {
+	  flex: 1;
+	  min-width: 0; /* or some value */
+	  h2 {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	  }
+	}
 }
 
-.long-and-truncated {
-  flex: 1;
-  
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.short-and-fixed {
-  white-space: nowrap;
-  > div {
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    background: lightgreen;
-    display: inline-block;
-  }
-}
-
-.long-and-truncated-with-child {
-  flex: 1;
-  h2 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-.long-and-truncated-with-child-corrected {
-  flex: 1;
-  min-width: 0; /* or some value */
-  h2 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
+.parallax-window {
+    min-height: 100px;
+    background: transparent;
 }

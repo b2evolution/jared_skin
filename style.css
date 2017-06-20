@@ -524,6 +524,7 @@ div.log_container {
 }
 .evo_post_title {
   display: table;
+  width: 100%;
 }
 .evo_post_title h1,
 .evo_post_title h2,
@@ -926,4 +927,8 @@ div[class*="_list"],
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+.parallax-window {
+  min-height: 100px;
+  background: transparent;
 }
