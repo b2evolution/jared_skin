@@ -84,41 +84,6 @@ if( $Skin->get_setting( 'section_access_image_file_ID' ) )
 </header><!-- .row -->
 
 
-<?php
-if( $Skin->show_container_when_access_denied( 'menu' ) )
-{ // Display 'Menu' widget container
-?>
-<nav class="row">
-
-	<div class="col-md-12">
-		<ul class="nav nav-tabs evo_container evo_container__menu">
-		<?php
-			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
-			// Display container and contents:
-			// Note: this container is designed to be a single <ul> list
-			skin_container( NT_('Menu'), array(
-					// The following params will be used as defaults for widgets included in this container:
-					'block_start'         => '',
-					'block_end'           => '',
-					'block_display_title' => false,
-					'list_start'          => '',
-					'list_end'            => '',
-					'item_start'          => '<li class="evo_widget $wi_class$">',
-					'item_end'            => '</li>',
-					'item_selected_start' => '<li class="active evo_widget $wi_class$">',
-					'item_selected_end'   => '</li>',
-					'item_title_before'   => '',
-					'item_title_after'    => '',
-				) );
-			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
-		?>
-		</ul>
-	</div><!-- .col -->
-
-</nav><!-- .row -->
-<?php } ?>
-
-
 <div class="row">
 	<div class="col-md-12">
 		<main><!-- This is were a link like "Jump to main content" would land -->
@@ -145,13 +110,13 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 
-		<?php
+			<?php
 			// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 			skin_include( '_access_denied.disp.php' );
 			// Note: you can customize any of the sub templates included here by
 			// copying the matching php file into your skin directory.
 			// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
-		?>
+			?>
 
 		</main>
 

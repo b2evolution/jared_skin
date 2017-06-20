@@ -46,10 +46,10 @@ if( $is_pictured_page )
 {
 	$parallax_bg_sec_oth = '';
 	// Check if image is uploaded
-	if( $Skin->get_setting( 'section_oth_image_file_ID' ) )
+	if( $Skin->get_setting( 'section_access_image_file_ID' ) )
 	{
 		// Get image...
-		$bg_image_File_oth = & $FileCache->get_by_ID( $Skin->get_setting( 'section_oth_image_file_ID' ), false, false );
+		$bg_image_File_oth = & $FileCache->get_by_ID( $Skin->get_setting( 'section_access_image_file_ID' ), false, false );
 		if( !empty( $bg_image_File_oth ) && $bg_image_File_oth->exists() )
 		{
 			// Store everything needed for parallax
@@ -144,28 +144,6 @@ if( $is_other_disp )
 
 <div class="container main_page_wrapper_other_disps">
 	<?php } else { ?>
-
-	<div class="coll-xs-12 col-sm-12 col-md-8 col-md-pull-4">
-		<div class="evo_container evo_container__header">
-		<?php
-			// ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
-			// Display container and contents:
-			skin_container( NT_('Header'), array(
-					// The following params will be used as defaults for widgets included in this container:
-					'block_start'       => '<div class="evo_widget $wi_class$">',
-					'block_end'         => '</div>',
-					'block_title_start' => '<h1>',
-					'block_title_end'   => '</h1>',
-					// Widget 'Search form':
-					'search_input_before'  => '<div class="input-group">',
-					'search_input_after'   => '',
-					'search_submit_before' => '<span class="input-group-btn">',
-					'search_submit_after'  => '</span></div>',    
-				) );
-			// ----------------------------- END OF "Header" CONTAINER -----------------------------
-		?>
-		</div>
-	</div><!-- .col -->
 
 </header><!-- .row -->
 	<?php } ?>
