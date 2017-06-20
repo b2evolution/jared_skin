@@ -47,7 +47,7 @@ if( $Skin->get_setting( 'section_1_image_file_ID' ) )
 	}
 }
 
-echo '<div class="evo_pictured_layout parallax-window" '. $parallax_bg_sec_1 .'>';
+echo '<div class="evo_pictured_layout parallax-window" data-z-index="0" '. $parallax_bg_sec_1 .'>';
 ?>
 
 <div class="container main_page_wrapper">
@@ -240,7 +240,7 @@ echo '<div class="evo_pictured_layout parallax-window" '. $parallax_bg_sec_1 .'>
 	</div><!-- .col -->
 
 	<!-- "Slide down" button -->
-	<div class="slide_button_wrap"><a href="#" id="slide_button"><i class="fa fa-angle-down" ></i></a></div>
+	<div class="slide_button_wrap" style="z-index:0"><a href="#" id="slide_button"><i class="fa fa-angle-down" ></i></a></div>
 
 </div><!-- .row -->
 
@@ -267,7 +267,7 @@ echo '<div class="evo_pictured_layout parallax-window" '. $parallax_bg_sec_1 .'>
 			if( !empty( $bg_image_File2 ) && $bg_image_File2->exists() )
 			{
 				// Store everything needed for parallax
-				$parallax_bg_sec_2 = 'data-parallax="scroll" data-image-src="'. $bg_image_File2->get_url() .'"';
+				$parallax_bg_sec_2 = 'data-parallax="scroll" data-z-index="1" data-image-src="'. $bg_image_File2->get_url() .'"';
 			}
 		}
 
@@ -308,7 +308,7 @@ echo '<div class="evo_pictured_layout parallax-window" '. $parallax_bg_sec_1 .'>
 			if( !empty( $bg_image_File3 ) && $bg_image_File3->exists() )
 			{
 				// Store everything needed for parallax
-				$parallax_bg_sec_3 = 'data-parallax="scroll" data-image-src="'. $bg_image_File3->get_url() .'"';
+				$parallax_bg_sec_3 = 'data-parallax="scroll" data-z-index="1" data-image-src="'. $bg_image_File3->get_url() .'"';
 			}
 		}		
 		
@@ -347,7 +347,7 @@ echo '<div class="evo_pictured_layout parallax-window" '. $parallax_bg_sec_1 .'>
 			if( !empty( $bg_image_File4 ) && $bg_image_File4->exists() )
 			{
 				// Store everything needed for parallax
-				$parallax_bg_sec_4 = 'data-parallax="scroll" data-image-src="'. $bg_image_File4->get_url() .'"';
+				$parallax_bg_sec_4 = 'data-parallax="scroll" data-z-index="1" data-image-src="'. $bg_image_File4->get_url() .'"';
 			}
 		}
 		
@@ -386,7 +386,7 @@ echo '<div class="evo_pictured_layout parallax-window" '. $parallax_bg_sec_1 .'>
 			if( !empty( $bg_image_File5 ) && $bg_image_File5->exists() )
 			{
 				// Store everything needed for parallax
-				$parallax_bg_sec_5 = 'data-parallax="scroll" data-image-src="'. $bg_image_File5->get_url() .'"';
+				$parallax_bg_sec_5 = 'data-parallax="scroll" data-z-index="1" data-image-src="'. $bg_image_File5->get_url() .'"';
 			}
 		}		
 		
