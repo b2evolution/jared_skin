@@ -33,6 +33,9 @@ skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
 if( $Skin->get_setting( 'section_1_display' ) ) {
+	
+// Parallax effect speed
+$section_1_parallax_speed = $Skin->get_setting( 'section_1_parallax' );
 
 $parallax_bg_sec_1 = '';
 // Check if image is uploaded
@@ -43,7 +46,7 @@ if( $Skin->get_setting( 'section_1_image_file_ID' ) )
 	if( !empty( $bg_image_File1 ) && $bg_image_File1->exists() )
 	{
 		// Store everything needed for parallax
-		$parallax_bg_sec_1 = 'data-parallax="scroll" data-image-src="'. $bg_image_File1->get_url() .'"';
+		$parallax_bg_sec_1 = 'data-parallax="scroll" data-speed="'. $section_1_parallax_speed .'" data-image-src="'. $bg_image_File1->get_url() .'"';
 	}
 }
 
@@ -257,6 +260,9 @@ echo '<div class="evo_pictured_layout parallax-window" data-z-index="0" '. $para
 
 		<?php
 		if( $Skin->get_setting( 'section_2_display' ) ) {
+			
+		// Parallax effect speed
+		$section_2_parallax_speed = $Skin->get_setting( 'section_2_parallax' );
 
 		$parallax_bg_sec_2 = '';
 		// Check if image is uploaded
@@ -267,7 +273,7 @@ echo '<div class="evo_pictured_layout parallax-window" data-z-index="0" '. $para
 			if( !empty( $bg_image_File2 ) && $bg_image_File2->exists() )
 			{
 				// Store everything needed for parallax
-				$parallax_bg_sec_2 = 'data-parallax="scroll" data-z-index="1" data-image-src="'. $bg_image_File2->get_url() .'"';
+				$parallax_bg_sec_2 = 'data-parallax="scroll" data-z-index="1" data-speed="'. $section_2_parallax_speed .'" data-image-src="'. $bg_image_File2->get_url() .'"';
 			}
 		}
 
@@ -299,6 +305,9 @@ echo '<div class="evo_pictured_layout parallax-window" data-z-index="0" '. $para
 		<?php
 		if( $Skin->get_setting( 'section_3_display' ) ) {
 			
+		// Parallax effect speed
+		$section_3_parallax_speed = $Skin->get_setting( 'section_3_parallax' );
+			
 		$parallax_bg_sec_3 = '';
 		// Check if image is uploaded
 		if( $Skin->get_setting( 'section_3_image_file_ID' ) )
@@ -308,7 +317,7 @@ echo '<div class="evo_pictured_layout parallax-window" data-z-index="0" '. $para
 			if( !empty( $bg_image_File3 ) && $bg_image_File3->exists() )
 			{
 				// Store everything needed for parallax
-				$parallax_bg_sec_3 = 'data-parallax="scroll" data-z-index="1" data-image-src="'. $bg_image_File3->get_url() .'"';
+				$parallax_bg_sec_3 = 'data-parallax="scroll" data-z-index="1" data-speed="'. $section_3_parallax_speed .'" data-image-src="'. $bg_image_File3->get_url() .'"';
 			}
 		}		
 		
@@ -337,6 +346,9 @@ echo '<div class="evo_pictured_layout parallax-window" data-z-index="0" '. $para
 		<?php } ?>
 		
 		<?php if( $Skin->get_setting( 'section_4_display' ) ) {
+			
+		// Parallax effect speed
+		$section_4_parallax_speed = $Skin->get_setting( 'section_4_parallax' );
 		
 		$parallax_bg_sec_4 = '';
 		// Check if image is uploaded
@@ -347,7 +359,7 @@ echo '<div class="evo_pictured_layout parallax-window" data-z-index="0" '. $para
 			if( !empty( $bg_image_File4 ) && $bg_image_File4->exists() )
 			{
 				// Store everything needed for parallax
-				$parallax_bg_sec_4 = 'data-parallax="scroll" data-z-index="1" data-image-src="'. $bg_image_File4->get_url() .'"';
+				$parallax_bg_sec_4 = 'data-parallax="scroll" data-z-index="1" data-speed="'. $section_4_parallax_speed .'" data-image-src="'. $bg_image_File4->get_url() .'"';
 			}
 		}
 		
@@ -376,7 +388,10 @@ echo '<div class="evo_pictured_layout parallax-window" data-z-index="0" '. $para
 		<?php } ?>
 		
 		<?php if( $Skin->get_setting( 'section_5_display' ) ) {
-			
+
+		// Parallax effect speed
+		$section_5_parallax_speed = $Skin->get_setting( 'section_5_parallax' );
+		
 		$parallax_bg_sec_5 = '';
 		// Check if image is uploaded
 		if( $Skin->get_setting( 'section_5_image_file_ID' ) )
@@ -386,7 +401,7 @@ echo '<div class="evo_pictured_layout parallax-window" data-z-index="0" '. $para
 			if( !empty( $bg_image_File5 ) && $bg_image_File5->exists() )
 			{
 				// Store everything needed for parallax
-				$parallax_bg_sec_5 = 'data-parallax="scroll" data-z-index="1" data-image-src="'. $bg_image_File5->get_url() .'"';
+				$parallax_bg_sec_5 = 'data-parallax="scroll" data-z-index="1" data-speed="'. $section_5_parallax_speed .'" data-image-src="'. $bg_image_File5->get_url() .'"';
 			}
 		}		
 		

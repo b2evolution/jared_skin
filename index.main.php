@@ -28,7 +28,7 @@ skin_init( $disp );
 
 // Check if current page has a big picture as background
 $is_pictured_page = in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) );
-$is_other_disp = !in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'page', 'msgform', 'help', 'front' ) );
+$is_other_disp = !in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'page', 'msgform', 'front', 'help' ) );
 
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
 skin_include( '_html_header.inc.php', array(
@@ -44,7 +44,7 @@ skin_include( '_body_header.inc.php' );
 
 if( $is_pictured_page )
 {
-	$parallax_bg_sec_oth = '';
+	$section_access_image_file_ID = '';
 	// Check if image is uploaded
 	if( $Skin->get_setting( 'section_access_image_file_ID' ) )
 	{
@@ -53,15 +53,14 @@ if( $is_pictured_page )
 		if( !empty( $bg_image_File_oth ) && $bg_image_File_oth->exists() )
 		{
 			// Store everything needed for parallax
-			$parallax_bg_sec_oth = 'data-parallax="scroll" data-image-src="'. $bg_image_File_oth->get_url() .'"';
+			$section_access_image_file_ID = 'data-parallax="scroll" data-image-src="'. $bg_image_File_oth->get_url() .'"';
 		}
 	}
 	
-	echo '<div class="evo_pictured_layout parallax-window" '. $parallax_bg_sec_oth .'>';
+	echo '<div class="evo_pictured_layout parallax-window" '. $section_access_image_file_ID .'>';
 }
 if( $is_other_disp )
 {
-	
 	$parallax_bg_sec_oth = '';
 	// Check if image is uploaded
 	if( $Skin->get_setting( 'section_oth_image_file_ID' ) )
@@ -75,8 +74,9 @@ if( $is_other_disp )
 		}
 	}	
 	
-	echo '<div class="evo_container__standalone_page_area_oth" '. $parallax_bg_sec_oth .'>';
+	echo '<div class="evo_container__standalone_page_area_oth parallax-window" '. $parallax_bg_sec_oth .'>';
 }
+
 ?>
 
 

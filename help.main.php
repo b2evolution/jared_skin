@@ -39,11 +39,21 @@ skin_include( '_html_header.inc.php' );
 skin_include( '_body_header.inc.access.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
+$parallax_bg_sec_oth = '';
+// Check if image is uploaded
+if( $Skin->get_setting( 'section_access_image_file_ID' ) )
+{
+	// Get image...
+	$bg_image_File_oth = & $FileCache->get_by_ID( $Skin->get_setting( 'section_access_image_file_ID' ), false, false );
+	if( !empty( $bg_image_File_oth ) && $bg_image_File_oth->exists() )
+	{
+		// Store everything needed for parallax
+		$parallax_bg_sec_oth = 'data-parallax="scroll" data-image-src="'. $bg_image_File_oth->get_url() .'"';
+	}
+}
+echo '<div class="evo_container__standalone_page_area_oth parallax-window" '. $parallax_bg_sec_oth .'>';
+	
 ?>
-
-<div class="evo_pictured_layout">
-
-<div class="evo_container__standalone_page_area_oth">
 
 <div class="container">
 
@@ -132,8 +142,6 @@ skin_include( '_body_header.inc.access.php' );
 </div><!-- .row -->
 
 </div><!-- .container -->
-
-</div><!-- .evo_pictured_layout -->
 
 
 <?php

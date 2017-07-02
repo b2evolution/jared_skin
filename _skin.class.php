@@ -207,6 +207,17 @@ class jared_Skin extends Skin
 						'defaultvalue' => 1,
 						'type' => 'checkbox',
 					),
+					'section_1_parallax' => array(
+						'label' => T_('Background Parallax speed'),
+						'note' => T_('Set the speed of parallax effect on the background.'),
+						'defaultvalue' => '0.4',
+						'type'     => 'radio',
+						'options'  => array(
+							array( '0.2', T_('Slow') ),
+							array( '0.4', T_('Normal') ),
+							array( '0.8', T_('Fast') ),
+						),
+					),
 					'section_1_navbar_text_color' => array(
 						'label' => T_('Top navigation text color'),
 						'note' => T_('Click to select a color.'),
@@ -308,6 +319,17 @@ class jared_Skin extends Skin
 						'defaultvalue' => 1,
 						'type' => 'checkbox',
 					),
+					'section_2_parallax' => array(
+						'label' => T_('Background Parallax speed'),
+						'note' => T_('Set the speed of parallax effect on the background.'),
+						'defaultvalue' => '0.4',
+						'type'     => 'radio',
+						'options'  => array(
+							array( '0.2', T_('Slow') ),
+							array( '0.4', T_('Normal') ),
+							array( '0.8', T_('Fast') ),
+						),
+					),
 					'section_2_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -392,6 +414,17 @@ class jared_Skin extends Skin
 						'defaultvalue' => 1,
 						'type' => 'checkbox',
 					),
+					'section_3_parallax' => array(
+						'label' => T_('Background Parallax speed'),
+						'note' => T_('Set the speed of parallax effect on the background.'),
+						'defaultvalue' => '0.4',
+						'type'     => 'radio',
+						'options'  => array(
+							array( '0.2', T_('Slow') ),
+							array( '0.4', T_('Normal') ),
+							array( '0.8', T_('Fast') ),
+						),
+					),
 					'section_3_image_file_ID' => array(
 						'label' => T_('Background image'),
 						'type' => 'fileselect',
@@ -474,6 +507,17 @@ class jared_Skin extends Skin
 						'note' => T_('Check this to enable Front Page Area 4.'),
 						'defaultvalue' => 1,
 						'type' => 'checkbox',
+					),
+					'section_4_parallax' => array(
+						'label' => T_('Background Parallax speed'),
+						'note' => T_('Set the speed of parallax effect on the background.'),
+						'defaultvalue' => '0.4',
+						'type'     => 'radio',
+						'options'  => array(
+							array( '0.2', T_('Slow') ),
+							array( '0.4', T_('Normal') ),
+							array( '0.8', T_('Fast') ),
+						),
 					),
 					'section_4_image_file_ID' => array(
 						'label' => T_('Background image'),
@@ -558,6 +602,17 @@ class jared_Skin extends Skin
 						'note' => T_('Check this to enable Front Page Area 5.'),
 						'defaultvalue' => 1,
 						'type' => 'checkbox',
+					),
+					'section_5_parallax' => array(
+						'label' => T_('Background Parallax speed'),
+						'note' => T_('Set the speed of parallax effect on the background.'),
+						'defaultvalue' => '0.4',
+						'type'     => 'radio',
+						'options'  => array(
+							array( '0.2', T_('Slow') ),
+							array( '0.4', T_('Normal') ),
+							array( '0.8', T_('Fast') ),
+						),
 					),
 					'section_5_image_file_ID' => array(
 						'label' => T_('Background image'),
@@ -649,6 +704,17 @@ class jared_Skin extends Skin
 						'initialize_with' => 'shared/global/monument-valley/monument-valley.jpg',
 						'thumbnail_size' => 'fit-320x320'
 					),
+					'section_6_parallax' => array(
+						'label' => T_('Background Parallax speed'),
+						'note' => T_('Set the speed of parallax effect on the background.'),
+						'defaultvalue' => '0.4',
+						'type'     => 'radio',
+						'options'  => array(
+							array( '0.2', T_('Slow') ),
+							array( '0.4', T_('Normal') ),
+							array( '0.8', T_('Fast') ),
+						),
+					),
 					'section_6_bg_color' => array(
 						'label' => T_('Background color'),
 						'note' => T_('This color will be used if Background image is not set or does not exist.'),
@@ -731,6 +797,17 @@ class jared_Skin extends Skin
 						'type' => 'fileselect',
 						'initialize_with' => 'shared/global/monument-valley/john-ford-point.jpg',
 						'thumbnail_size' => 'fit-320x320'
+					),
+					'section_7_parallax' => array(
+						'label' => T_('Background Parallax speed'),
+						'note' => T_('Set the speed of parallax effect on the background.'),
+						'defaultvalue' => '0.4',
+						'type'     => 'radio',
+						'options'  => array(
+							array( '0.2', T_('Slow') ),
+							array( '0.4', T_('Normal') ),
+							array( '0.8', T_('Fast') ),
+						),
 					),
 					'section_7_bg_color' => array(
 						'label' => T_('Background color'),
@@ -815,6 +892,17 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'section_access_parallax' => array(
+						'label' => T_('Background Parallax speed'),
+						'note' => T_('Set the speed of parallax effect on the background.'),
+						'defaultvalue' => '0.4',
+						'type'     => 'radio',
+						'options'  => array(
+							array( '0.2', T_('Slow') ),
+							array( '0.4', T_('Normal') ),
+							array( '0.8', T_('Fast') ),
+						),
+					),
 				'section_pictured_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -836,6 +924,17 @@ class jared_Skin extends Skin
 						'type' => 'fileselect',
 						'initialize_with' => 'shared/global/monument-valley/john-ford-point.jpg',
 						'thumbnail_size' => 'fit-320x320'
+					),
+					'section_oth_parallax' => array(
+						'label' => T_('Background Parallax speed'),
+						'note' => T_('Set the speed of parallax effect on the background.'),
+						'defaultvalue' => '0.4',
+						'type'     => 'radio',
+						'options'  => array(
+							array( '0.2', T_('Slow') ),
+							array( '0.4', T_('Normal') ),
+							array( '0.8', T_('Fast') ),
+						),
 					),
 					'section_oth_bg_color' => array(
 						'label' => T_('Background color'),
@@ -1513,7 +1612,7 @@ class jared_Skin extends Skin
 			
 		
 		// ============ Section 6 - Header for Standalone Pages ============
-		if( $disp == 'page' )
+		if( $disp == 'page' || $disp == 'single' )
 		{
 		if ( ! $this->get_setting( 'section_6_image_file_ID' ) )
 		{
