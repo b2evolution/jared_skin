@@ -44,12 +44,16 @@ $parallax_bg_sec_msg = '';
 // Check if image is uploaded
 if( $Skin->get_setting( 'section_7_image_file_ID' ) )
 {
+	
+	// Parallax effect speed
+	$section_7_parallax_speed = $Skin->get_setting( 'section_7_parallax' );
+	
 	// Get image...
 	$bg_image_File7 = & $FileCache->get_by_ID( $Skin->get_setting( 'section_7_image_file_ID' ), false, false );
 	if( !empty( $bg_image_File7 ) && $bg_image_File7->exists() )
 	{
 		// Store everything needed for parallax
-		$parallax_bg_sec_msg = 'data-parallax="scroll" data-image-src="'. $bg_image_File7->get_url() .'"';
+		$parallax_bg_sec_msg = 'data-parallax="scroll" data-speed="'. $section_7_parallax_speed .'" data-image-src="'. $bg_image_File7->get_url() .'"';
 	}
 }
 

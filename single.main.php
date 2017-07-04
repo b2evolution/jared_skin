@@ -1,6 +1,6 @@
 <?php
 /**
- * This is the main/default page template for the "bootstrap_main" skin.
+ * This is the main/default page template for the "bootstrap_blog" skin.
  *
  * This skin only uses one single template which includes most of its features.
  * It will also rely on default includes for specific dispays (like the comment form).
@@ -12,7 +12,7 @@
  * to handle the request (based on $disp).
  *
  * @package evoskins
- * @subpackage bootstrap_main
+ * @subpackage bootstrap_blog
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
@@ -26,9 +26,6 @@ if( evo_version_compare( $app_version, '6.4' ) < 0 )
 skin_init( $disp );
 
 
-// Check if current page has a big picture as background
-$is_other_disp = !in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'page', 'msgform', 'front', 'help' ) );
-
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
 skin_include( '_html_header.inc.php', array(
 	'body_class' => 'pictured',
@@ -40,29 +37,30 @@ skin_include( '_html_header.inc.php', array(
 // If site headers are enabled, they will be included here:
 skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
+?>
 
-if( $is_other_disp )
+<?php
+		
+if( $Item->get_cover_image_url() )
 {
-	$parallax_bg_sec_oth = '';
+	echo '<div class="evo_container__single_page_cover parallax-window" data-parallax="scroll" data-image-src="' . $Item->get_cover_image_url() . '" >';
+} else {
+	
+	$parallax_bg_sec_6 = '';
 	// Check if image is uploaded
-	if( $Skin->get_setting( 'section_oth_image_file_ID' ) )
+	if( $Skin->get_setting( 'section_6_image_file_ID' ) )
 	{
-		
-		// Parallax effect speed
-		$section_oth_parallax_speed = $Skin->get_setting( 'section_oth_parallax' );
-		
 		// Get image...
-		$bg_image_File_oth = & $FileCache->get_by_ID( $Skin->get_setting( 'section_oth_image_file_ID' ), false, false );
-		if( !empty( $bg_image_File_oth ) && $bg_image_File_oth->exists() )
+		$bg_image_File6 = & $FileCache->get_by_ID( $Skin->get_setting( 'section_6_image_file_ID' ), false, false );
+		if( !empty( $bg_image_File6 ) && $bg_image_File6->exists() )
 		{
 			// Store everything needed for parallax
-			$parallax_bg_sec_oth = 'data-parallax="scroll" data-speed="'. $section_oth_parallax_speed .'" data-image-src="'. $bg_image_File_oth->get_url() .'"';
+			$parallax_bg_sec_6 = 'data-parallax="scroll" data-image-src="'. $bg_image_File6->get_url() .'"';
 		}
-	}	
-	
-	echo '<div class="evo_container__standalone_page_area_oth parallax-window" '. $parallax_bg_sec_oth .'>';
+	}
+		
+	echo '<div class="evo_container__standalone_page_area_6 parallax-window" '. $parallax_bg_sec_6 .'>';
 }
-
 ?>
 
 
@@ -94,31 +92,20 @@ if( $is_other_disp )
 		?>
 		</div>
 	</div><!-- .col -->
-	
-	<?php if( $is_other_disp ) { ?>
-	
-	<div class="evo_page_title col-md-12">
+
+	<div class="evo_post_title col-md-12">
+		<h1><?php $Item->title(); // PAGE TITLE ?></h1>
+		
 		<?php
-			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-			request_title( array(
-					'title_before'      => '<h1 class="page_title">',
-					'title_after'       => '</h1>',
-					'title_none'        => '',
-					'glue'              => ' - ',
-					'title_single_disp' => false,
-					'title_page_disp'   => false,
-					'format'            => 'htmlbody',
-					'register_text'     => '',
-					'login_text'        => '',
-					'lostpassword_text' => '',
-					'account_activation' => '',
-					'msgform_text'      => '',
-					'user_text'         => T_( 'User settings' ),
-					'users_text'        => T_( 'Users' ),
-					'posts_text'        => T_( 'Posts' ),
-					'display_edit_links'=> false,
-				) );
-			// ----------------------------- END OF REQUEST TITLE ----------------------------
+		// if( is_logged_in() )
+		// { // Display edit link only for intro posts, because for all other posts the link is displayed on the info line.
+			// $Item->edit_link( array(
+				// 'before' => '<div class="'.button_class( 'group' ).'">',
+				// 'after'  => '</div>',
+				// 'text'   => $Item->is_intro() ? get_icon( 'edit' ).' '.T_('Edit Intro') : '#',
+				// 'class'  => button_class( 'text' ),
+			// ) );
+		// }		
 		?>
 	</div>
 
@@ -126,13 +113,9 @@ if( $is_other_disp )
 
 </div><!-- .container -->
 
-</div><!-- .evo_container__standalone_page_area_oth -->
+</div><!-- .evo_container__standalone_page_area_6 -->
 
 <div class="container main_page_wrapper_other_disps">
-	<?php } else { ?>
-
-</header><!-- .row -->
-	<?php } ?>
 
 <div class="row">
 
@@ -157,14 +140,36 @@ if( $is_other_disp )
 		<?php
 			// ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
 			item_prevnext_links( array(
-					'block_start' => '<ul class="pager">',
-					'prev_start'  => '<li class="previous">',
-					'prev_end'    => '</li>',
-					'next_start'  => '<li class="next">',
-					'next_end'    => '</li>',
-					'block_end'   => '</ul>',
+					'block_start' => '<nav><ul class="pager">',
+						'prev_start'  => '<li class="previous">',
+						'prev_end'    => '</li>',
+						'next_start'  => '<li class="next">',
+						'next_end'    => '</li>',
+					'block_end'   => '</ul></nav>',
 				) );
 			// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
+		?>
+
+		<?php
+			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
+			request_title( array(
+					'title_before'      => '<h2>',
+					'title_after'       => '</h2>',
+					'title_none'        => '',
+					'glue'              => ' - ',
+					'title_single_disp' => false,
+					'title_page_disp'   => false,
+					'format'            => 'htmlbody',
+					'register_text'     => '',
+					'login_text'        => '',
+					'lostpassword_text' => '',
+					'account_activation' => '',
+					'msgform_text'      => '',
+					'user_text'         => '',
+					'users_text'        => '',
+					'display_edit_links'=> false,
+				) );
+			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 
 		<?php
@@ -220,6 +225,8 @@ if( $is_other_disp )
 						'prev_text'             => '<i class="fa fa-angle-double-left"></i>',
 						'next_text'             => '<i class="fa fa-angle-double-right"></i>',
 					),
+					// Item content:
+					'url_link_position'     => 'top',
 					// Form params for the forms below: login, register, lostpassword, activateinfo and msgform
 					'skin_form_before'      => '<div class="panel panel-default skin-form">'
 																				.'<div class="panel-heading">'
@@ -258,10 +265,8 @@ if( $is_other_disp )
 					'search_submit_before' => '<span class="input-group-btn">',
 					'search_submit_after'  => '</span></div>',
 					// Front page
-					'front_block_first_title_start' => '<h1>',
-					'front_block_first_title_end'   => '</h1>',
-					'front_block_title_start'       => '<h2>',
-					'front_block_title_end'         => '</h2>',
+					'featured_intro_before' => '<div class="jumbotron">',
+					'featured_intro_after'  => '</div>',
 					// Form "Sending a message"
 					'msgform_form_title' => T_('Sending a message'),
 				) );
@@ -269,7 +274,6 @@ if( $is_other_disp )
 			// copying the matching php file into your skin directory.
 			// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
 		?>
-
 		</main>
 
 	</div><!-- .col -->
