@@ -40,10 +40,13 @@ skin_include( '_body_header.inc.php' );
 ?>
 
 <?php
-		
+
+// Parallax effect speed
+$section_6_parallax_speed = $Skin->get_setting( 'section_6_parallax' );
+	
 if( $Item->get_cover_image_url() )
 {
-	echo '<div class="evo_container__single_page_cover parallax-window" data-parallax="scroll" data-image-src="' . $Item->get_cover_image_url() . '" >';
+	echo '<div class="evo_container__single_page_cover parallax-window" data-parallax="scroll" data-speed="'. $section_6_parallax_speed .'" data-image-src="' . $Item->get_cover_image_url() . '" >';
 } else {
 	
 	$parallax_bg_sec_6 = '';
@@ -55,7 +58,7 @@ if( $Item->get_cover_image_url() )
 		if( !empty( $bg_image_File6 ) && $bg_image_File6->exists() )
 		{
 			// Store everything needed for parallax
-			$parallax_bg_sec_6 = 'data-parallax="scroll" data-image-src="'. $bg_image_File6->get_url() .'"';
+			$parallax_bg_sec_6 = 'data-parallax="scroll" data-speed="'. $section_6_parallax_speed .'" data-image-src="'. $bg_image_File6->get_url() .'"';
 		}
 	}
 		
