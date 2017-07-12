@@ -121,18 +121,18 @@ if( $is_other_disp )
 			// ----------------------------- END OF REQUEST TITLE ----------------------------
 		?>
 	</div>
+	
+	<?php } ?>
 
 </header><!-- .row -->
 
 </div><!-- .container -->
 
+<?php if( $is_other_disp ) { ?>
 </div><!-- .evo_container__standalone_page_area_oth -->
+<?php } ?>
 
 <div class="container main_page_wrapper_other_disps">
-	<?php } else { ?>
-
-</header><!-- .row -->
-	<?php } ?>
 
 <div class="row">
 

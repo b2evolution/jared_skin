@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is the template that displays "login required" for non logged-in users.
+ * This file is the template that displays "register" page for non logged-in users.
  *
  * For a quick explanation of b2evo 2.0 skins, please start here:
  * {@link http://b2evolution.net/man/skin-development-primer}
@@ -109,18 +109,15 @@ if( $Skin->get_setting( 'section_access_image_file_ID' ) )
 																				.'</div>'
 																				.'<div class="panel-body">',
 					'skin_form_after'       => '</div></div>',
-					// Login
-					'display_form_messages' => true,
-					'form_title_login'      => T_('Log in to your account').'$form_links$',
-					'form_title_lostpass'   => get_request_title().'$form_links$',
-					'lostpass_page_class'   => 'evo_panel__lostpass',
-					'login_form_inskin'     => false,
-					'login_page_class'      => 'evo_panel__login',
-					'login_page_before'     => '<div class="$form_class$">',
-					'login_page_after'      => '</div>',
-					'display_reg_link'      => true,
-					'abort_link_position'   => 'form_title',
-					'abort_link_text'       => '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>',
+					// Register
+					'register_page_before'      => '<div class="evo_panel__register">',
+					'register_page_after'       => '</div>',
+					'register_form_title'       => T_('Register'),
+					'register_links_attrs'      => '',
+					'register_use_placeholders' => true,
+					'register_field_width'      => 252,
+					'register_disabled_page_before' => '<div class="evo_panel__register register-disabled">',
+					'register_disabled_page_after'  => '</div>',
 				) );
 			// Note: you can customize any of the sub templates included here by
 			// copying the matching php file into your skin directory.

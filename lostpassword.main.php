@@ -1,6 +1,6 @@
 <?php
 /**
- * This file is the template that displays "login required" for non logged-in users.
+ * This file is the template that displays "login" page for non logged-in users.
  *
  * For a quick explanation of b2evo 2.0 skins, please start here:
  * {@link http://b2evolution.net/man/skin-development-primer}
@@ -121,6 +121,24 @@ if( $Skin->get_setting( 'section_access_image_file_ID' ) )
 					'display_reg_link'      => true,
 					'abort_link_position'   => 'form_title',
 					'abort_link_text'       => '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>',
+					// Register
+					'register_page_before'      => '<div class="evo_panel__register">',
+					'register_page_after'       => '</div>',
+					'register_form_title'       => T_('Register'),
+					'register_links_attrs'      => '',
+					'register_use_placeholders' => true,
+					'register_field_width'      => 252,
+					'register_disabled_page_before' => '<div class="evo_panel__register register-disabled">',
+					'register_disabled_page_after'  => '</div>',
+					// Activate form
+					'activate_form_title'  => T_('Account activation'),
+					'activate_page_before' => '<div class="evo_panel__activation">',
+					'activate_page_after'  => '</div>',
+					// Search
+					'search_input_before'  => '<div class="input-group">',
+					'search_input_after'   => '',
+					'search_submit_before' => '<span class="input-group-btn">',
+					'search_submit_after'  => '</span></div>',
 				) );
 			// Note: you can customize any of the sub templates included here by
 			// copying the matching php file into your skin directory.
