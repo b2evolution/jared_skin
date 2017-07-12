@@ -1326,27 +1326,27 @@ class jared_Skin extends Skin
 			else
 			{
 				$color = $this->get_setting( 'section_1_bg_color' );
-				$custom_css .= '.evo_pictured_layout { background: '.$color." }\n";
+				$custom_css .= 'body.pictured.disp_front .evo_pictured_layout { background: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_coll_title_color' ) )
 			{
-				$custom_css .= 'body.pictured .main_page_wrapper .widget_core_coll_title h1 a { color: '.$color." }\n";
+				$custom_css .= 'body.pictured.disp_front .main_page_wrapper .widget_core_coll_title h1 a { color: '.$color." }\n";
 			}
 			if( $max_width = $this->get_setting( 'section_1_cont_width' ) )
 			{
-				$custom_css .= 'body.pictured .container.main_page_wrapper { max-width: '.$max_width."px }\n";
+				$custom_css .= 'body.pictured.disp_front .container.main_page_wrapper { max-width: '.$max_width."px }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_title_color' ) )
 			{
-				$custom_css .= 'body.pictured .main_page_wrapper h2.page-header { color: '.$color." }\n";
+				$custom_css .= 'body.pictured.disp_front .main_page_wrapper h2.page-header { color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_muted_color' ) )
 			{
-				$custom_css .= 'body.pictured .main_page_wrapper .text-muted { color: '.$color." }\n";
+				$custom_css .= 'body.pictured.disp_front .main_page_wrapper .text-muted { color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_text_color' ) )
 			{
-				$custom_css .= 'body.pictured .front_main_content, body.pictured .front_main_content h1 small, .evo_container__header, .evo_container__page_top { color: '.$color." }\n";
+				$custom_css .= 'body.pictured.disp_front .front_main_content, body.pictured .front_main_content h1 small, .evo_container__header, .evo_container__page_top { color: '.$color." }\n";
 				// $custom_css .= '.evo_pictured_layout .compact_search_form .input-group .search_field, .evo_pictured_layout .compact_search_form .input-group .input-group-btn { border-color: '.$color." }\n";
 			}
 
