@@ -199,9 +199,7 @@ body.anonymous .navbar.main-header-navigation.affix { top: 0 }
 		}
 	}
 }
-@media (max-width: 767px) {
-	
-}
+
 // @media only screen and (max-width: 414px) {
 	// .navbar.main-header-navigation .navbar-brand > h3 a {
 		// max-width: 220px;
@@ -273,40 +271,10 @@ body.pictured {
 	}
 }
 .evo_pictured_layout {
-	// display: table;
-	// height: 100%;
 	min-height: 100%;
-	// min-width: 100%;
-	// position: relative;
-	// width: 100%;
-	// background-attachment: fixed;
 	background-size: cover;
 	background-position: center center;
-	// > .evo_pictured__image {
-		// display: none;
-		// width: 100%;
-	// }
 }
-// @media only screen and (max-width: 640px) {
-	// body.disp_front {
-		// .sitewide_header {
-			// margin-bottom: 0;
-		// }
-		// .evo_pictured_layout {
-			// position: relative;
-			// height: auto;
-			// min-height: auto;
-			// > .evo_pictured__image {
-				// display: block;
-			// }
-		// }
-		// div.front_main_area {
-			// width: auto;
-			// margin-top: 0;
-			// margin-bottom: 0;
-		// }
-	// }
-// }
 
 // Login widget form
 .widget_core_user_login {
@@ -948,52 +916,68 @@ div[class*="_list"], .evo_layout_list {
 
 @media (min-width: 768px) {
 	.flex-parent {
-	  display: flex;
-	  align-items: center;
-	  padding: 10px;
-	  margin: 30px 0;
+		display: flex;
+		align-items: center;
+		padding: 10px;
+		margin: 30px 0;
 	}
 
 	.long-and-truncated {
-	  flex: 1;
+		flex: 1;
 	  
-	  white-space: nowrap;
-	  overflow: hidden;
-	  text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	.short-and-fixed {
-	  white-space: nowrap;
-	  > div {
-		width: 30px;
-		height: 30px;
-		border-radius: 10px;
-		background: lightgreen;
-		display: inline-block;
-	  }
+		white-space: nowrap;
+		> div {
+			width: 30px;
+			height: 30px;
+			border-radius: 10px;
+			background: lightgreen;
+			display: inline-block;
+		}
 	}
 
 	.long-and-truncated-with-child {
-	  flex: 1;
-	  h2 {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	  }
+		flex: 1;
+		h2 {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 	}
 
 	.long-and-truncated-with-child-corrected {
-	  flex: 1;
-	  min-width: 0; /* or some value */
-	  h2 {
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
-	  }
+		flex: 1;
+		min-width: 0; /* or some value */
+		h2 {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 	}
 }
 
+// Important for 
 .parallax-window {
     min-height: 100px;
     background: transparent;
+}
+
+input.SaveButton,
+input.submit,
+input.preview,
+input.btn-success,
+a.btn-primary,
+input.btn-primary {
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
