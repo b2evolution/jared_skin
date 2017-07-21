@@ -1085,6 +1085,68 @@ class jared_Skin extends Skin
 				'featured_posts_end' => array(
 					'layout' => 'end_fieldset',
 				),
+				
+				
+				// ============ Buttons color customization ============
+				'buttons_section_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Button Customization Settings')
+				),
+					// Login button
+					'login_button_color' => array(
+						'label' => T_('Login button color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'login_button_bg_color' => array(
+						'label' => T_('Login button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#5cb85c',
+						'type' => 'color',
+					),
+					// Register button
+					'register_button_color' => array(
+						'label' => T_('Register button color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'register_button_bg_color' => array(
+						'label' => T_('Register button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#337ab7',
+						'type' => 'color',
+					),
+					// Contact button
+					'contact_button_color' => array(
+						'label' => T_('Contact and Subscribe button color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'contact_button_bg_color' => array(
+						'label' => T_('Contact and Subscribe button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#337ab7',
+						'type' => 'color',
+					),
+					// Save/Submit button
+					//'submit_button_color' => array(
+						//'label' => T_('Submit and Save button color'),
+						//'note' => T_('Click to select a color.'),
+						//'defaultvalue' => '#ffffff',
+						//'type' => 'color',
+					//),
+					//'submit_button_bg_color' => array(
+						//'label' => T_('Submit and Save button background color'),
+						//'note' => T_('Click to select a color.'),
+						//'defaultvalue' => '#337ab7',
+						//'type' => 'color',
+					//),
+				'buttons_section_end' => array(
+					'layout' => 'end_fieldset',
+				),
 
 
 				// ============ Colorbox Image Settings ============
@@ -1608,6 +1670,8 @@ class jared_Skin extends Skin
 				$custom_css .= ".evo_container__front_page_area_5 { text-align: right }\n";
 			}
 			}
+			
+			
 		}
 			
 		
@@ -1790,6 +1854,33 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'bgimg_hover_link_color' ) )
 		{	// Custom link hover color on background image:
 			$custom_css .= '.evo_hasbgimg a:hover { color: '.$color." }\n";
+		}
+		
+		
+		// ============ Buttons color customization ============
+		if( $color = $this->get_setting( 'login_button_color' ) )
+		{	// Custom text color on login button:
+			$custom_css .= 'input[type="submit"].btn-success { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'login_button_bg_color' ) )
+		{	// Custom text background-color on login button:
+			$custom_css .= 'input[type="submit"].btn-success { background-color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'register_button_color' ) )
+		{	// Custom text color on register button:
+			$custom_css .= 'a.btn.btn-primary.btn-lg { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'register_button_bg_color' ) )
+		{	// Custom text background-color on register button:
+			$custom_css .= 'a.btn.btn-primary.btn-lg { background-color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'contact_button_color' ) )
+		{	// Custom text color on contact button:
+			$custom_css .= 'input[type="submit"].submit.btn-primary { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'contact_button_bg_color' ) )
+		{	// Custom text background-color on contact button:
+			$custom_css .= 'input[type="submit"].submit.btn-primary { background-color: '.$color." }\n";
 		}
 		
 		
