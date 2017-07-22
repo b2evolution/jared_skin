@@ -1132,18 +1132,18 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 					// Save/Submit button
-					//'submit_button_color' => array(
-						//'label' => T_('Submit and Save button color'),
-						//'note' => T_('Click to select a color.'),
-						//'defaultvalue' => '#ffffff',
-						//'type' => 'color',
-					//),
-					//'submit_button_bg_color' => array(
-						//'label' => T_('Submit and Save button background color'),
-						//'note' => T_('Click to select a color.'),
-						//'defaultvalue' => '#337ab7',
-						//'type' => 'color',
-					//),
+					'submit_button_color' => array(
+						'label' => T_('Submit and Save button color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'submit_button_bg_color' => array(
+						'label' => T_('Submit and Save button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#337ab7',
+						'type' => 'color',
+					),
 				'buttons_section_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -1860,19 +1860,19 @@ class jared_Skin extends Skin
 		// ============ Buttons color customization ============
 		if( $color = $this->get_setting( 'login_button_color' ) )
 		{	// Custom text color on login button:
-			$custom_css .= 'input[type="submit"].btn-success { color: '.$color." }\n";
+			$custom_css .= 'input[type="submit"].btn-success, .widget_core_user_login input.submit.btn-default { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'login_button_bg_color' ) )
 		{	// Custom text background-color on login button:
-			$custom_css .= 'input[type="submit"].btn-success { background-color: '.$color." }\n";
+			$custom_css .= 'input[type="submit"].btn-success, .widget_core_user_login input.submit.btn-default { background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'register_button_color' ) )
 		{	// Custom text color on register button:
-			$custom_css .= 'a.btn.btn-primary.btn-lg { color: '.$color." }\n";
+			$custom_css .= 'a.btn.btn-primary.btn-lg, .widget_register_form input.submit { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'register_button_bg_color' ) )
 		{	// Custom text background-color on register button:
-			$custom_css .= 'a.btn.btn-primary.btn-lg { background-color: '.$color." }\n";
+			$custom_css .= 'a.btn.btn-primary.btn-lg, .widget_register_form input.submit { background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'contact_button_color' ) )
 		{	// Custom text color on contact button:

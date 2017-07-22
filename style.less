@@ -759,6 +759,13 @@ body.pictured .secondary_area .widget_core_org_members {
 	}
 }
 
+.widget_register_form,
+.widget_core_user_login {
+	.panel {
+		background: transparent;
+	}
+}
+
 // New search layout IN DEV
 // .compact_search_form {
 	// .input-group {
@@ -972,7 +979,9 @@ input.submit,
 input.preview,
 input.btn-success,
 a.btn-primary,
-input.btn-primary {
+input.btn-primary,
+.widget_register_form input.submit,
+.widget_core_user_login input.submit {
     padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
