@@ -43,7 +43,7 @@ class jared_Skin extends Skin
 	 */
 	function get_default_type()
 	{
-		return 'rwd';
+		return 'normal';
 	}
 
 
