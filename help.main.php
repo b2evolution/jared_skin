@@ -36,64 +36,10 @@ skin_include( '_html_header.inc.php' );
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
-siteskin_include( '_site_body_header.inc.php' );
+skin_include( '_body_header.inc.access.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
-
-<?php
-if( $Skin->show_container_when_access_denied( 'menu' ) )
-{ // Display 'Menu' widget container
-?>
-<nav class="navbar navbar-default main-header-navigation"><!-- data-spy="affix" data-offset-top="50"-->
-	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="navbar-header">
-		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		</button>
-		<?php
-		skin_widget( array(
-			// CODE for the widget:
-			'widget'              => 'coll_title',
-			// Optional display params
-			'block_start'         => '<div class="navbar-brand">',
-			'block_end'           => '</div>',
-			'item_class'           => 'navbar-brand',
-		) );
-		// ------------------------- "Menu" Collection logo --------------------------
-		?>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		<ul class="nav navbar-nav navbar-right">
-		<?php
-			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
-			// Display container and contents:
-			// Note: this container is designed to be a single <ul> list
-			skin_container( NT_('Menu'), array(
-					// The following params will be used as defaults for widgets included in this container:
-					'block_start'         => '',
-					'block_end'           => '',
-					'block_display_title' => false,
-					'list_start'          => '',
-					'list_end'            => '',
-					'item_start'          => '<li class="evo_widget $wi_class$">',
-					'item_end'            => '</li>',
-					'item_selected_start' => '<li class="active evo_widget $wi_class$">',
-					'item_selected_end'   => '</li>',
-					'item_title_before'   => '',
-					'item_title_after'    => '',
-				) );
-			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
-		?>
-		</ul>
-	</div><!-- /.navbar-collapse -->
-</nav>
-<?php } ?>
 
 <div class="evo_container__standalone_page_area_oth">
 
@@ -119,6 +65,11 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 					'list_end'            => '</ul>',
 					'item_start'          => '<li>',
 					'item_end'            => '</li>',
+					// Widget 'Search form':
+					'search_input_before'  => '<div class="input-group">',
+					'search_input_after'   => '',
+					'search_submit_before' => '<span class="input-group-btn">',
+					'search_submit_after'  => '</span></div>',    
 				) );
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
 		?>
@@ -180,82 +131,11 @@ if( $Skin->show_container_when_access_denied( 'menu' ) )
 
 </div><!-- .container -->
 
-<!-- =================================== START OF FOOTER =================================== -->
-<footer class="container-fluid footer_wrapper">
-			
-	<?php
-	if( $Skin->show_container_when_access_denied( 'footer' ) )
-	{ // Display 'Footer' widget container
-	?>
-	<div class="container evo_container evo_container__footer">
-		<?php
-		// ------------------------- "Footer" CONTAINER EMBEDDED HERE --------------------------
-		// Display container and contents:
-		skin_container( NT_('Footer'), array(
-				// The following params will be used as defaults for widgets included in this container:
-				'block_start'         => '<div class="evo_widget $wi_class$">',
-				'block_end'           => '</div>',
-			) );
-		// ----------------------------- END OF "Footer" CONTAINER -----------------------------
-		?>
-	</div>
-	<?php } ?>
-	
-	<p class="baseline">
-		<?php
-		// Display footer text (text can be edited in Blog Settings):
-		$Blog->footer_text( array(
-				'before' => '',
-				'after'  => ' &bull; ',
-			) );
-		// TODO: dh> provide a default class for pTyp, too. Should be a name and not the ityp_ID though..?!
-		
-		// Display a link to contact the owner of this blog (if owner accepts messages):
-		$Blog->contact_link( array(
-				'before' => '',
-				'after'  => ' &bull; ',
-				'text'   => T_('Contact'),
-				'title'  => T_('Send a message to the owner of this blog...'),
-			) );
-			
-		// Display a link to help page:
-		$Blog->help_link( array(
-				'before' => ' ',
-				'after'  => ' ',
-				'text'   => T_('Help'),
-			) );
-			
-		// Display additional credits:
-		// If you can add your own credits without removing the defaults, you'll be very cool :))
-		// Please leave this at the bottom of the page to make sure your blog gets listed on b2evolution.net
-		credits( array(
-				'list_start' => '&bull;',
-				'list_end'   => ' ',
-				'separator'  => '&bull;',
-				'item_start' => ' ',
-				'item_end'   => ' ',
-			) );
-		?>
-	</p>
-
-	<?php
-		// Please help us promote b2evolution and leave this logo on your blog:
-		powered_by( array(
-				'block_start' => '<div class="powered_by">',
-				'block_end'   => '</div>',
-				// Check /rsc/img/ for other possible images -- Don't forget to change or remove width & height too
-				'img_url'     => '$rsc$img/powered-by-b2evolution-120t.gif',
-				'img_width'   => 120,
-				'img_height'  => 32,
-			) );
-	?>
-
-</footer><!-- .footer_wrapper -->
 
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
 // If site footers are enabled, they will be included here:
-siteskin_include( '_site_body_footer.inc.php' );
+skin_include( '_body_footer.inc.access.php' );
 // ------------------------------- END OF SITE FOOTER --------------------------------
 
 

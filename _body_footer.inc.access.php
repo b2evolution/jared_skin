@@ -12,7 +12,10 @@
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 ?>
 
-
+<?php
+if( $Skin->show_container_when_access_denied( 'footer' ) )
+{ // Display 'Footer' widget container
+?>
 <!-- =================================== START OF FOOTER =================================== -->
 <footer class="container-fluid footer_wrapper">
 
@@ -84,7 +87,8 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 	?>
 
 </footer><!-- .footer_wrapper -->
-	
+<?php } ?>
+
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
 // If site footers are enabled, they will be included here:

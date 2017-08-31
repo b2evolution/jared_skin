@@ -21,7 +21,7 @@ class jared_Skin extends Skin
 	 * Skin version
 	 * @var string
 	 */
-	var $version = '1.0.0';
+	var $version = '1.0.1';
 
 	/**
 	 * Do we want to use style.min.css instead of style.css ?
@@ -43,7 +43,7 @@ class jared_Skin extends Skin
 	 */
 	function get_default_type()
 	{
-		return 'rwd';
+		return 'normal';
 	}
 
 
@@ -141,6 +141,22 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'nav_colltitle_size' => array(
+						'label' => T_('Collection title font size'),
+						'note' => 'px. ' . T_('Set font size for collection title in navigation.'),
+						'defaultvalue' => '18',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
+					'nav_links_size' => array(
+						'label' => T_('Links font size'),
+						'note' => 'px. ' . T_('Set font size for navigation links.'),
+						'defaultvalue' => '13',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'nav_links_color' => array(
 						'label' => T_('Links color'),
 						'note' => T_('Click to select a color.'),
@@ -209,6 +225,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'section_1_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'section_1_coll_title_color' => array(
 						'label' => T_('Collection title color'),
 						'note' => T_('Click to select a color.'),
@@ -233,12 +257,6 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
-					// 'section_1_link_h_color' => array(
-						// 'label' => T_('Links hover color'),
-						// 'note' => T_('Click to select a color.'),
-						// 'defaultvalue' => '#FFFFFF',
-						// 'type' => 'color',
-					// ),
 					'section_1_muted_color' => array(
 						'label' => T_('Muted text color'),
 						'note' => T_('Click to select a color.'),
@@ -303,6 +321,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
 					),
+					'section_2_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'section_2_title_color' => array(
 						'label' => T_('Title color'),
 						'note' => T_('Click to select a color'),
@@ -363,7 +389,7 @@ class jared_Skin extends Skin
 					'section_3_display' => array(
 						'label' => T_('Display this section'),
 						'note' => T_('Check this to enable Front Page Area 3.'),
-						'defaultvalue' => 1,
+						'defaultvalue' => 0,
 						'type' => 'checkbox',
 					),
 					'section_3_image_file_ID' => array(
@@ -377,6 +403,14 @@ class jared_Skin extends Skin
 						'note' => T_('This color will be used if Background image is not set or does not exist.'),
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
+					),
+					'section_3_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
 					),
 					'section_3_title_color' => array(
 						'label' => T_('Title color'),
@@ -438,7 +472,7 @@ class jared_Skin extends Skin
 					'section_4_display' => array(
 						'label' => T_('Display this section'),
 						'note' => T_('Check this to enable Front Page Area 4.'),
-						'defaultvalue' => 1,
+						'defaultvalue' => 0,
 						'type' => 'checkbox',
 					),
 					'section_4_image_file_ID' => array(
@@ -453,6 +487,14 @@ class jared_Skin extends Skin
 						'note' => T_('This color will be used if Background image is not set or does not exist.'),
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
+					),
+					'section_4_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
 					),
 					'section_4_title_color' => array(
 						'label' => T_('Title color'),
@@ -514,7 +556,7 @@ class jared_Skin extends Skin
 					'section_5_display' => array(
 						'label' => T_('Display this section'),
 						'note' => T_('Check this to enable Front Page Area 5.'),
-						'defaultvalue' => 1,
+						'defaultvalue' => 0,
 						'type' => 'checkbox',
 					),
 					'section_5_image_file_ID' => array(
@@ -528,6 +570,14 @@ class jared_Skin extends Skin
 						'note' => T_('This color will be used if Background image is not set or does not exist.'),
 						'defaultvalue' => '#FFFFFF',
 						'type' => 'color',
+					),
+					'section_5_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
 					),
 					'section_5_title_color' => array(
 						'label' => T_('Title color'),
@@ -605,6 +655,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'section_6_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'section_6_title_color' => array(
 						'label' => T_('Title color'),
 						'note' => T_('Click to select a color'),
@@ -680,6 +738,14 @@ class jared_Skin extends Skin
 						'defaultvalue' => '#333333',
 						'type' => 'color',
 					),
+					'section_7_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
+					),
 					'section_7_title_color' => array(
 						'label' => T_('Title color'),
 						'note' => T_('Click to select a color'),
@@ -732,6 +798,34 @@ class jared_Skin extends Skin
 				),
 				
 				
+				// ============ Section - Header for restricted access disps ============
+				'section_pictured_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Section - Restricted access disps') . ' ( disp=login || disp=register || disp=lostpassword || disp=activateinfo || disp=access_denied || disp=access_requires_login )'
+				),
+					'section_access_navbar_text_color' => array(
+						'label' => T_('Top navigation text color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#FFFFFF',
+						'type' => 'color',
+					),
+					'section_access_image_file_ID' => array(
+						'label' => T_('Background image'),
+						'type' => 'fileselect',
+						'initialize_with' => 'shared/global/monument-valley/john-ford-point.jpg',
+						'thumbnail_size' => 'fit-320x320'
+					),
+					'section_access_bg_color' => array(
+						'label' => T_('Background color'),
+						'note' => T_('This color will be used if Background image is not set or does not exist.'),
+						'defaultvalue' => '#333333',
+						'type' => 'color',
+					),
+				'section_pictured_end' => array(
+					'layout' => 'end_fieldset',
+				),
+				
+				
 				// ============ Section - Header for other disps ============
 				'section_oth_start' => array(
 					'layout' => 'begin_fieldset',
@@ -754,6 +848,14 @@ class jared_Skin extends Skin
 						'note' => T_('This color will be used if Background image is not set or does not exist.'),
 						'defaultvalue' => '#333333',
 						'type' => 'color',
+					),
+					'section_oth_cont_width' => array(
+						'label' => T_('Maximum content width'),
+						'note' => 'px. ' . T_('Set the ammount of maximum width for the content in this section.' ) . ' <strong>' . T_( 'Maximum value is') . ' 1170px.</strong>',
+						'defaultvalue' => '1170',
+						'type' => 'integer',
+						'size' => '2',
+						'allow_empty' => false,
 					),
 					'section_oth_title_color' => array(
 						'label' => T_('Title color'),
@@ -888,6 +990,68 @@ class jared_Skin extends Skin
 						'type' => 'color',
 					),
 				'featured_posts_end' => array(
+					'layout' => 'end_fieldset',
+				),
+				
+				
+				// ============ Buttons color customization ============
+				'buttons_section_start' => array(
+					'layout' => 'begin_fieldset',
+					'label'  => T_('Button Customization Settings')
+				),
+					// Login button
+					'login_button_color' => array(
+						'label' => T_('Login button color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'login_button_bg_color' => array(
+						'label' => T_('Login button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#5cb85c',
+						'type' => 'color',
+					),
+					// Register button
+					'register_button_color' => array(
+						'label' => T_('Register button color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'register_button_bg_color' => array(
+						'label' => T_('Register button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#337ab7',
+						'type' => 'color',
+					),
+					// Contact button
+					'contact_button_color' => array(
+						'label' => T_('Contact and Subscribe button color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'contact_button_bg_color' => array(
+						'label' => T_('Contact and Subscribe button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#337ab7',
+						'type' => 'color',
+					),
+					// Save/Submit button
+					'submit_button_color' => array(
+						'label' => T_('Submit and Save button color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#ffffff',
+						'type' => 'color',
+					),
+					'submit_button_bg_color' => array(
+						'label' => T_('Submit and Save button background color'),
+						'note' => T_('Click to select a color.'),
+						'defaultvalue' => '#337ab7',
+						'type' => 'color',
+					),
+				'buttons_section_end' => array(
 					'layout' => 'end_fieldset',
 				),
 
@@ -1036,20 +1200,71 @@ class jared_Skin extends Skin
 
 		
 		// ============ Navigation Section ============
-		if( $color = $this->get_setting( 'nav_bg_color' ) )
+		$nav_links_color = $this->get_setting( 'nav_links_color' );
+		$nav_bg_color    = $this->get_setting( 'nav_bg_color' );
+		
+		if( $custom_font_size = $this->get_setting( 'nav_colltitle_size' ) )
 		{
-			$custom_css .= '.navbar { background-color: ' . $color . " }\n";
+			$custom_css .= ".navbar.main-header-navigation .navbar-brand > h3 a { font-size:". $custom_font_size. "px }\n";
 		}
-		if( $color = $this->get_setting( 'nav_links_color' ) )
+		
+		if( $custom_font_size = $this->get_setting( 'nav_links_size' ) )
 		{
-			$custom_css .= '.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }\n";
+			$custom_css .= ".navbar.main-header-navigation.navbar-default .navbar-nav > .active > a, .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a:focus, .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a:hover, .navbar.main-header-navigation.navbar-default .navbar-nav li > a { font-size:". $custom_font_size. "px }\n";
 		}
+		
+		// If "Transparent background" option for navigation is TRUE
 		if( $this->get_setting( 'nav_bg_transparent' ) )
 		{
-			$custom_css .= "@media only screen and (min-width: 766px) { .navbar { background-color: transparent } }\n";
-		} else
+			// Set background-color for all cases, but (!)
+			$custom_css .= ".navbar, .navbar.affix { background-color: $nav_bg_color }\n";
+			// ... exclude background-color in mentioned media queries and set transparent
+			$custom_css .= "@media (min-width: 1025px) { .navbar { background-color: transparent } }\n";
+			
+			// Section 1 navigation links color
+			if( in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
+			{
+				$section_nav_color = $this->get_setting( 'section_1_navbar_text_color' );
+				$custom_css .= "@media (min-width: 1025px) { .affix-top a { color: $section_nav_color !important } }\n";
+				$custom_css .= "@media (max-width: 1024px) { .affix-top a { color: $nav_links_color !important } }\n";
+			}
+			// Section 6 navigation links color
+			if( $disp == 'page' )
+			{
+				$section_nav_color = $this->get_setting( 'section_6_navbar_text_color' );
+				$custom_css .= "@media (min-width: 1025px) { .affix-top a { color: $section_nav_color !important } }\n";
+			}
+			// Section 7 navigation links color
+			if( $disp == 'msgform' || $disp == 'threads' )
+			{
+				$section_nav_color = $this->get_setting( 'section_7_navbar_text_color' );
+				$custom_css .= "@media (min-width: 1025px) { .affix-top a { color: $section_nav_color !important } }\n";
+			}
+			// Section access navigation links color
+			if( in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
+			{
+				$section_nav_color = $this->get_setting( 'section_access_navbar_text_color' );
+				$custom_css .= "@media (min-width: 1025px) { .affix-top a { color: $section_nav_color !important } }\n";
+			}
+			// Section 8 navigation links color
+			if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) {
+				$section_nav_color = $this->get_setting( 'section_oth_navbar_text_color' );
+				$custom_css .= "@media (min-width: 1025px) { .affix-top a { color: $section_nav_color !important } }\n";
+			}
+			
+			// Default navigation links color, applied to all conditions EXCEPT when '.affix-top'
+			// $custom_css .= ".navbar.navbar-default:not(.affix-top) a, .navbar.navbar-default:not(.affix-top) a:hover, .navbar-default:not(.affix-top) .navbar-nav>.active>a, .navbar-default:not(.affix-top) .navbar-nav>.active>a:focus, .navbar-default:not(.affix-top) .navbar-nav>.active>a:hover, .navbar-default:not(.affix-top) .navbar-nav>.active>a, .navbar-default:not(.affix-top) .navbar-nav>li>a, .navbar-default:not(.affix-top) .navbar-nav>li>a:focus, .navbar-default:not(.affix-top) .navbar-nav>li>a:hover { color: $nav_links_color }\n";
+			$custom_css .= ".navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: $nav_links_color }\n";
+			
+		}
+		
+		// If "Transparent background" option for navigation is FALSE
+		else
 		{
-			$custom_css .= ".evo_container__front_page_primary h1, .evo_container__front_page_secondary h1, .evo_container__standalone_page_area_6 h1, .evo_container__single_page_cover h1, .evo_container__standalone_page_area_7 h1, .evo_container__standalone_page_area_oth h1 { margin-top: 75px; }\n";
+			// Set background-color for all cases
+			$custom_css .= ".navbar { background-color: $nav_bg_color }\n";
+			// Set all navigation links color to what is set as default
+			$custom_css .= ".navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: $nav_links_color }\n";
 		}
 		
 		
@@ -1072,38 +1287,38 @@ class jared_Skin extends Skin
 			// ============ Section 1 - Front Page Main Area ============
 			if( $this->get_setting( 'section_1_display' ) )
 			{
-			if( $color = $this->get_setting( 'section_1_navbar_text_color' ) )
-			{
-				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
-			}
 			if( $this->get_setting( 'section_1_image_file_ID' ) )
 			{
 				$bg_image_File1 = & $FileCache->get_by_ID( $this->get_setting( 'section_1_image_file_ID' ), false, false );
 			}
 			if( !empty( $bg_image_File1 ) && $bg_image_File1->exists() )
 			{
-				$custom_css .= '.evo_pictured_layout { background-image: url('.$bg_image_File1->get_url().") }\n";
+				$custom_css .= '.evo_container__front_first_section { background-image: url('.$bg_image_File1->get_url().") }\n";
 			}
 			else
 			{
 				$color = $this->get_setting( 'section_1_bg_color' );
-				$custom_css .= '.evo_pictured_layout { background: '.$color." }\n";
+				$custom_css .= '.evo_container__front_first_section { background: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_coll_title_color' ) )
 			{
-				$custom_css .= 'body.pictured .main_page_wrapper .widget_core_coll_title h1 a { color: '.$color." }\n";
+				$custom_css .= 'body.pictured.disp_front .main_page_wrapper .widget_core_coll_title h1 a { color: '.$color." }\n";
+			}
+			if( $max_width = $this->get_setting( 'section_1_cont_width' ) )
+			{
+				$custom_css .= 'body.pictured.disp_front .container.main_page_wrapper { max-width: '.$max_width."px }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_title_color' ) )
 			{
-				$custom_css .= 'body.pictured .main_page_wrapper h2.page-header { color: '.$color." }\n";
+				$custom_css .= 'body.pictured.disp_front .main_page_wrapper h2.page-header { color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_muted_color' ) )
 			{
-				$custom_css .= 'body.pictured .main_page_wrapper .text-muted { color: '.$color." }\n";
+				$custom_css .= 'body.pictured.disp_front .main_page_wrapper .text-muted { color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_text_color' ) )
 			{
-				$custom_css .= 'body.pictured .front_main_content, body.pictured .front_main_content h1 small, .evo_container__header, .evo_container__page_top { color: '.$color." }\n";
+				$custom_css .= 'body.pictured.disp_front .front_main_content, body.pictured .front_main_content h1 small, .evo_container__header, .evo_container__page_top { color: '.$color." }\n";
 			}
 
 			$link_color 		= $this->get_setting( 'section_1_link_color' );
@@ -1158,6 +1373,10 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'section_2_bg_color' );
 				$custom_css .= '.evo_container__front_page_secondary_area { background: '.$color." }\n";
 			}
+			if( $max_width = $this->get_setting( 'section_2_cont_width' ) )
+			{
+				$custom_css .= '.evo_container__front_page_secondary_area > .container { max-width: '.$max_width."px }\n";
+			}
 			if( $color = $this->get_setting( 'section_2_title_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_secondary_area h2.page-header { color: '.$color." }\n";
@@ -1208,6 +1427,10 @@ class jared_Skin extends Skin
 			{
 				$color = $this->get_setting( 'section_3_bg_color' );
 				$custom_css .= '.evo_container__front_page_area_3 { background: '.$color." }\n";
+			}
+			if( $max_width = $this->get_setting( 'section_3_cont_width' ) )
+			{
+				$custom_css .= '.evo_container__front_page_area_3 > .container { max-width: '.$max_width."px }\n";
 			}
 			if( $color = $this->get_setting( 'section_3_title_color' ) )
 			{
@@ -1260,6 +1483,10 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'section_4_bg_color' );
 				$custom_css .= '.evo_container__front_page_area_4 { background: '.$color." }\n";
 			}
+			if( $max_width = $this->get_setting( 'section_4_cont_width' ) )
+			{
+				$custom_css .= '.evo_container__front_page_area_4 > .container { max-width: '.$max_width."px }\n";
+			}
 			if( $color = $this->get_setting( 'section_4_title_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_4 h2.page-header { color: '.$color." }\n";
@@ -1311,6 +1538,10 @@ class jared_Skin extends Skin
 				$color = $this->get_setting( 'section_5_bg_color' );
 				$custom_css .= '.evo_container__front_page_area_5 { background: '.$color." }\n";
 			}
+			if( $max_width = $this->get_setting( 'section_5_cont_width' ) )
+			{
+				$custom_css .= '.evo_container__front_page_area_5 > .container { max-width: '.$max_width."px }\n";
+			}
 			if( $color = $this->get_setting( 'section_5_title_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_5 h2.page-header { color: '.$color." }\n";
@@ -1344,11 +1575,13 @@ class jared_Skin extends Skin
 				$custom_css .= ".evo_container__front_page_area_5 { text-align: right }\n";
 			}
 			}
+			
+			
 		}
 			
 		
 		// ============ Section 6 - Header for Standalone Pages ============
-		if( $disp == 'page' )
+		if( $disp == 'page' || $disp == 'single' )
 		{
 		if( $color = $this->get_setting( 'section_6_navbar_text_color' ) )
 		{
@@ -1374,7 +1607,6 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_6_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { color: '.$color." }\n";
-			// $custom_css .= '.navbar { background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_link_color' ) )
 		{
@@ -1406,10 +1638,6 @@ class jared_Skin extends Skin
 		// ============ Section 7 - Header for Contact form and Messaging ============
 		if( $disp == 'msgform' || $disp == 'threads' )
 		{
-		if( $color = $this->get_setting( 'section_7_navbar_text_color' ) )
-		{
-			$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
-		}
 		if( $this->get_setting( 'section_7_image_file_ID' ) )
 		{
 			$bg_image_File7 = & $FileCache->get_by_ID( $this->get_setting( 'section_7_image_file_ID' ), false, false );
@@ -1423,6 +1651,10 @@ class jared_Skin extends Skin
 			$color = $this->get_setting( 'section_7_bg_color' );
 			$custom_css .= '.evo_container__standalone_page_area_7 { background: '.$color." }\n";
 		}
+		if( $max_width = $this->get_setting( 'section_7_cont_width' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_7 > .container { max-width: '.$max_width."px }\n";
+		}
 		if( $color = $this->get_setting( 'section_7_title_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 .msgform_disp_title h1 { color: '.$color." }\n";
@@ -1430,7 +1662,6 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_7_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 { color: '.$color." }\n";
-			// $custom_css .= '.navbar { background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_7_link_color' ) )
 		{
@@ -1459,13 +1690,26 @@ class jared_Skin extends Skin
 		}
 		
 		
-		// ============ Section - Header for other disps  ============
-		if( $color = $this->get_setting( 'section_oth_navbar_text_color' ) )
+		// ============ Section - Header for restricted access disps ============
+		if( in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
 		{
-			if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) {
-				$custom_css .= '@media only screen and (min-width: 766px) {.navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: ' . $color . " }}\n";
+			if( $this->get_setting( 'section_access_image_file_ID' ) )
+			{
+				$bg_image_File_access = & $FileCache->get_by_ID( $this->get_setting( 'section_access_image_file_ID' ), false, false );
 			}
+			if( !empty( $bg_image_File_access ) && $bg_image_File_access->exists() )
+			{
+				$custom_css .= '.restricted_access_disps { background-image: url('.$bg_image_File_access->get_url().") }\n";
+			}
+			else
+			{
+				$color = $this->get_setting( 'section_access_bg_color' );
+				$custom_css .= '.restricted_access_disps { background: '.$color." }\n";
+			}		
 		}
+		
+		
+		// ============ Section - Header for other disps  ============
 		if( $this->get_setting( 'section_oth_image_file_ID' ) )
 		{
 			$bg_image_File_oth = & $FileCache->get_by_ID( $this->get_setting( 'section_oth_image_file_ID' ), false, false );
@@ -1479,10 +1723,13 @@ class jared_Skin extends Skin
 			$color = $this->get_setting( 'section_oth_bg_color' );
 			$custom_css .= '.evo_container__standalone_page_area_oth { background: '.$color." }\n";
 		}
+		if( $max_width = $this->get_setting( 'section_oth_cont_width' ) )
+		{
+			$custom_css .= '.evo_container__standalone_page_area_oth > .container { max-width: '.$max_width."px }\n";
+		}
 		if( $color = $this->get_setting( 'section_oth_text_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_oth { color: '.$color." }\n";
-			// if( ! in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login', 'msgform', 'threads', 'page' ) ) ) { $custom_css .= '.navbar { background-color: '.$color." }\n"; }
 		}
 		if( $color = $this->get_setting( 'section_oth_title_color' ) )
 		{
@@ -1526,6 +1773,33 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'bgimg_hover_link_color' ) )
 		{	// Custom link hover color on background image:
 			$custom_css .= '.evo_hasbgimg a:hover { color: '.$color." }\n";
+		}
+		
+		
+		// ============ Buttons color customization ============
+		if( $color = $this->get_setting( 'login_button_color' ) )
+		{	// Custom text color on login button:
+			$custom_css .= 'input[type="submit"].btn-success, .widget_core_user_login input.submit.btn-default { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'login_button_bg_color' ) )
+		{	// Custom text background-color on login button:
+			$custom_css .= 'input[type="submit"].btn-success, .widget_core_user_login input.submit.btn-default { background-color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'register_button_color' ) )
+		{	// Custom text color on register button:
+			$custom_css .= 'a.btn.btn-primary.btn-lg, input.btn.btn-primary.btn-lg, .widget_register_form input.submit { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'register_button_bg_color' ) )
+		{	// Custom text background-color on register button:
+			$custom_css .= 'a.btn.btn-primary.btn-lg, input.btn.btn-primary.btn-lg, .widget_register_form input.submit { background-color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'contact_button_color' ) )
+		{	// Custom text color on contact button:
+			$custom_css .= 'input[type="submit"].submit.btn-primary { color: '.$color." }\n";
+		}
+		if( $color = $this->get_setting( 'contact_button_bg_color' ) )
+		{	// Custom text background-color on contact button:
+			$custom_css .= 'input[type="submit"].submit.btn-primary { background-color: '.$color." }\n";
 		}
 		
 		
