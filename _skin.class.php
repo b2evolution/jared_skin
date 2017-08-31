@@ -1341,10 +1341,16 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_1_button_bg_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_primary .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_primary .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_primary .evo_widget .item_content > a.btn.btn-default
+				{ background-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_button_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_primary .evo_widget > .btn.btn-default { color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_primary .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_primary .evo_widget .item_content > a.btn.btn-default
+				{ color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'section_1_text_align' ) == 'section_1_center' )
 			{
@@ -1396,10 +1402,16 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_2_button_bg_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_secondary_area .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_secondary_area .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_secondary_area .evo_widget .item_content > a.btn.btn-default
+				{ background-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_2_button_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_secondary_area .evo_widget > .btn.btn-default { color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_secondary_area .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_secondary_area .evo_widget .item_content > a.btn.btn-default
+				{ color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'section_2_text_align' ) == 'section_2_center' )
 			{
@@ -1451,10 +1463,16 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_3_button_bg_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_3 .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_area_3 .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_area_3 .evo_widget .item_content > a.btn.btn-default
+				{ background-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_3_button_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_3 .evo_widget > .btn.btn-default { color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_area_3 .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_area_3 .evo_widget .item_content > a.btn.btn-default
+				{ color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'section_3_text_align' ) == 'section_3_center' )
 			{
@@ -1506,10 +1524,16 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_4_button_bg_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_4 .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_area_4 .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_area_4 .evo_widget .item_content > a.btn.btn-default
+				{ background-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_4_button_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_4 .evo_widget > .btn.btn-default { color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_area_4 .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_area_4 .evo_widget .item_content > a.btn.btn-default
+				{ color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'section_4_text_align' ) == 'section_4_center' )
 			{
@@ -1561,10 +1585,16 @@ class jared_Skin extends Skin
 			if( $color = $this->get_setting( 'section_5_button_bg_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_5 .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_area_5 .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_area_5 .evo_widget .item_content > a.btn.btn-default
+				{ background-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_5_button_color' ) )
 			{
 				$custom_css .= '.evo_container__front_page_area_5 .evo_widget > .btn.btn-default { color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_area_5 .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_area_5 .evo_widget .item_content > a.btn.btn-default
+				{ color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'section_5_text_align' ) == 'section_5_center' )
 			{
@@ -1619,10 +1649,16 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_6_button_bg_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget > .btn.btn-default, .evo_container__single_page_cover .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget .item_excerpt > a.btn.btn-default,
+			.evo_container__standalone_page_area_6 .evo_widget .item_content > a.btn.btn-default
+			{ background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_button_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget > .btn.btn-default, .evo_container__single_page_cover .evo_widget > .btn.btn-default { color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6 .evo_widget .item_excerpt > a.btn.btn-default,
+			.evo_container__standalone_page_area_6 .evo_widget .item_content > a.btn.btn-default
+			{ color: '.$color." }\n";
 		}
 		if( $this->get_setting( 'section_6_text_align' ) == 'section_6_center' )
 		{
@@ -1674,10 +1710,16 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_7_button_bg_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_7 .evo_widget .item_excerpt > a.btn.btn-default,
+			.evo_container__standalone_page_area_7 .evo_widget .item_content > a.btn.btn-default
+			{ background-ccolor: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_7_button_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_7 .evo_widget > .btn.btn-default { color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_7 .evo_widget .item_excerpt > a.btn.btn-default,
+			.evo_container__standalone_page_area_7 .evo_widget .item_content > a.btn.btn-default
+			{ color: '.$color." }\n";
 		}
 		if( $this->get_setting( 'section_7_text_align' ) == 'section_7_center' )
 		{
@@ -1746,10 +1788,16 @@ class jared_Skin extends Skin
 		if( $color = $this->get_setting( 'section_oth_button_bg_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_oth .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_oth .evo_widget .item_excerpt > a.btn.btn-default,
+			.evo_container__standalone_page_area_oth .evo_widget .item_content > a.btn.btn-default
+			{ background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_oth_button_color' ) )
 		{
 			$custom_css .= '.evo_container__standalone_page_area_oth .evo_widget > .btn.btn-default { color: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_oth .evo_widget .item_excerpt > a.btn.btn-default,
+			.evo_container__standalone_page_area_oth .evo_widget .item_content > a.btn.btn-default
+			{ color: '.$color." }\n";
 		}
 		if( $this->get_setting( 'section_oth_text_align' ) == 'section_oth_center' )
 		{

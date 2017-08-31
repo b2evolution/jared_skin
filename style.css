@@ -113,6 +113,23 @@ body {
   font-size: 50px;
   margin-bottom: 30px;
 }
+.evo_container__front_page_primary .evo_widget .item_excerpt > a.btn.btn-default,
+.evo_container__front_page_secondary .evo_widget .item_excerpt > a.btn.btn-default,
+.evo_container__standalone_page_area_6 .evo_widget .item_excerpt > a.btn.btn-default,
+.evo_container__single_page_cover .evo_widget .item_excerpt > a.btn.btn-default,
+.evo_container__standalone_page_area_7 .evo_widget .item_excerpt > a.btn.btn-default,
+.evo_container__standalone_page_area_oth .evo_widget .item_excerpt > a.btn.btn-default,
+.restricted_access_disps .evo_widget .item_excerpt > a.btn.btn-default,
+.evo_container__front_page_primary .evo_widget .item_content > a.btn.btn-default,
+.evo_container__front_page_secondary .evo_widget .item_content > a.btn.btn-default,
+.evo_container__standalone_page_area_6 .evo_widget .item_content > a.btn.btn-default,
+.evo_container__single_page_cover .evo_widget .item_content > a.btn.btn-default,
+.evo_container__standalone_page_area_7 .evo_widget .item_content > a.btn.btn-default,
+.evo_container__standalone_page_area_oth .evo_widget .item_content > a.btn.btn-default,
+.restricted_access_disps .evo_widget .item_content > a.btn.btn-default {
+  padding: 0 8px;
+  border: none;
+}
 .secondary_area {
   position: relative;
   z-index: 1;
