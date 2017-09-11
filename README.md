@@ -1,6 +1,6 @@
 # "Jared" skin for b2evolution CMS.
 
-"Jared" is equipped with a set of predefined <a href="https://www.w3schools.com/css/css_syntax.asp" target="_blank">CSS classes</a>, that can be used to change content layout througout the skin.
+"Jared" is equipped with a set of predefined CSS classes, that can be used to change content layout througout the skin.
 
 #### Menu links class
 
@@ -18,5 +18,6 @@
 #### Special classes implementation
 
 These classes can be simply insert:
-1) in widgets - in <code>CSS Class</code> field, for example <a href="http://b2evolution.net/media/blogs/man/skin-guide/widget_edit_screen.png?mtime=1428614162" target="_blank">here</a> or through HTML Widget;
-2) in posts, through Markup post view.
+
+1. in widgets - in <code>CSS Class</code> field, for example <a href="http://b2evolution.net/media/blogs/man/skin-guide/widget_edit_screen.png?mtime=1428614162" target="_blank">here</a> or through HTML Widget;
+2. in posts, through Markup post view.
