@@ -1623,12 +1623,12 @@ class jared_Skin extends Skin
 		}
 		if( !empty( $bg_image_File6 ) && $bg_image_File6->exists() )
 		{
-			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { background-image: url('.$bg_image_File6->get_url().") }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6 { background-image: url('.$bg_image_File6->get_url().") }\n";
 		}
 		else
 		{
 			$color = $this->get_setting( 'section_6_bg_color' );
-			$custom_css .= '.evo_container__standalone_page_area_6, .evo_container__single_page_cover { background: '.$color." }\n";
+			$custom_css .= '.evo_container__standalone_page_area_6 { background: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'section_6_title_color' ) )
 		{
