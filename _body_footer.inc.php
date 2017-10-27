@@ -16,12 +16,14 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 <!-- =================================== START OF FOOTER =================================== -->
 <footer class="container-fluid footer_wrapper">
 
-	<div class="container evo_container evo_container__footer">
 		<?php
 		// ------------------------- "Footer" CONTAINER EMBEDDED HERE --------------------------
 		// Display container and contents:
 		skin_container( NT_('Footer'), array(
 				// The following params will be used as defaults for widgets included in this container:
+				'container_display_if_empty' => false, // If no widget, don't display container at all
+				'container_start'     => '<div class="container evo_container $wico_class$">',
+				'container_end'       => '</div>',
 				'block_start'         => '<div class="evo_widget $wi_class$">',
 				'block_end'           => '</div>',
 				// Widget 'Search form':
@@ -32,8 +34,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 			) );
 		// ----------------------------- END OF "Footer" CONTAINER -----------------------------
 		?>
-	</div>
-	
+
 	<p class="baseline">
 		<?php
 		// Display footer text (text can be edited in Blog Settings):

@@ -39,15 +39,14 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 
 <div class="container main_page_wrapper">
 
-<header class="row">
-
-	<div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8">
-		<div class="evo_container evo_container__page_top">
 		<?php
 			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
 			// Display container and contents:
 			skin_container( NT_('Page Top'), array(
 					// The following params will be used as defaults for widgets included in this container:
+					'container_display_if_empty' => true, // Display container anyway even if no widget
+					'container_start'     => '<header class="row"><div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8"><div class="evo_container $wico_class$">',
+					'container_end'       => '</div></div></header>',
 					'block_start'         => '<div class="evo_widget $wi_class$">',
 					'block_end'           => '</div>',
 					'block_display_title' => false,
@@ -58,10 +57,6 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 				) );
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
 		?>
-		</div>
-	</div><!-- .col -->
-
-</header><!-- .row -->
 
 <div class="row">
 
@@ -237,81 +232,69 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 
 	<div class="row">
 
-		<?php if( $Skin->get_setting( 'section_2_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_secondary_area">
-			<div class="container">
-			<?php
+		<?php if( $Skin->get_setting( 'section_2_display' ) ) {
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
 				skin_container( NT_('Front Page Secondary Area'), array(
 						// The following params will be used as defaults for widgets included in this container:
+						'container_display_if_empty' => false, // If no widget, don't display container at all
+						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
+						'container_end'     => '</div></div>',
 						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
-			?>
-			</div>
-		</div>
-		<?php } ?>
+		} ?>
 		
-		<?php if( $Skin->get_setting( 'section_3_display' ) ) { ?>	
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_3">
-			<div class="container">
-			<?php
+		<?php if( $Skin->get_setting( 'section_3_display' ) ) {
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
 				skin_container( NT_('Front Page Area 3'), array(
 						// The following params will be used as defaults for widgets included in this container:
+						'container_display_if_empty' => false, // If no widget, don't display container at all
+						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
+						'container_end'     => '</div></div>',
 						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
-			?>
-			</div>
-		</div>
-		<?php } ?>
+		} ?>
 		
-		<?php if( $Skin->get_setting( 'section_4_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_4">
-			<div class="container">
-			<?php
+		<?php if( $Skin->get_setting( 'section_4_display' ) ) {
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
 				skin_container( NT_('Front Page Area 4'), array(
 						// The following params will be used as defaults for widgets included in this container:
+						'container_display_if_empty' => false, // If no widget, don't display container at all
+						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
+						'container_end'     => '</div></div>',
 						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
-			?>
-			</div>
-		</div>
-		<?php } ?>
+		} ?>
 		
-		<?php if( $Skin->get_setting( 'section_5_display' ) ) { ?>
-		<div class="evo_container evo_container__front_page_secondary evo_container__front_page_area_5">
-			<div class="container">
-			<?php
+		<?php if( $Skin->get_setting( 'section_5_display' ) ) {
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
 				skin_container( NT_('Front Page Area 5'), array(
 						// The following params will be used as defaults for widgets included in this container:
+						'container_display_if_empty' => false, // If no widget, don't display container at all
+						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
+						'container_end'     => '</div></div>',
 						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
-			?>
-			</div>
-		</div>
-		<?php } ?>
+		} ?>
 
 	</div><!-- .row -->
 

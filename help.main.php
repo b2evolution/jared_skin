@@ -51,13 +51,13 @@ skin_include( '_body_header.inc.access.php' );
 		<?php
 		if( $Skin->show_container_when_access_denied( 'page_top' ) )
 		{ // Display 'Page Top' widget container
-		?>
-		<div class="evo_container evo_container__page_top">
-		<?php
 			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
 			// Display container and contents:
 			skin_container( NT_('Page Top'), array(
 					// The following params will be used as defaults for widgets included in this container:
+					'container_display_if_empty' => false, // If no widget, don't display container at all
+					'container_start'     => '<div class="evo_container $wico_class$">',
+					'container_end'       => '</div>',
 					'block_start'         => '<div class="evo_widget $wi_class$">',
 					'block_end'           => '</div>',
 					'block_display_title' => false,
@@ -72,9 +72,7 @@ skin_include( '_body_header.inc.access.php' );
 					'search_submit_after'  => '</span></div>',    
 				) );
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
-		?>
-		</div>
-		<?php } ?>
+		} ?>
 	</div><!-- .col -->
 	
 	<div class="col-md-12">
