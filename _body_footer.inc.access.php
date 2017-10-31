@@ -22,7 +22,7 @@ if( $Skin->show_container_when_access_denied( 'footer' ) )
 		<?php
 		// ------------------------- "Footer" CONTAINER EMBEDDED HERE --------------------------
 		// Display container and contents:
-		skin_container( NT_('Footer'), array(
+		widget_container( 'footer', array(
 				// The following params will be used as defaults for widgets included in this container:
 				'container_display_if_empty' => false, // If no widget, don't display container at all
 				'container_start'     => '<div class="container evo_container $wico_class$">',

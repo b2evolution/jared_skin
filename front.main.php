@@ -42,7 +42,7 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 		<?php
 			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
 			// Display container and contents:
-			skin_container( NT_('Page Top'), array(
+			widget_container( 'page_top', array(
 					// The following params will be used as defaults for widgets included in this container:
 					'container_display_if_empty' => true, // Display container anyway even if no widget
 					'container_start'     => '<header class="row"><div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8"><div class="evo_container $wico_class$">',
@@ -235,7 +235,7 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 		<?php if( $Skin->get_setting( 'section_2_display' ) ) {
 				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
-				skin_container( NT_('Front Page Secondary Area'), array(
+				widget_container( 'front_page_secondary_area', array(
 						// The following params will be used as defaults for widgets included in this container:
 						'container_display_if_empty' => false, // If no widget, don't display container at all
 						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
@@ -249,9 +249,9 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 		} ?>
 		
 		<?php if( $Skin->get_setting( 'section_3_display' ) ) {
-				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
+				// ------------------------- "Front Page Area 3" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
-				skin_container( NT_('Front Page Area 3'), array(
+				widget_container( 'front_page_area_3', array(
 						// The following params will be used as defaults for widgets included in this container:
 						'container_display_if_empty' => false, // If no widget, don't display container at all
 						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
@@ -261,13 +261,13 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
 					) );
-				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
+				// ----------------------------- END OF "Front Page Area 3" CONTAINER -----------------------------
 		} ?>
 		
 		<?php if( $Skin->get_setting( 'section_4_display' ) ) {
-				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
+				// ------------------------- "Front Page Area 4" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
-				skin_container( NT_('Front Page Area 4'), array(
+				widget_container( 'front_page_area_4', array(
 						// The following params will be used as defaults for widgets included in this container:
 						'container_display_if_empty' => false, // If no widget, don't display container at all
 						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
@@ -277,13 +277,13 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
 					) );
-				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
+				// ----------------------------- END OF "Front Page Area 4" CONTAINER -----------------------------
 		} ?>
 		
 		<?php if( $Skin->get_setting( 'section_5_display' ) ) {
-				// ------------------------- "Front Page Secondary Area" CONTAINER EMBEDDED HERE --------------------------
+				// ------------------------- "Front Page Area 5" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
-				skin_container( NT_('Front Page Area 5'), array(
+				widget_container( 'front_page_area_5', array(
 						// The following params will be used as defaults for widgets included in this container:
 						'container_display_if_empty' => false, // If no widget, don't display container at all
 						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
@@ -293,7 +293,7 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
 					) );
-				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
+				// ----------------------------- END OF "Front Page Area 5" CONTAINER -----------------------------
 		} ?>
 
 	</div><!-- .row -->
