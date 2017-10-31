@@ -238,7 +238,7 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 				widget_container( 'front_page_secondary_area', array(
 						// The following params will be used as defaults for widgets included in this container:
 						'container_display_if_empty' => false, // If no widget, don't display container at all
-						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
+						'container_start'   => '<div class="evo_container $wico_class$"><div class="container">',
 						'container_end'     => '</div></div>',
 						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
@@ -254,7 +254,7 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 				widget_container( 'front_page_area_3', array(
 						// The following params will be used as defaults for widgets included in this container:
 						'container_display_if_empty' => false, // If no widget, don't display container at all
-						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
+						'container_start'   => '<div class="evo_container $wico_class$"><div class="container">',
 						'container_end'     => '</div></div>',
 						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
@@ -270,7 +270,7 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 				widget_container( 'front_page_area_4', array(
 						// The following params will be used as defaults for widgets included in this container:
 						'container_display_if_empty' => false, // If no widget, don't display container at all
-						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
+						'container_start'   => '<div class="evo_container $wico_class$"><div class="container">',
 						'container_end'     => '</div></div>',
 						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',
@@ -286,7 +286,7 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 				widget_container( 'front_page_area_5', array(
 						// The following params will be used as defaults for widgets included in this container:
 						'container_display_if_empty' => false, // If no widget, don't display container at all
-						'container_start'   => '<div class="evo_container evo_container__front_page_secondary $wico_class$"><div class="container">',
+						'container_start'   => '<div class="evo_container $wico_class$"><div class="container">',
 						'container_end'     => '</div></div>',
 						'block_start'       => '<div class="evo_widget $wi_class$">',
 						'block_end'         => '</div>',

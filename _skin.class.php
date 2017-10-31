@@ -1372,25 +1372,25 @@ class jared_Skin extends Skin
 			}
 			if( $color = $this->get_setting( 'section_1_button_bg_color' ) )
 			{
-				$custom_css .= '.evo_container__front_page_primary .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
-				$custom_css .= '.evo_container__front_page_primary .evo_widget .item_excerpt > a.btn.btn-default,
-				.evo_container__front_page_primary .evo_widget .item_content > a.btn.btn-default
+				$custom_css .= '.evo_container__front_page_main_area .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_main_area .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_main_area .evo_widget .item_content > a.btn.btn-default
 				{ background-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_button_color' ) )
 			{
-				$custom_css .= '.evo_container__front_page_primary .evo_widget > .btn.btn-default { color: '.$color." }\n";
-				$custom_css .= '.evo_container__front_page_primary .evo_widget .item_excerpt > a.btn.btn-default,
-				.evo_container__front_page_primary .evo_widget .item_content > a.btn.btn-default
+				$custom_css .= '.evo_container__front_page_main_area .evo_widget > .btn.btn-default { color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_main_area .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_main_area .evo_widget .item_content > a.btn.btn-default
 				{ color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'section_1_text_align' ) == 'section_1_center' )
 			{
-				$custom_css .= ".evo_container__front_page_primary { text-align: center }\n";
+				$custom_css .= ".evo_container__front_page_main_area { text-align: center }\n";
 			}
 			if( $this->get_setting( 'section_1_text_align' ) == 'section_1_right' )
 			{
-				$custom_css .= ".evo_container__front_page_primary { text-align: right }\n";
+				$custom_css .= ".evo_container__front_page_main_area { text-align: right }\n";
 			}
 			}
 

@@ -94,7 +94,7 @@ skin_include( '_body_header.inc.access.php' );
 
 </div><!-- .container -->
 
-</div><!-- .evo_container__standalone_page_area_7 -->
+</div><!-- .evo_container__standalone_page_area_oth -->
 
 <div class="container main_page_wrapper">
 
