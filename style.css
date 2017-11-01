@@ -47,8 +47,8 @@ body {
   font-size: 20px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
-.evo_container__front_page_primary,
-.evo_container__front_page_secondary,
+.evo_container__front_page_main_area,
+.evo_container__front_page_secondary_area,
 .evo_container__standalone_page_area_6,
 .evo_container__single_page_cover,
 .evo_container__standalone_page_area_7,
@@ -58,43 +58,43 @@ body {
   background-position: center center;
   padding: 80px 0;
 }
-.evo_container__front_page_primary h1,
-.evo_container__front_page_secondary h1,
+.evo_container__front_page_main_area h1,
+.evo_container__front_page_secondary_area h1,
 .evo_container__standalone_page_area_6 h1,
 .evo_container__single_page_cover h1,
 .evo_container__standalone_page_area_7 h1,
 .evo_container__standalone_page_area_oth h1,
 .restricted_access_disps h1,
-.evo_container__front_page_primary h2,
-.evo_container__front_page_secondary h2,
+.evo_container__front_page_main_area h2,
+.evo_container__front_page_secondary_area h2,
 .evo_container__standalone_page_area_6 h2,
 .evo_container__single_page_cover h2,
 .evo_container__standalone_page_area_7 h2,
 .evo_container__standalone_page_area_oth h2,
 .restricted_access_disps h2,
-.evo_container__front_page_primary h3,
-.evo_container__front_page_secondary h3,
+.evo_container__front_page_main_area h3,
+.evo_container__front_page_secondary_area h3,
 .evo_container__standalone_page_area_6 h3,
 .evo_container__single_page_cover h3,
 .evo_container__standalone_page_area_7 h3,
 .evo_container__standalone_page_area_oth h3,
 .restricted_access_disps h3,
-.evo_container__front_page_primary h4,
-.evo_container__front_page_secondary h4,
+.evo_container__front_page_main_area h4,
+.evo_container__front_page_secondary_area h4,
 .evo_container__standalone_page_area_6 h4,
 .evo_container__single_page_cover h4,
 .evo_container__standalone_page_area_7 h4,
 .evo_container__standalone_page_area_oth h4,
 .restricted_access_disps h4,
-.evo_container__front_page_primary h5,
-.evo_container__front_page_secondary h5,
+.evo_container__front_page_main_area h5,
+.evo_container__front_page_secondary_area h5,
 .evo_container__standalone_page_area_6 h5,
 .evo_container__single_page_cover h5,
 .evo_container__standalone_page_area_7 h5,
 .evo_container__standalone_page_area_oth h5,
 .restricted_access_disps h5,
-.evo_container__front_page_primary h6,
-.evo_container__front_page_secondary h6,
+.evo_container__front_page_main_area h6,
+.evo_container__front_page_secondary_area h6,
 .evo_container__standalone_page_area_6 h6,
 .evo_container__single_page_cover h6,
 .evo_container__standalone_page_area_7 h6,
@@ -103,8 +103,8 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
 }
-.evo_container__front_page_primary h1,
-.evo_container__front_page_secondary h1,
+.evo_container__front_page_main_area h1,
+.evo_container__front_page_secondary_area h1,
 .evo_container__standalone_page_area_6 h1,
 .evo_container__single_page_cover h1,
 .evo_container__standalone_page_area_7 h1,
@@ -113,15 +113,15 @@ body {
   font-size: 50px;
   margin-bottom: 30px;
 }
-.evo_container__front_page_primary .evo_widget .item_excerpt > a.btn.btn-default,
-.evo_container__front_page_secondary .evo_widget .item_excerpt > a.btn.btn-default,
+.evo_container__front_page_main_area .evo_widget .item_excerpt > a.btn.btn-default,
+.evo_container__front_page_secondary_area .evo_widget .item_excerpt > a.btn.btn-default,
 .evo_container__standalone_page_area_6 .evo_widget .item_excerpt > a.btn.btn-default,
 .evo_container__single_page_cover .evo_widget .item_excerpt > a.btn.btn-default,
 .evo_container__standalone_page_area_7 .evo_widget .item_excerpt > a.btn.btn-default,
 .evo_container__standalone_page_area_oth .evo_widget .item_excerpt > a.btn.btn-default,
 .restricted_access_disps .evo_widget .item_excerpt > a.btn.btn-default,
-.evo_container__front_page_primary .evo_widget .item_content > a.btn.btn-default,
-.evo_container__front_page_secondary .evo_widget .item_content > a.btn.btn-default,
+.evo_container__front_page_main_area .evo_widget .item_content > a.btn.btn-default,
+.evo_container__front_page_secondary_area .evo_widget .item_content > a.btn.btn-default,
 .evo_container__standalone_page_area_6 .evo_widget .item_content > a.btn.btn-default,
 .evo_container__single_page_cover .evo_widget .item_content > a.btn.btn-default,
 .evo_container__standalone_page_area_7 .evo_widget .item_content > a.btn.btn-default,
@@ -130,15 +130,15 @@ body {
   padding: 0 8px;
   border: none;
 }
-.evo_container__front_page_primary .widget_core_coll_featured_intro .featurepost .evo_post_title h2,
-.evo_container__front_page_secondary .widget_core_coll_featured_intro .featurepost .evo_post_title h2,
+.evo_container__front_page_main_area .widget_core_coll_featured_intro .featurepost .evo_post_title h2,
+.evo_container__front_page_secondary_area .widget_core_coll_featured_intro .featurepost .evo_post_title h2,
 .evo_container__standalone_page_area_6 .widget_core_coll_featured_intro .featurepost .evo_post_title h2,
 .evo_container__single_page_cover .widget_core_coll_featured_intro .featurepost .evo_post_title h2,
 .evo_container__standalone_page_area_7 .widget_core_coll_featured_intro .featurepost .evo_post_title h2,
 .evo_container__standalone_page_area_oth .widget_core_coll_featured_intro .featurepost .evo_post_title h2,
 .restricted_access_disps .widget_core_coll_featured_intro .featurepost .evo_post_title h2,
-.evo_container__front_page_primary .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
-.evo_container__front_page_secondary .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
+.evo_container__front_page_main_area .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
+.evo_container__front_page_secondary_area .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
 .evo_container__standalone_page_area_6 .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
 .evo_container__single_page_cover .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
 .evo_container__standalone_page_area_7 .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
@@ -146,8 +146,8 @@ body {
 .restricted_access_disps .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group {
   display: inline-block;
 }
-.evo_container__front_page_primary .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
-.evo_container__front_page_secondary .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
+.evo_container__front_page_main_area .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
+.evo_container__front_page_secondary_area .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
 .evo_container__standalone_page_area_6 .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
 .evo_container__single_page_cover .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
 .evo_container__standalone_page_area_7 .widget_core_coll_featured_intro .featurepost .evo_post_title .btn-group,
@@ -156,8 +156,8 @@ body {
   padding-top: 5px;
   padding-left: 20px;
 }
-.evo_container__front_page_primary .evo_post__full_text ul,
-.evo_container__front_page_secondary .evo_post__full_text ul,
+.evo_container__front_page_main_area .evo_post__full_text ul,
+.evo_container__front_page_secondary_area .evo_post__full_text ul,
 .evo_container__standalone_page_area_6 .evo_post__full_text ul,
 .evo_container__single_page_cover .evo_post__full_text ul,
 .evo_container__standalone_page_area_7 .evo_post__full_text ul,
@@ -296,10 +296,10 @@ div.front_main_area .front_main_content {
 div.front_main_area div.widget {
   margin: 30px 0;
 }
-div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 {
+div.front_main_area .evo_container__front_page_main_area .widget_core_coll_title h1 {
   margin: 0;
 }
-div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
+div.front_main_area .evo_container__front_page_main_area .widget_core_coll_title h1 a {
   font-size: 80px;
   line-height: 1.2em;
   text-transform: uppercase;
@@ -890,7 +890,7 @@ div[class*="_list"],
   }
 }
 @media only screen and (max-width: 992px) {
-  div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
+  div.front_main_area .evo_container__front_page_main_area .widget_core_coll_title h1 a {
     font-size: 50px;
   }
   .detail_msgform .main_page_wrapper,
@@ -904,14 +904,14 @@ div[class*="_list"],
   #skin_wrapper {
     font-size: 15px;
   }
-  div.front_main_area .evo_container__front_page_primary .widget_core_coll_title h1 a {
+  div.front_main_area .evo_container__front_page_main_area .widget_core_coll_title h1 a {
     font-size: 34px;
   }
   .evo_widget h2.page-header {
     font-size: 34px;
   }
-  .evo_container__front_page_primary h1,
-  .evo_container__front_page_secondary h1,
+  .evo_container__front_page_main_area h1,
+  .evo_container__front_page_secondary_area h1,
   .evo_container__standalone_page_area_6 h1,
   .evo_container__single_page_cover h1,
   .evo_container__standalone_page_area_7 h1,
@@ -919,8 +919,8 @@ div[class*="_list"],
   .restricted_access_disps h1 {
     font-size: 30px;
   }
-  .evo_container__front_page_primary h2,
-  .evo_container__front_page_secondary h2,
+  .evo_container__front_page_main_area h2,
+  .evo_container__front_page_secondary_area h2,
   .evo_container__standalone_page_area_6 h2,
   .evo_container__single_page_cover h2,
   .evo_container__standalone_page_area_7 h2,
@@ -928,8 +928,8 @@ div[class*="_list"],
   .restricted_access_disps h2 {
     font-size: 26px;
   }
-  .evo_container__front_page_primary h3,
-  .evo_container__front_page_secondary h3,
+  .evo_container__front_page_main_area h3,
+  .evo_container__front_page_secondary_area h3,
   .evo_container__standalone_page_area_6 h3,
   .evo_container__single_page_cover h3,
   .evo_container__standalone_page_area_7 h3,
@@ -937,8 +937,8 @@ div[class*="_list"],
   .restricted_access_disps h3 {
     font-size: 22px;
   }
-  .evo_container__front_page_primary h4,
-  .evo_container__front_page_secondary h4,
+  .evo_container__front_page_main_area h4,
+  .evo_container__front_page_secondary_area h4,
   .evo_container__standalone_page_area_6 h4,
   .evo_container__single_page_cover h4,
   .evo_container__standalone_page_area_7 h4,
@@ -946,8 +946,8 @@ div[class*="_list"],
   .restricted_access_disps h4 {
     font-size: 18px;
   }
-  .evo_container__front_page_primary h5,
-  .evo_container__front_page_secondary h5,
+  .evo_container__front_page_main_area h5,
+  .evo_container__front_page_secondary_area h5,
   .evo_container__standalone_page_area_6 h5,
   .evo_container__single_page_cover h5,
   .evo_container__standalone_page_area_7 h5,
@@ -955,8 +955,8 @@ div[class*="_list"],
   .restricted_access_disps h5 {
     font-size: 14px;
   }
-  .evo_container__front_page_primary h6,
-  .evo_container__front_page_secondary h6,
+  .evo_container__front_page_main_area h6,
+  .evo_container__front_page_secondary_area h6,
   .evo_container__standalone_page_area_6 h6,
   .evo_container__single_page_cover h6,
   .evo_container__standalone_page_area_7 h6,
@@ -981,8 +981,8 @@ div[class*="_list"],
   .nav > li > a {
     padding: 10px 0;
   }
-  .evo_container__front_page_primary,
-  .evo_container__front_page_secondary,
+  .evo_container__front_page_main_area,
+  .evo_container__front_page_secondary_area,
   .evo_container__standalone_page_area_6,
   .evo_container__single_page_cover,
   .evo_container__standalone_page_area_7,

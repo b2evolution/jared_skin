@@ -53,7 +53,7 @@ skin_include( '_body_header.inc.access.php' );
 		{ // Display 'Page Top' widget container
 			// ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
 			// Display container and contents:
-			skin_container( NT_('Page Top'), array(
+			widget_container( 'page_top', array(
 					// The following params will be used as defaults for widgets included in this container:
 					'container_display_if_empty' => false, // If no widget, don't display container at all
 					'container_start'     => '<div class="evo_container $wico_class$">',
@@ -94,7 +94,7 @@ skin_include( '_body_header.inc.access.php' );
 
 </div><!-- .container -->
 
-</div><!-- .evo_container__standalone_page_area_7 -->
+</div><!-- .evo_container__standalone_page_area_oth -->
 
 <div class="container main_page_wrapper">
 

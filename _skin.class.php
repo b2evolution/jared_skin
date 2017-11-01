@@ -87,6 +87,38 @@ class jared_Skin extends Skin
 	}
 
 
+	/**
+	 * Get the container codes of the skin main containers
+	 *
+	 * This should NOT be protected. It should be used INSTEAD of file parsing.
+	 * File parsing should only be used if this function is not defined
+	 *
+	 * @return array
+	 */
+	function get_declared_containers()
+	{
+		// Note: second param below is the ORDER
+		return array(
+				'page_top'                  => array( NT_('Page Top'), 2 ),
+				'header'                    => array( NT_('Header'), 10 ),
+				'menu'                      => array( NT_('Menu'), 15 ),
+				'front_page_main_area'      => array( NT_('Front Page Main Area'), 40 ),
+				'front_page_secondary_area' => array( NT_('Front Page Secondary Area'), 45 ),
+				'front_page_area_3'         => array( NT_('Front Page Area 3'), 46 ),
+				'front_page_area_4'         => array( NT_('Front Page Area 4'), 47 ),
+				'front_page_area_5'         => array( NT_('Front Page Area 5'), 48 ),
+				'item_single_header'        => array( NT_('Item Single Header'), 50 ),
+				'item_single'               => array( NT_('Item Single'), 51 ),
+				'item_page'                 => array( NT_('Item Page'), 55 ),
+				'contact_page_main_area'    => array( NT_('Contact Page Main Area'), 60 ),
+				'footer'                    => array( NT_('Footer'), 100 ),
+				'user_profile_left'         => array( NT_('User Profile - Left'), 110 ),
+				'user_profile_right'        => array( NT_('User Profile - Right'), 120 ),
+				'404_page'                  => array( NT_('404 Page'), 130 ),
+			);
+	}
+
+
 	/*
 	 * What CSS framework does has this skin been designed with?
 	 *
@@ -1340,25 +1372,25 @@ class jared_Skin extends Skin
 			}
 			if( $color = $this->get_setting( 'section_1_button_bg_color' ) )
 			{
-				$custom_css .= '.evo_container__front_page_primary .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
-				$custom_css .= '.evo_container__front_page_primary .evo_widget .item_excerpt > a.btn.btn-default,
-				.evo_container__front_page_primary .evo_widget .item_content > a.btn.btn-default
+				$custom_css .= '.evo_container__front_page_main_area .evo_widget > .btn.btn-default { background-color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_main_area .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_main_area .evo_widget .item_content > a.btn.btn-default
 				{ background-color: '.$color." }\n";
 			}
 			if( $color = $this->get_setting( 'section_1_button_color' ) )
 			{
-				$custom_css .= '.evo_container__front_page_primary .evo_widget > .btn.btn-default { color: '.$color." }\n";
-				$custom_css .= '.evo_container__front_page_primary .evo_widget .item_excerpt > a.btn.btn-default,
-				.evo_container__front_page_primary .evo_widget .item_content > a.btn.btn-default
+				$custom_css .= '.evo_container__front_page_main_area .evo_widget > .btn.btn-default { color: '.$color." }\n";
+				$custom_css .= '.evo_container__front_page_main_area .evo_widget .item_excerpt > a.btn.btn-default,
+				.evo_container__front_page_main_area .evo_widget .item_content > a.btn.btn-default
 				{ color: '.$color." }\n";
 			}
 			if( $this->get_setting( 'section_1_text_align' ) == 'section_1_center' )
 			{
-				$custom_css .= ".evo_container__front_page_primary { text-align: center }\n";
+				$custom_css .= ".evo_container__front_page_main_area { text-align: center }\n";
 			}
 			if( $this->get_setting( 'section_1_text_align' ) == 'section_1_right' )
 			{
-				$custom_css .= ".evo_container__front_page_primary { text-align: right }\n";
+				$custom_css .= ".evo_container__front_page_main_area { text-align: right }\n";
 			}
 			}
 
