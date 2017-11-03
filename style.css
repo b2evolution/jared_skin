@@ -166,6 +166,13 @@ body {
   margin-left: 25px;
   text-align: left !important;
 }
+.evo_container__front_page_main_area {
+  padding: 0;
+}
+.evo_container__front_page_main_area .evo_widget ul,
+.evo_container__front_page_main_area .evo_widget ul:last-child {
+  margin-left: 22px;
+}
 .secondary_area {
   position: relative;
   z-index: 1;
@@ -287,7 +294,7 @@ body.anonymous .navbar.main-header-navigation.affix {
 }
 div.front_main_area {
   padding: 0;
-  margin: 85px 0;
+  margin: 0;
 }
 div.front_main_area .front_main_content {
   border-radius: 6px;
