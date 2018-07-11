@@ -21,7 +21,7 @@ class jared_Skin extends Skin
 	 * Skin version
 	 * @var string
 	 */
-	var $version = '1.0.2';
+	var $version = '6.0.2';
 
 	/**
 	 * Do we want to use style.min.css instead of style.css ?
@@ -122,8 +122,8 @@ class jared_Skin extends Skin
 				'layout_section_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Navigation Section ============
 				'navigation_section_start' => array(
 					'layout' => 'begin_fieldset',
@@ -172,8 +172,8 @@ class jared_Skin extends Skin
 				'navigation_section_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Page Top Section ============
 				'pagetop_section_start' => array(
 					'layout' => 'begin_fieldset',
@@ -195,7 +195,7 @@ class jared_Skin extends Skin
 					'layout' => 'end_fieldset',
 				),
 
-				
+
 				// ============ Section 1 - Front Page Main Area ============
 				'section_1_start' => array(
 					'layout' => 'begin_fieldset',
@@ -295,7 +295,7 @@ class jared_Skin extends Skin
 				'section_1_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
+
 
 				// ============ Section 2 - Front Page Secondary Area ============
 				'section_2_start' => array(
@@ -379,8 +379,8 @@ class jared_Skin extends Skin
 				'section_2_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Section 3 - Front Page Area 3 ============
 				'section_3_start' => array(
 					'layout' => 'begin_fieldset',
@@ -462,8 +462,8 @@ class jared_Skin extends Skin
 				'section_3_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Section 4 - Front Page Area 4 ============
 				'section_4_start' => array(
 					'layout' => 'begin_fieldset',
@@ -546,8 +546,8 @@ class jared_Skin extends Skin
 				'section_4_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Section 5 - Front Page Area 5 ============
 				'section_5_start' => array(
 					'layout' => 'begin_fieldset',
@@ -629,8 +629,8 @@ class jared_Skin extends Skin
 				'section_5_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Section 6 - Header for Standalone Pages ============
 				'section_6_start' => array(
 					'layout' => 'begin_fieldset',
@@ -713,8 +713,8 @@ class jared_Skin extends Skin
 				'section_6_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Section 7 - Header for Contact form and Messaging ============
 				'section_7_start' => array(
 					'layout' => 'begin_fieldset',
@@ -796,8 +796,8 @@ class jared_Skin extends Skin
 				'section_7_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Section - Header for restricted access disps ============
 				'section_pictured_start' => array(
 					'layout' => 'begin_fieldset',
@@ -824,8 +824,8 @@ class jared_Skin extends Skin
 				'section_pictured_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Section - Header for other disps ============
 				'section_oth_start' => array(
 					'layout' => 'begin_fieldset',
@@ -907,8 +907,8 @@ class jared_Skin extends Skin
 				'section_oth_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Footer Section ============
 				'footer_start' => array(
 					'layout' => 'begin_fieldset',
@@ -965,7 +965,7 @@ class jared_Skin extends Skin
 					'layout' => 'end_fieldset',
 				),
 
-				
+
 				// ============ Featured Posts Settings ============
 				'featured_posts_start' => array(
 					'layout' => 'begin_fieldset',
@@ -992,8 +992,8 @@ class jared_Skin extends Skin
 				'featured_posts_end' => array(
 					'layout' => 'end_fieldset',
 				),
-				
-				
+
+
 				// ============ Buttons color customization ============
 				'buttons_section_start' => array(
 					'layout' => 'begin_fieldset',
@@ -1186,9 +1186,9 @@ class jared_Skin extends Skin
 		// Skin specific initializations:
 
 		// Limit images by max height:
-		
+
 		add_headline( '<link href="https://fonts.googleapis.com/css?family=Ek+Mukta:300|Josefin+Sans:300,400" rel="stylesheet">' );
-		
+
 		$max_image_height = intval( $this->get_setting( 'max_image_height' ) );
 		if( $max_image_height > 0 )
 		{
@@ -1198,21 +1198,21 @@ class jared_Skin extends Skin
 		// Add custom CSS:
 		$custom_css = '';
 
-		
+
 		// ============ Navigation Section ============
 		$nav_links_color = $this->get_setting( 'nav_links_color' );
 		$nav_bg_color    = $this->get_setting( 'nav_bg_color' );
-		
+
 		if( $custom_font_size = $this->get_setting( 'nav_colltitle_size' ) )
 		{
 			$custom_css .= ".navbar.main-header-navigation .navbar-brand > h3 a { font-size:". $custom_font_size. "px }\n";
 		}
-		
+
 		if( $custom_font_size = $this->get_setting( 'nav_links_size' ) )
 		{
 			$custom_css .= ".navbar.main-header-navigation.navbar-default .navbar-nav > .active > a, .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a:focus, .navbar.main-header-navigation.navbar-default .navbar-nav > .active > a:hover, .navbar.main-header-navigation.navbar-default .navbar-nav li > a { font-size:". $custom_font_size. "px }\n";
 		}
-		
+
 		// If "Transparent background" option for navigation is TRUE
 		if( $this->get_setting( 'nav_bg_transparent' ) )
 		{
@@ -1220,7 +1220,7 @@ class jared_Skin extends Skin
 			$custom_css .= ".navbar, .navbar.affix { background-color: $nav_bg_color }\n";
 			// ... exclude background-color in mentioned media queries and set transparent
 			$custom_css .= "@media (min-width: 1025px) { .navbar { background-color: transparent } }\n";
-			
+
 			// Section 1 navigation links color
 			if( in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
 			{
@@ -1251,13 +1251,13 @@ class jared_Skin extends Skin
 				$section_nav_color = $this->get_setting( 'section_oth_navbar_text_color' );
 				$custom_css .= "@media (min-width: 1025px) { .affix-top a { color: $section_nav_color !important } }\n";
 			}
-			
+
 			// Default navigation links color, applied to all conditions EXCEPT when '.affix-top'
 			// $custom_css .= ".navbar.navbar-default:not(.affix-top) a, .navbar.navbar-default:not(.affix-top) a:hover, .navbar-default:not(.affix-top) .navbar-nav>.active>a, .navbar-default:not(.affix-top) .navbar-nav>.active>a:focus, .navbar-default:not(.affix-top) .navbar-nav>.active>a:hover, .navbar-default:not(.affix-top) .navbar-nav>.active>a, .navbar-default:not(.affix-top) .navbar-nav>li>a, .navbar-default:not(.affix-top) .navbar-nav>li>a:focus, .navbar-default:not(.affix-top) .navbar-nav>li>a:hover { color: $nav_links_color }\n";
 			$custom_css .= ".navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: $nav_links_color }\n";
-			
+
 		}
-		
+
 		// If "Transparent background" option for navigation is FALSE
 		else
 		{
@@ -1266,8 +1266,8 @@ class jared_Skin extends Skin
 			// Set all navigation links color to what is set as default
 			$custom_css .= ".navbar.navbar-default a, .navbar.navbar-default a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>li>a, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover { color: $nav_links_color }\n";
 		}
-		
-		
+
+
 		// ============ Page Top Section ============
 		if( $color = $this->get_setting( 'pagetop_button_bg_color' ) )
 		{
@@ -1278,12 +1278,12 @@ class jared_Skin extends Skin
 			$custom_css .= '.evo_container__page_top .evo_widget > .btn.btn-default { color: '.$color." }\n";
 		}
 
-		
+
 		$FileCache = & get_FileCache();
 		if( in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
 		{
 
-			
+
 			// ============ Section 1 - Front Page Main Area ============
 			if( $this->get_setting( 'section_1_display' ) )
 			{
@@ -1362,7 +1362,7 @@ class jared_Skin extends Skin
 			}
 			}
 
-			
+
 			// ============ Section 2 - Front Page Secondary Area ============
 			if( $this->get_setting( 'section_2_display' ) )
 			{
@@ -1423,7 +1423,7 @@ class jared_Skin extends Skin
 			}
 			}
 
-			
+
 			// ============ Section 3 - Front Page Area 3 ============
 			if( $this->get_setting( 'section_3_display' ) )
 			{
@@ -1484,7 +1484,7 @@ class jared_Skin extends Skin
 			}
 			}
 
-			
+
 			// ============ Section 4 - Front Page Area 4 ============
 			if( $this->get_setting( 'section_4_display' ) )
 			{
@@ -1544,8 +1544,8 @@ class jared_Skin extends Skin
 				$custom_css .= ".evo_container__front_page_area_4 { text-align: right }\n";
 			}
 			}
-			
-			
+
+
 			// ============ Section 5 - Front Page Area 5 ============
 			if( $this->get_setting( 'section_5_display' ) )
 			{
@@ -1605,11 +1605,11 @@ class jared_Skin extends Skin
 				$custom_css .= ".evo_container__front_page_area_5 { text-align: right }\n";
 			}
 			}
-			
-			
+
+
 		}
-			
-		
+
+
 		// ============ Section 6 - Header for Standalone Pages ============
 		if( $disp == 'page' || $disp == 'single' )
 		{
@@ -1669,8 +1669,8 @@ class jared_Skin extends Skin
 			$custom_css .= ".evo_container__standalone_page_area_6, .evo_container__single_page_cover { text-align: right }\n";
 		}
 		}
-		
-		
+
+
 		// ============ Section 7 - Header for Contact form and Messaging ============
 		if( $disp == 'msgform' || $disp == 'threads' )
 		{
@@ -1730,8 +1730,8 @@ class jared_Skin extends Skin
 			$custom_css .= ".evo_container__standalone_page_area_7 { text-align: right }\n";
 		}
 		}
-		
-		
+
+
 		// ============ Section - Header for restricted access disps ============
 		if( in_array( $disp, array( 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
 		{
@@ -1747,10 +1747,10 @@ class jared_Skin extends Skin
 			{
 				$color = $this->get_setting( 'section_access_bg_color' );
 				$custom_css .= '.restricted_access_disps { background: '.$color." }\n";
-			}		
+			}
 		}
-		
-		
+
+
 		// ============ Section - Header for other disps  ============
 		if( $this->get_setting( 'section_oth_image_file_ID' ) )
 		{
@@ -1807,7 +1807,7 @@ class jared_Skin extends Skin
 		{
 			$custom_css .= ".evo_container__standalone_page_area_oth { text-align: right }\n";
 		}
-		
+
 
 		// ============ Featured Posts Settings ============
 		if( $color = $this->get_setting( 'bgimg_text_color' ) )
@@ -1822,8 +1822,8 @@ class jared_Skin extends Skin
 		{	// Custom link hover color on background image:
 			$custom_css .= '.evo_hasbgimg a:hover { color: '.$color." }\n";
 		}
-		
-		
+
+
 		// ============ Buttons color customization ============
 		if( $color = $this->get_setting( 'login_button_color' ) )
 		{	// Custom text color on login button:
@@ -1849,8 +1849,8 @@ class jared_Skin extends Skin
 		{	// Custom text background-color on contact button:
 			$custom_css .= 'input[type="submit"].submit.btn-primary { background-color: '.$color." }\n";
 		}
-		
-		
+
+
 		// ============ Footer Section ============
 		if( $color = $this->get_setting( 'footer_bg_color' ) )
 		{	// Custom text color on background image:

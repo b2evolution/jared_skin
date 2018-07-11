@@ -47,6 +47,28 @@ body {
   font-size: 20px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
+.evo_comment_footer .action_btn_group,
+.evo_comment_info .action_btn_group {
+  float: right;
+}
+.evo_comment .panel-heading {
+  line-height: 1.2em;
+}
+.evo_comment .panel-heading .evo_status {
+  margin-left: 5px;
+}
+@media screen and (max-width: 640px) {
+  .evo_comment .panel-heading .evo_status {
+    float: none !important;
+    margin-left: 0;
+    margin-top: 5px;
+    display: inline-block;
+  }
+  .evo_comment .panel-heading .evo_status:before {
+    display: block;
+    content: " ";
+  }
+}
 .evo_container__front_page_primary,
 .evo_container__front_page_secondary,
 .evo_container__standalone_page_area_6,
