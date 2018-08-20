@@ -74,6 +74,7 @@ class jared_Skin extends Skin
 	public function get_supported_coll_kinds()
 	{
 		$supported_kinds = array(
+				'minisite' => 'yes',
 				'main' => 'yes',
 				'std' => 'yes',		// Blog
 				'photo' => 'no',
