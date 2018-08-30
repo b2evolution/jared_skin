@@ -94,7 +94,7 @@ class jared_Skin extends Skin
 	 * This should NOT be protected. It should be used INSTEAD of file parsing.
 	 * File parsing should only be used if this function is not defined
 	 *
-	 * @return array
+	 * @return array Array which overrides default containers; Empty array means to use all default containers.
 	 */
 	function get_declared_containers()
 	{
@@ -104,10 +104,10 @@ class jared_Skin extends Skin
 				'header'                    => array( NT_('Header'), 10 ),
 				'menu'                      => array( NT_('Menu'), 15 ),
 				'front_page_main_area'      => array( NT_('Front Page Area 1'), 40 ),
-				'front_page_secondary_area' => array( NT_('Front Page Area 2'), 45 ),
-				'front_page_area_3'         => array( NT_('Front Page Area 3'), 46 ),
-				'front_page_area_4'         => array( NT_('Front Page Area 4'), 47 ),
-				'front_page_area_5'         => array( NT_('Front Page Area 5'), 48 ),
+				'front_page_secondary_area' => array( NT_('Front Page Area 2'), 41 ),
+				'front_page_area_3'         => array( NT_('Front Page Area 3'), 42 ),
+				'front_page_area_4'         => array( NT_('Front Page Area 4'), 43 ),
+				'front_page_area_5'         => array( NT_('Front Page Area 5'), 44 ),
 				'item_list'                 => array( NT_('Item List'), 48 ),
 				'item_in_list'              => array( NT_('Item in List'), 49 ),
 				'item_single_header'        => array( NT_('Item Single Header'), 50 ),
