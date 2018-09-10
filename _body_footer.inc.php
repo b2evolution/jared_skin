@@ -30,7 +30,12 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 				'search_input_before'  => '<div class="input-group">',
 				'search_input_after'   => '',
 				'search_submit_before' => '<span class="input-group-btn">',
-				'search_submit_after'  => '</span></div>',    
+				'search_submit_after'  => '</span></div>',
+				// The following overrides are used to prevent nested "container" divs with subcontainers:
+				'override_params_for_subcontainer_row' => array(
+					'container_start' => '<div class="evo_container $wico_class$">',
+					'container_end'   => '</div>',
+				),
 			) );
 		// ----------------------------- END OF "Footer" CONTAINER -----------------------------
 		?>
@@ -43,7 +48,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 				'after'  => ' &bull; ',
 			) );
 		// TODO: dh> provide a default class for pTyp, too. Should be a name and not the ityp_ID though..?!
-		
+
 		// Display a link to contact the owner of this blog (if owner accepts messages):
 		$Blog->contact_link( array(
 				'before' => '',
@@ -51,14 +56,14 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 				'text'   => T_('Contact'),
 				'title'  => T_('Send a message to the owner of this blog...'),
 			) );
-			
+
 		// Display a link to help page:
 		$Blog->help_link( array(
 				'before' => ' ',
 				'after'  => ' ',
 				'text'   => T_('Help'),
 			) );
-			
+
 		// Display additional credits:
 		// If you can add your own credits without removing the defaults, you'll be very cool :))
 		// Please leave this at the bottom of the page to make sure your blog gets listed on b2evolution.net
@@ -85,7 +90,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 	?>
 
 </footer><!-- .footer_wrapper -->
-	
+
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
 // If site footers are enabled, they will be included here:

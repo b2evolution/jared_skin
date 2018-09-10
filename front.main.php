@@ -244,10 +244,15 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// The following overrides are used to prevent nested "container" divs with subcontainers:
+						'override_params_for_subcontainer_row' => array(
+							'container_start' => '<div class="evo_container $wico_class$">',
+							'container_end'   => '</div>',
+						),
 					) );
 				// ----------------------------- END OF "Front Page Secondary Area" CONTAINER -----------------------------
 		} ?>
-		
+
 		<?php if( $Skin->get_setting( 'section_3_display' ) ) {
 				// ------------------------- "Front Page Area 3" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
@@ -260,10 +265,15 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// The following overrides are used to prevent nested "container" divs with subcontainers:
+						'override_params_for_subcontainer_row' => array(
+							'container_start' => '<div class="evo_container $wico_class$">',
+							'container_end'   => '</div>',
+						),
 					) );
 				// ----------------------------- END OF "Front Page Area 3" CONTAINER -----------------------------
 		} ?>
-		
+
 		<?php if( $Skin->get_setting( 'section_4_display' ) ) {
 				// ------------------------- "Front Page Area 4" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
@@ -276,10 +286,15 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// The following overrides are used to prevent nested "container" divs with subcontainers:
+						'override_params_for_subcontainer_row' => array(
+							'container_start' => '<div class="evo_container $wico_class$">',
+							'container_end'   => '</div>',
+						),
 					) );
 				// ----------------------------- END OF "Front Page Area 4" CONTAINER -----------------------------
 		} ?>
-		
+
 		<?php if( $Skin->get_setting( 'section_5_display' ) ) {
 				// ------------------------- "Front Page Area 5" CONTAINER EMBEDDED HERE --------------------------
 				// Display container and contents:
@@ -292,6 +307,11 @@ if( $Skin->get_setting( 'section_1_display' ) ) {
 						'block_end'         => '</div>',
 						'block_title_start' => '<h2 class="page-header">',
 						'block_title_end'   => '</h2>',
+						// The following overrides are used to prevent nested "container" divs with subcontainers:
+						'override_params_for_subcontainer_row' => array(
+							'container_start' => '<div class="evo_container $wico_class$">',
+							'container_end'   => '</div>',
+						),
 					) );
 				// ----------------------------- END OF "Front Page Area 5" CONTAINER -----------------------------
 		} ?>
