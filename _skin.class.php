@@ -159,6 +159,13 @@ class jared_Skin extends Skin
 						'size' => '7',
 						'allow_empty' => true,
 					),
+					'message_affix_offset' => array(
+						'label' => T_('Messages affix offset'),
+						'note' => 'px. ' . T_('Set message top offset value.'),
+						'defaultvalue' => '100',
+						'type' => 'integer',
+						'allow_empty' => true,
+					),
 				'layout_section_end' => array(
 					'layout' => 'end_fieldset',
 				),
@@ -1934,6 +1941,9 @@ class jared_Skin extends Skin
 </style>';
 		add_headline( $custom_css );
 		}
+
+		// Init JS to affix Messages:
+		init_affix_messages_js( $this->get_setting( 'message_affix_offset' ) );
 	}
 
 
