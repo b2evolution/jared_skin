@@ -98,7 +98,10 @@ class jared_Skin extends Skin
 	 */
 	function get_declared_containers()
 	{
-		// Note: second param below is the ORDER
+		// Array to override default containers from function get_skin_default_containers():
+		// - Key is widget container code;
+		// - Value: array( 0 - container name, 1 - container order ),
+		//          NULL - means don't use the container, WARNING: it(only empty/without widgets) will be deleted from DB on changing of collection skin or on reload container definitions.
 		return array(
 				'page_top'                  => array( NT_('Page Top'), 2 ),
 				'header'                    => array( NT_('Header'), 10 ),
@@ -114,6 +117,8 @@ class jared_Skin extends Skin
 				'item_single'               => array( NT_('Item Single'), 51 ),
 				'item_page'                 => array( NT_('Item Page'), 55 ),
 				'contact_page_main_area'    => array( NT_('Contact Page Main Area'), 60 ),
+				'sidebar'                   => NULL,
+				'sidebar_2'                 => NULL,
 				'footer'                    => array( NT_('Footer'), 100 ),
 				'user_profile_left'         => array( NT_('User Profile - Left'), 110 ),
 				'user_profile_right'        => array( NT_('User Profile - Right'), 120 ),
