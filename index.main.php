@@ -76,7 +76,7 @@ if( $is_other_disp ) {
 		?>
 
 	<?php if( $is_other_disp ) { ?>
-	
+
 	<div class="evo_page_title col-md-12">
 		<?php
 			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------

@@ -46,6 +46,22 @@ body {
 	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+.evo_container__item_single_header {
+	.evo_widget {
+		padding: 0;
+		&.widget_core_item_visibility_badge {
+			.evo_status {
+				padding: 3px 7px;
+			}
+		}
+		&.widget_core_item_next_previous {
+			ul {
+				display: block;
+			}
+		}
+	}
+}
+
 .evo_container__front_page_main_area,
 .evo_container__front_page_secondary_area,
 .evo_container__front_page_area_3,
@@ -633,7 +649,7 @@ div.action_messages, div.log_container {
 }
 
 // Positions on the action buttons near page titles
-.evo_post_title {
+.evo_post_title, .widget_core_item_title {
 	display: table;
 	width: 100%;
 	h1, h2, h3, h4, h5, h6 {

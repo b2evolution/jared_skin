@@ -47,6 +47,15 @@ body {
   font-size: 20px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
+.evo_container__item_single_header .evo_widget {
+  padding: 0;
+}
+.evo_container__item_single_header .evo_widget.widget_core_item_visibility_badge .evo_status {
+  padding: 3px 7px;
+}
+.evo_container__item_single_header .evo_widget.widget_core_item_next_previous ul {
+  display: block;
+}
 .evo_container__front_page_main_area,
 .evo_container__front_page_secondary_area,
 .evo_container__front_page_area_3,
@@ -667,30 +676,40 @@ div.action_messages,
 div.log_container {
   margin: 0;
 }
-.evo_post_title {
+.evo_post_title,
+.widget_core_item_title {
   display: table;
   width: 100%;
 }
 .evo_post_title h1,
+.widget_core_item_title h1,
 .evo_post_title h2,
+.widget_core_item_title h2,
 .evo_post_title h3,
+.widget_core_item_title h3,
 .evo_post_title h4,
+.widget_core_item_title h4,
 .evo_post_title h5,
-.evo_post_title h6 {
+.widget_core_item_title h5,
+.evo_post_title h6,
+.widget_core_item_title h6 {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
 }
-.evo_post_title h2 {
+.evo_post_title h2,
+.widget_core_item_title h2 {
   display: table-cell;
   margin: 0;
   padding: 20px 0 10px;
 }
-.evo_post_title .btn-group {
+.evo_post_title .btn-group,
+.widget_core_item_title .btn-group {
   display: table-cell;
   padding: 20px 0 10px 30px;
   vertical-align: middle;
 }
-.evo_post_title .btn-group > a {
+.evo_post_title .btn-group > a,
+.widget_core_item_title .btn-group > a {
   color: #333 !important;
 }
 body.pictured .front_main_content .ufld_icon_links a {

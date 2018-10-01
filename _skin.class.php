@@ -21,7 +21,7 @@ class jared_Skin extends Skin
 	 * Skin version
 	 * @var string
 	 */
-	var $version = '7.0.4';
+	var $version = '7.0.5';
 
 	/**
 	 * Do we want to use style.min.css instead of style.css ?

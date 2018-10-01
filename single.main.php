@@ -17,7 +17,7 @@
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
 if( evo_version_compare( $app_version, '6.4' ) < 0 )
-{ // Older skins (versions 2.x and above) should work on newer b2evo versions, but newer skins may not work on older b2evo versions.
+{	// Older skins (versions 2.x and above) should work on newer b2evo versions, but newer skins may not work on older b2evo versions.
 	die( 'This skin is designed for b2evolution 6.4 and above. Please <a href="http://b2evolution.net/downloads/index.html">upgrade your b2evolution</a>.' );
 }
 
@@ -44,7 +44,7 @@ if( $Item->get_cover_image_url() )
 {
 	echo '<div class="evo_container__single_page_cover" style="background-image:url('. $Item->get_cover_image_url() .')">';
 } else {
-	
+
 	$single_bg_sec_6 = '';
 	// Check if image is uploaded
 	if( $Skin->get_setting( 'section_6_image_file_ID' ) )
@@ -57,7 +57,7 @@ if( $Item->get_cover_image_url() )
 			$single_bg_sec_6 = 'style="background-image:url('. $bg_image_File6->get_url() .')"';
 		}
 	}
-		
+
 	echo '<div class="evo_container__standalone_page_area_6 parallax-window" '. $single_bg_sec_6 .'>';
 }
 ?>
@@ -86,25 +86,13 @@ if( $Item->get_cover_image_url() )
 					'search_input_before'  => '<div class="input-group">',
 					'search_input_after'   => '',
 					'search_submit_before' => '<span class="input-group-btn">',
-					'search_submit_after'  => '</span></div>',    
+					'search_submit_after'  => '</span></div>',
 				) );
 			// ----------------------------- END OF "Page Top" CONTAINER -----------------------------
 		?>
 
 	<div class="evo_post_title col-md-12">
 		<h1><?php $Item->title(); // PAGE TITLE ?></h1>
-		
-		<?php
-		// if( is_logged_in() )
-		// { // Display edit link only for intro posts, because for all other posts the link is displayed on the info line.
-			// $Item->edit_link( array(
-				// 'before' => '<div class="'.button_class( 'group' ).'">',
-				// 'after'  => '</div>',
-				// 'text'   => $Item->is_intro() ? get_icon( 'edit' ).' '.T_('Edit Intro') : '#',
-				// 'class'  => button_class( 'text' ),
-			// ) );
-		// }		
-		?>
 	</div>
 
 </header><!-- .row -->
@@ -125,7 +113,7 @@ if( $Item->get_cover_image_url() )
 
 		<?php
 		if( ! in_array( $disp, array( 'login', 'lostpassword', 'register', 'activateinfo', 'access_requires_login' ) ) )
-		{ // Don't display the messages here because they are displayed inside wrapper to have the same width as form
+		{	// Don't display the messages here because they are displayed inside wrapper to have the same width as form
 			// ------------------------- MESSAGES GENERATED FROM ACTIONS -------------------------
 			messages( array(
 					'block_start' => '<div class="action_messages">',
@@ -133,19 +121,6 @@ if( $Item->get_cover_image_url() )
 				) );
 			// --------------------------------- END OF MESSAGES ---------------------------------
 		}
-		?>
-
-		<?php
-			// ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
-			item_prevnext_links( array(
-					'block_start' => '<nav><ul class="pager">',
-						'prev_start'  => '<li class="previous">',
-						'prev_end'    => '</li>',
-						'next_start'  => '<li class="next">',
-						'next_end'    => '</li>',
-					'block_end'   => '</ul></nav>',
-				) );
-			// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
 		?>
 
 		<?php
