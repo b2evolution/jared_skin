@@ -47,13 +47,16 @@ body {
   font-size: 20px;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
-.evo_container__item_single_header .evo_widget {
+.evo_container__item_single_header .evo_widget,
+.evo_container__item_in_list .evo_widget {
   padding: 0;
 }
-.evo_container__item_single_header .evo_widget.widget_core_item_visibility_badge .evo_status {
+.evo_container__item_single_header .evo_widget.widget_core_item_visibility_badge .evo_status,
+.evo_container__item_in_list .evo_widget.widget_core_item_visibility_badge .evo_status {
   padding: 3px 7px;
 }
-.evo_container__item_single_header .evo_widget.widget_core_item_next_previous ul {
+.evo_container__item_single_header .evo_widget.widget_core_item_next_previous ul,
+.evo_container__item_in_list .evo_widget.widget_core_item_next_previous ul {
   display: block;
 }
 .evo_container__front_page_main_area,
