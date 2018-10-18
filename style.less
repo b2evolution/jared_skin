@@ -163,7 +163,7 @@ body {
 	border-radius: 0;
 	border: 0;
 	margin: 0;
-	z-index: 999; // Important for placing the menu container OVER the background image
+	z-index: 99999; // Important for placing the menu container OVER the background image and OVER widget debug blocks in customizer mode
 	transition: 0.2s ease-in;
 
 	.navbar-header {
@@ -258,12 +258,12 @@ body {
 	width: 100%;
 }
 
-body.loggedin .navbar.main-header-navigation.affix { top: 27px }
+body.evo_toolbar_visible .navbar.main-header-navigation.affix { top: 27px }
 // SEEMS TO INTERFERE WITH THE DEFAULT SITENAV BEHAVIOR
-body.anonymous .navbar.main-header-navigation.affix { top: 0 }
+body.evo_toolbar_hidden .navbar.main-header-navigation.affix { top: 0 }
 
 @media (max-width: 1024px) {
-	body.loggedin, body.anonymous {
+	body.evo_toolbar_visible, body.evo_toolbar_hidden {
 		.navbar.main-header-navigation.affix,
 		.navbar.main-header-navigation.affix-top {
 			margin: 0;
